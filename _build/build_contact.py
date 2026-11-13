@@ -84,11 +84,11 @@ html = head(f"Request a Sample — Metal Fiber, Felt, Sleeves | {COMPANY}",
  "Stock samples ship in one to three days. Most technical textile products carry no minimum order, so a trial can be a single length.",
  "sample.html","metal fiber sample, sintered felt sample, free sample",
  json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"Request a Sample","url":f"{SITE}/sample.html"},ensure_ascii=False),
- "img/sh-felt.webp") + header("contact.html") + crumb([("Contact","contact.html"),("Request a Sample",None)]) + page_hero(
+ "img/en-ph-contact.webp") + header("contact.html") + crumb([("Contact","contact.html"),("Request a Sample",None)]) + page_hero(
  "02","REQUEST A SAMPLE","Test it on your own line",
  "A specification argued on paper is slower than a sample on a machine. Stock samples ship in one to three days, freight normally collect, and most technical textile products carry no minimum order.",
  [("1","–3 days","Stock sample lead time"),("0","MOQ","On most textile products"),("1","working day","Typical reply time")],
- "img/sh-felt.webp") + subnav(SUB_CON,"sample.html") + f"""
+ "img/en-ph-contact.webp") + subnav(SUB_CON,"sample.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="form-wrap">

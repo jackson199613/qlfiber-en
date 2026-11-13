@@ -66,10 +66,10 @@ html = head("Downloads — Catalogues, Data Sheets and Certificates | QL Metal F
   "Technical data sheets, catalogues, certificates and the selection questionnaire. Request any document and we will email it the same working day.",
   "downloads.html","metal fiber datasheet, sintered felt catalogue, ISO 9001 certificate",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"Downloads","url":f"{SITE}/downloads.html"},ensure_ascii=False),
-  "img/media-02.webp") + header("resources.html") + crumb([("Resources","resources.html"),("Downloads",None)]) + page_hero(
+  "img/en-ph-resources.webp") + header("resources.html") + crumb([("Resources","resources.html"),("Downloads",None)]) + page_hero(
   "02","DOWNLOADS","Documents for your supplier file",
   "Request any of the documents below and we will email it the same working day, with the data sheet matched to the grade you are considering rather than a generic range.",
-  None,"img/media-02.webp") + subnav(SUB_RES,"downloads.html") + f"""
+  None,"img/en-ph-resources.webp") + subnav(SUB_RES,"downloads.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Available on request</div>

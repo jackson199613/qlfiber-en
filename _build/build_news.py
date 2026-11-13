@@ -7,7 +7,7 @@ POSTS=[
  dict(s="article-1", cat="Technical", date="2026-09-18", read="7 min",
   t="Absolute rating is not the whole specification",
   sum="Two media with the same 20 µm absolute rating can behave completely differently on the same line. What actually sets change-out interval is dirt-holding capacity, and that is a function of structure, not rating.",
-  img="img/micro-gradient.webp", cap="Graded pore structure: coarse upstream, fine downstream",
+  img="img/en-micro-gradient.webp", cap="Graded pore structure: coarse upstream, fine downstream",
   body=["<p>Buyers usually specify filtration media by absolute rating, because it is the one number that appears on every data sheet. It answers a real question — what is the largest particle that gets through — but it says nothing about how long the element will last before differential pressure forces a change.</p>",
    "<h3>Where the capacity comes from</h3>",
    "<p>Sintered metal fiber felt filters in depth rather than at a surface. Layers of decreasing fiber diameter are laid so that pore size falls from the upstream face to the downstream face. Coarse particles are captured near the surface, fine particles deeper in, and the whole thickness is doing work. A surface filter at the same rating uses only its face, so it blinds faster at the same solids load.</p>",
@@ -19,7 +19,7 @@ POSTS=[
  dict(s="article-2", cat="Application", date="2026-07-02", read="6 min",
   t="Recovering oil from extraction liquor without demulsifier",
   sum="In hydrometallurgical extraction, the non-dissolved oil fraction is what drives activated carbon and resin consumption downstream. Removing it physically turns a consumable cost into recovered organic phase.",
-  img="img/micro-coalesce.webp", cap="Coalescence: droplets captured, grown and floated off",
+  img="img/en-micro-coalesce.webp", cap="Coalescence: droplets captured, grown and floated off",
   body=["<p>Oil in an extraction liquor comes in two forms. A dissolved fraction, typically 5 to 40 ppm depending on the extractant and the mixing regime, which needs deep treatment. And a non-dissolved fraction, dispersed and emulsified, which can be recovered physically.</p>",
    "<h3>Why the non-dissolved fraction matters most</h3>",
    "<p>It is the fraction that loads activated carbon and resin beds downstream. Treat it as a chemical problem and you pay twice: once for demulsifier, once for the sludge it creates. Treat it as a physical one and the organic phase goes back into the circuit.</p>",
@@ -31,7 +31,7 @@ POSTS=[
  dict(s="article-3", cat="Application", date="2026-05-14", read="5 min",
   t="Why glass tempering lines keep coming back to metal fiber",
   sum="Ceramic roller covers, toothed bar protection and hot bending mould covers all fail the same way: the fabric survives the temperature but not the combination of temperature, abrasion and marking.",
-  img="img/sleeve-03.webp", cap="Knitted metal fiber sleeve on tempering rollers",
+  img="img/en-glass.webp", cap="Knitted metal fiber sleeve on tempering rollers",
   body=["<p>A glass tempering line is an unforgiving test for a textile. The material has to hold 350 °C continuously with short peaks far above it, resist abrasion from glass moving across it, and — the part that eliminates most candidates — leave no mark on the glass surface.</p>",
    "<h3>What metal fiber changes</h3>",
    "<p>Because the fiber is drawn metal rather than a coated or metallised yarn, there is no coating to burn off or shed onto the glass. 316L is the standard material; FeCrAl is available where the duty is hotter. Products are heat-set, so under normal cutting and handling they do not fuzz.</p>",
@@ -85,11 +85,11 @@ sc=json.dumps({"@context":"https://schema.org","@type":"ItemList","name":"News &
 
 html = head("News & Blog — Metal Fiber Technical Articles | QL Metal Fiber",
   "Technical articles and company news on metal fiber filtration, coalescing oil recovery, glass processing textiles and conductive yarn.",
-  "news.html","metal fiber blog, filtration technical article, oil recovery news", sc, "img/micro-gradient.webp"
+  "news.html","metal fiber blog, filtration technical article, oil recovery news", sc, "img/en-micro-gradient.webp"
  ) + header("company.html") + crumb([("Company","company.html"),("News & Blog",None)]) + page_hero(
   "05","NEWS &amp; BLOG","What we have learned, written down",
   "Technical notes from selection and trial work, and the occasional company announcement. No product launches dressed as articles.",
-  None,"img/micro-gradient.webp") + subnav(SUB_CO,"news.html") + f"""
+  None,"img/en-micro-gradient.webp") + subnav(SUB_CO,"news.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="pills rv" data-filter=".post">

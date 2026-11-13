@@ -4,22 +4,22 @@ sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, footer, w, CTA_BAND, crumb, page_hero, subnav, SUB_APP, SITE
 
 CARDS = [
- ("a-glass.html","01","Glass Processing","Lead track","img/sleeve-03.webp",
+ ("a-glass.html","01","Glass Processing","Lead track","img/en-glass.webp",
   "Heat-resistant sleeves, fabrics, tapes and ropes for tempering, bending and forming lines.",
   "Rated to 1100 °C, lint-free, non-marking"),
- ("a-filtration.html","02","Filtration &amp; Separation","Highest value per account","img/fts-huayou-02.webp",
+ ("a-filtration.html","02","Filtration &amp; Separation","Highest value per account","img/en-filtration.webp",
   "Cleanable all-metal media for melt, viscose and hot gas, plus chemical-free oil recovery.",
   "10–60 µm absolute · 30 MPa · 600 m³/h"),
- ("a-emi.html","03","EMI Shielding &amp; Anti-static","Broadest coverage","img/ind-emi.webp",
+ ("a-emi.html","03","EMI Shielding &amp; Anti-static","Broadest coverage","img/en-emi.webp",
   "Conductive fiber, blended yarn, thread, braided sleeve and tape for shielding and static control.",
   "0.5–100% steel · 1–64 Ω/m"),
- ("a-specialty.html","04","Specialty Materials","","img/sh-felt.webp",
+ ("a-specialty.html","04","Specialty Materials","","img/en-specialty.webp",
   "Porous plates, burner media and damping felts for combustion, thermal shock and vibration.",
   "50–90% porosity · to 1100 °C"),
- ("a-automotive.html","05","Automotive","","img/ind-auto.webp",
+ ("a-automotive.html","05","Automotive","","img/en-automotive.webp",
   "Mould covers, heating wire, chopped fiber, sintered media and hydraulic elements.",
   "Glass forming to seat heating"),
- ("a-textiles.html","06","Functional Textiles &amp; Smart Wearables","","img/ind-wear.webp",
+ ("a-textiles.html","06","Functional Textiles &amp; Smart Wearables","","img/en-textiles.webp",
   "Weavable, sewable, washable conductive and heating yarns for apparel and workwear.",
   "1–64 Ω/m · 12 µm monofilament"),
 ]
@@ -58,13 +58,13 @@ html = head("Application Solutions | Metal Fiber by Operating Condition — QL M
  "Six metal fiber application solutions — glass processing, filtration and separation, EMI shielding and anti-static, specialty materials, automotive, functional textiles — plus co-development for conditions outside them.",
  "applications.html",
  "metal fiber applications, glass processing sleeve, metal fiber filtration, EMI shielding fiber, conductive yarn",
- sc, "img/fts-huayou-02.webp") \
+ sc, "img/en-filtration.webp") \
  + header("applications.html") + crumb([("Applications", None)]) \
  + page_hero("", "APPLICATION SOLUTIONS",
    "Six solutions, organised by the conditions you run",
    "Buyers rarely ask what products we have. They ask whether a material will survive their furnace temperature, their solvent, their precision requirement — and for how long. Each solution starts from that question and ends with a sample on your line.",
    [("6","","Application solutions"),("7","forms","Product forms available"),("2","µm","Finest fiber diameter")],
-   "img/fts-huayou-02.webp") \
+   "img/en-filtration.webp") \
  + subnav(SUB_APP, "applications.html") + f"""
 <main>
 <section class="sec"><div class="wrap">

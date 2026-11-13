@@ -41,11 +41,11 @@ html = head("R&D Overview — Metal Fiber Research and Development | QL Metal Fi
   "A five-person core R&D team, eleven university and institute partnerships, four provincial research projects, and a laboratory that tests every material we propose.",
   "technology.html","metal fiber R&D, materials research, China metal fiber manufacturer",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"R&D Overview","url":f"{SITE}/technology.html"},ensure_ascii=False),
-  "img/lab-01.webp") + header("technology.html") + crumb([("Technology","technology.html"),("R&D Overview",None)]) + page_hero(
+  "img/en-ph-rd.webp") + header("technology.html") + crumb([("Technology","technology.html"),("R&D Overview",None)]) + page_hero(
   "01","TECHNOLOGY","We develop the material, not just the part",
   "Metal fiber behaviour is set long before a part is made — at the drawing die, the web, the sintering cycle. That is where our research sits, and it is why we can change a property rather than only select from a catalogue.",
   [("5","","Core R&D engineers"),("11","","University and institute partners"),("4","","Provincial research projects")],
-  "img/lab-01.webp") + subnav(SUB_TECH,"technology.html") + f"""
+  "img/en-ph-rd.webp") + subnav(SUB_TECH,"technology.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="g2" style="gap:56px;align-items:start">
@@ -111,11 +111,11 @@ html = head("Lab & Testing — In-house Metal Fiber Testing | QL Metal Fiber",
   "Bubble point, permeability, filtration efficiency, porosity, resistance and metallography, measured in our own laboratory on every material we propose.",
   "lab.html","metal fiber testing, bubble point, filtration efficiency test, SEM",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"Lab & Testing","url":f"{SITE}/lab.html"},ensure_ascii=False),
-  "img/lab-02.webp") + header("technology.html") + crumb([("Technology","technology.html"),("Lab & Testing",None)]) + page_hero(
+  "img/en-ph-lab.webp") + header("technology.html") + crumb([("Technology","technology.html"),("Lab & Testing",None)]) + page_hero(
   "02","LAB &amp; TESTING","Every claim on this site has a measurement behind it",
   "We test in house because a buyer qualifying a new supplier needs numbers that can be repeated — and because a material we cannot measure is a material we cannot improve.",
   [("9","","Standard test methods in house"),("100","%","Lots with an inspection report"),("1","–3 days","Typical sample lead time")],
-  "img/lab-02.webp") + subnav(SUB_TECH,"lab.html") + f"""
+  "img/en-ph-lab.webp") + subnav(SUB_TECH,"lab.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Test capability</div>
@@ -142,7 +142,7 @@ html = head("Lab & Testing — In-house Metal Fiber Testing | QL Metal Fiber",
         <li>Dimensions and fittings, or a drawing</li>
       </ul>
     </div>
-    <div class="rv d1">{gal([("img/lab-01.webp","Laboratory bench and test equipment"),("img/lab-02.webp","Sample preparation and inspection"),("img/micro-network.webp","Fiber network, micrograph"),("img/micro-gradient.webp","Graded pore structure through the thickness")])}</div>
+    <div class="rv d1">{gal([("img/lab-01.webp","Laboratory bench and test equipment"),("img/lab-02.webp","Sample preparation and inspection"),("img/en-micro-network.webp","Fiber network, micrograph"),("img/en-micro-gradient.webp","Graded pore structure through the thickness")])}</div>
   </div>
 </div></section>
 
@@ -163,11 +163,11 @@ html = head("Patents & Standards — 62 Patents, 6 Standards | QL Metal Fiber",
   "62 granted and pending patents, 16 of them inventions, and participation in six national, industry and group standards for metal fiber materials and equipment.",
   "patents.html","metal fiber patents, national standard, industry standard",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"Patents & Standards","url":f"{SITE}/patents.html"},ensure_ascii=False),
-  "img/plant-07.webp") + header("technology.html") + crumb([("Technology","technology.html"),("Patents & Standards",None)]) + page_hero(
+  "img/en-ph-patents.webp") + header("technology.html") + crumb([("Technology","technology.html"),("Patents & Standards",None)]) + page_hero(
   "03","PATENTS &amp; STANDARDS","Where our know-how is written down",
   "Intellectual property matters to a buyer for one practical reason: it shows the supplier owns the process rather than copying it, and that the specification you qualify will still exist in five years.",
   [("62","","Patents granted and pending"),("16","","Invention patents"),("6","","Standards co-drafted")],
-  "img/plant-07.webp") + subnav(SUB_TECH,"patents.html") + f"""
+  "img/en-ph-patents.webp") + subnav(SUB_TECH,"patents.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="g2" style="gap:56px;align-items:start">

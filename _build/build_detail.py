@@ -22,21 +22,21 @@ sc=json.dumps({"@context":"https://schema.org","@type":"Product","name":"20KIA3 
  "description":"316L sintered metal fiber felt, 20 µm absolute rating, 0.45 mm thick, 80% porosity.",
  "sku":"20KIA3","url":f"{SITE}/p-detail.html","brand":{"@type":"Brand","name":"QL Metal Fiber"},
  "manufacturer":{"@type":"Organization","name":COMPANY},
- "image":f"{SITE}/img/sh-felt.webp"},ensure_ascii=False)
+ "image":f"{SITE}/img/en-sh-felt.webp"},ensure_ascii=False)
 
 html = head("20KIA3 Sintered Metal Fiber Felt — 20 µm Absolute | QL Metal Fiber",
  "316L sintered metal fiber felt, 20 µm absolute rating, 0.45 mm thick, 80% porosity, 1850 Pa bubble point. Cleanable, weldable and pleatable.",
- "p-detail.html","20KIA3, sintered metal fiber felt, 20 micron filter media", sc, "img/sh-felt.webp"
+ "p-detail.html","20KIA3, sintered metal fiber felt, 20 micron filter media", sc, "img/en-sh-felt.webp"
  ) + header("products.html") + crumb([("Products","products.html"),
      ("Sintered Felt & Media","p-felt.html"),("20KIA3",None)]) + subnav(SUB_PROD,"p-felt.html") + f"""
 <main>
 <section class="sec" style="padding-top:56px"><div class="wrap">
   <div class="pd">
     <div class="pd-media rv">
-      <figure class="pd-main"><img src="img/sh-felt.webp" alt="20KIA3 sintered metal fiber felt" width="900" height="675"></figure>
+      <figure class="pd-main"><img src="img/en-sh-felt.webp" alt="20KIA3 sintered metal fiber felt" width="900" height="675"></figure>
       <div class="pd-thumbs">
-        <img src="img/micro-gradient.webp" alt="Graded pore structure" loading="lazy" width="300" height="225">
-        <img src="img/micro-network.webp" alt="Fiber network micrograph" loading="lazy" width="300" height="225">
+        <img src="img/en-micro-gradient.webp" alt="Graded pore structure" loading="lazy" width="300" height="225">
+        <img src="img/en-micro-network.webp" alt="Fiber network micrograph" loading="lazy" width="300" height="225">
         <img src="img/media-05.webp" alt="Cut media and discs" loading="lazy" width="300" height="225">
       </div>
     </div>

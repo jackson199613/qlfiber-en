@@ -6,29 +6,29 @@ from layout import head, header, footer, w, CTA_BAND, SITE, COMPANY, MAIL, TEL, 
 APPS = [
  ("a-glass.html","Glass Processing","Lead track",
   "Roller sleeves, braided sleeves and woven belts that take 1100&nbsp;°C, stay lint-free and leave no marks on the glass.",
-  "img/sleeve-03.webp"),
+  "img/en-glass.webp"),
  ("a-filtration.html","Filtration &amp; Separation","Highest value per account",
   "Cleanable, reusable all-metal media for polymer melt, viscose and hot gas — plus chemical-free oil recovery for solvent extraction.",
-  "img/fts-huayou-02.webp"),
+  "img/en-filtration.webp"),
  ("a-emi.html","EMI Shielding &amp; Anti-static","Broadest coverage",
   "Conductivity comes from the fiber itself, not a coating, so anti-static and shielding performance survives repeated washing.",
-  "img/ind-emi.webp"),
+  "img/en-emi.webp"),
  ("a-specialty.html","Specialty Materials","",
   "Porous plates, burner media and damping felts where ceramics crack under thermal shock and foams lose strength.",
-  "img/sh-felt.webp"),
+  "img/en-specialty.webp"),
  ("a-automotive.html","Automotive","",
   "From glass bending mould covers and heated seats to friction materials and hydraulic filtration.",
-  "img/ind-auto.webp"),
+  "img/en-automotive.webp"),
  ("a-textiles.html","Functional Textiles &amp; Smart Wearables","",
   "Weavable, sewable, washable conductive and heating yarns that run on standard textile equipment.",
-  "img/ind-wear.webp"),
+  "img/en-textiles.webp"),
 ]
 
 LINES = [
- ("p-fiber.html","01","Metal Fiber &amp; Yarn","Bundle-drawn stainless steel fiber down to 2&nbsp;µm, supplied as long fiber, chopped fiber, tow, pure-metal and blended yarn.","img/prod-yarn.webp"),
- ("p-felt.html","02","Sintered Felt &amp; Media","KIA3 / KIA3K / KIC4 sintered felts, 10–60&nbsp;µm absolute, 72–86% porosity, cleanable and reusable.","img/sh-felt.webp"),
- ("p-textile.html","03","Technical Textiles &amp; Sleeves","Knitted and braided sleeves, woven fabrics, tapes and ropes rated 350–1100&nbsp;°C.","img/sh-sleeve.webp"),
- ("p-element.html","04","Filter Elements","Pleated cartridges to 30&nbsp;MPa, sintered mesh elements, high-temperature metal filter bags.","img/sh-cartridge.webp"),
+ ("p-fiber.html","01","Metal Fiber &amp; Yarn","Bundle-drawn stainless steel fiber down to 2&nbsp;µm, supplied as long fiber, chopped fiber, tow, pure-metal and blended yarn.","img/en-sh-yarn.webp"),
+ ("p-felt.html","02","Sintered Felt &amp; Media","KIA3 / KIA3K / KIC4 sintered felts, 10–60&nbsp;µm absolute, 72–86% porosity, cleanable and reusable.","img/en-sh-felt.webp"),
+ ("p-textile.html","03","Technical Textiles &amp; Sleeves","Knitted and braided sleeves, woven fabrics, tapes and ropes rated 350–1100&nbsp;°C.","img/en-sh-sleeve.webp"),
+ ("p-element.html","04","Filter Elements","Pleated cartridges to 30&nbsp;MPa, sintered mesh elements, high-temperature metal filter bags.","img/en-sh-element.webp"),
  ("p-equipment.html","05","Oil Recovery Systems","Coalescing oil–water separation for hydrometallurgy — no demulsifiers, largest unit in service 600&nbsp;m³/h.","img/fts-bamo-02.webp"),
 ]
 
@@ -118,7 +118,7 @@ html = head(
         </div>
       </div>
       <figure class="hero-fig rv d2" style="margin:0">
-        <img src="img/sh-felt.webp" alt="Sintered metal fiber felt, rolled" width="1200" height="900">
+        <img src="img/en-hero.webp" alt="Sintered metal fiber felt, rolled" width="1200" height="900">
         <figcaption>Sintered metal fiber felt &mdash; 10&ndash;60&nbsp;µm absolute, 72&ndash;86% porosity, cleanable</figcaption>
       </figure>
     </div>

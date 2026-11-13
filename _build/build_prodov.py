@@ -3,16 +3,16 @@ import sys, os, json
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, footer, w, CTA_BAND, crumb, page_hero, subnav, SUB_PROD, SITE
 
-LINES=[("01","p-fiber.html","Metal Fiber & Yarn","img/prod-yarn.webp",
+LINES=[("01","p-fiber.html","Metal Fiber & Yarn","img/en-sh-yarn.webp",
         "Bundle-drawn stainless steel fiber from 2 µm, in filament, chopped and tow form — and the pure, blended and insulated yarns spun from it.",
         ["2 µm monofilament","0.5–100% steel blends","1–64 Ω/m conductive thread"],"fiber yarn"),
-       ("02","p-felt.html","Sintered Felt & Media","img/sh-felt.webp",
+       ("02","p-felt.html","Sintered Felt & Media","img/en-sh-felt.webp",
         "Graded-pore metal fiber felt, 10–60 µm absolute at 72–86% porosity — depth filtration that can be cleaned and returned to service.",
         ["10–60 µm absolute","72–86% porosity","480 °C service"],"felt media filtration"),
-       ("03","p-textile.html","Technical Textiles & Sleeves","img/sh-sleeve.webp",
+       ("03","p-textile.html","Technical Textiles & Sleeves","img/en-sh-sleeve.webp",
         "Knitted, braided and woven metal fiber: sleeves, cloth, tape and rope rated 350 °C continuous and 1100 °C short term.",
         ["350 °C continuous","Φ5–60 mm sleeves","1500 mm cloth width"],"textile glass"),
-       ("04","p-element.html","Filter Elements","img/sh-cartridge.webp",
+       ("04","p-element.html","Filter Elements","img/en-sh-element.webp",
         "Pleated cartridges, sintered mesh elements and high-temperature filter bags, built in house from our own media.",
         ["5–60 µm rating","30 MPa working pressure","425–1250 mm length"],"element filtration"),
        ("05","p-equipment.html","Oil Recovery Systems","img/fts-bamo-02.webp",
@@ -52,11 +52,11 @@ sc=json.dumps({"@context":"https://schema.org","@type":"ItemList","name":"Produc
 html = head("Products — Metal Fiber, Felt, Textiles, Elements and Systems | QL Metal Fiber",
    "Five product lines built on one material: bundle-drawn metal fiber. Fiber and yarn, sintered felt, technical textiles, filter elements and oil recovery systems.",
    "products.html","metal fiber products, sintered felt, metal fiber sleeve, filter element, oil recovery system",
-   sc,"img/sh-felt.webp") + header("products.html") + crumb([("Products",None)]) + page_hero(
+   sc,"img/en-ph-products.webp") + header("products.html") + crumb([("Products",None)]) + page_hero(
    "", "PRODUCTS", "One material, five product lines",
    "Everything we make starts as bundle-drawn metal fiber. What changes is the form it takes — and the form is chosen from your operating conditions, not from a catalogue page.",
    [("5","lines","From fiber to finished system"),("2","µm","Finest monofilament"),("62","patents","Granted and pending")],
-   "img/sh-felt.webp") + subnav(SUB_PROD,"products.html") + f"""
+   "img/en-ph-products.webp") + subnav(SUB_PROD,"products.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Product lines</div>

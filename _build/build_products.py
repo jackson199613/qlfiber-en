@@ -20,7 +20,7 @@ FELT = [("10KIA3","#10","#0.30","#75","#3700","#110"),("15KIA3","#15","#0.37","#
         ("60KIA3","#60","#0.70","#86","#620","#1200")]
 
 LINES = [
-dict(f="p-fiber.html", idx="01", en="METAL FIBER & YARN", bg="img/prod-yarn.webp",
+dict(f="p-fiber.html", idx="01", en="METAL FIBER & YARN", bg="img/en-sh-yarn.webp",
  h1="Stainless steel drawn down to 2 µm",
  lead="Bundle-drawn metal fiber in long filament, chopped and tow form, and the yarns spun from it — pure metal, blended or insulated. This is the raw material behind every other product line.",
  kpis=[("2","µm","Finest monofilament"),("0.5","–100%","Steel content in blends"),("1","–64 Ω/m","Conductive thread resistance")],
@@ -38,10 +38,10 @@ dict(f="p-fiber.html", idx="01", en="METAL FIBER & YARN", bg="img/prod-yarn.webp
        "Reinforcing fiber for friction materials and high-temperature composites",
        "Feedstock for sintered felt, woven textiles and filter elements"],
  notes="Fiber resistance at room temperature varies with the state of the stainless steel fiber. If your product has a resistance limit, state it at enquiry and we will test samples before qualification.",
- gal=[("img/prod-yarn.webp","Metal fiber yarn on cone"),("img/sh-yarn.webp","Blended yarn"),
-      ("img/micro-drawing.webp","Bundle drawing, schematic"),("img/prod-heatwire.webp","Insulated heating wire")]),
+ gal=[("img/en-sh-yarn.webp","Metal fiber yarn on cone"),("img/en-sh-fiber.webp","Blended yarn"),
+      ("img/en-micro-drawing.webp","Bundle drawing, schematic"),("img/prod-heatwire.webp","Insulated heating wire")]),
 
-dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/sh-felt.webp",
+dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/en-sh-felt.webp",
  h1="Depth filtration you can wash and put back",
  lead="Non-woven metal fiber webs laminated and vacuum-sintered into a graded pore structure — 10 to 60 µm absolute, 72 to 86% porosity, and cleanable rather than disposable.",
  kpis=[("10","–60 µm","Absolute rating"),("72","–86%","Porosity"),("480","°C","Service temperature")],
@@ -60,10 +60,10 @@ dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/sh-felt.webp
         FELT,
         "Typical values for reference. Final values are confirmed on the factory inspection report for each lot. Bubble point reflects the largest pore and rises as the rating gets finer; air permeability moves in the opposite direction, which is the trade-off to balance at selection."),
  notes="Thickened KIA3K media (1.1 mm) raises dirt-holding capacity and flow at the same rating — useful when the rating is fixed but differential pressure is rising too quickly.",
- gal=[("img/sh-felt.webp","Sintered metal fiber felt"),("img/micro-gradient.webp","Graded pore structure"),
-      ("img/micro-network.webp","Fiber network, micrograph"),("img/media-05.webp","Media and discs")]),
+ gal=[("img/en-sh-felt.webp","Sintered metal fiber felt"),("img/en-micro-gradient.webp","Graded pore structure"),
+      ("img/en-micro-network.webp","Fiber network, micrograph"),("img/media-05.webp","Media and discs")]),
 
-dict(f="p-textile.html", idx="03", en="TECHNICAL TEXTILES & SLEEVES", bg="img/sh-sleeve.webp",
+dict(f="p-textile.html", idx="03", en="TECHNICAL TEXTILES & SLEEVES", bg="img/en-sh-sleeve.webp",
  h1="Woven, knitted and braided metal — for heat that destroys fabric",
  lead="Elastic knitted sleeves, braided sleeves, woven cloth, tape and rope made from 316L metal fiber, rated 350 °C continuous and 1100 °C short term, with no coating to shed.",
  kpis=[("350","°C","Continuous service"),("1100","°C","Short-term peak"),("1500","mm","Maximum standard width")],
@@ -81,10 +81,10 @@ dict(f="p-textile.html", idx="03", en="TECHNICAL TEXTILES & SLEEVES", bg="img/sh
        "Hot bending mould covers for automotive glass","Thermocouple and cable sleeving",
        "Suction cup and clamp cushioning, container pusher bars","Equipment earthing and static elimination"],
  notes="Sharp cut edges and heavily abrasive duty still benefit from edge treatment — tell us the installation and we will advise whether the ends should be finished.",
- gal=[("img/sh-sleeve.webp","Braided metal fiber sleeve"),("img/sh-belt.webp","Metal fiber woven tape"),
-      ("img/yarn-fabric.webp","Metal fiber woven cloth"),("img/sleeve-04.webp","Sleeved rollers in service")]),
+ gal=[("img/en-sh-sleeve.webp","Braided metal fiber sleeve"),("img/sh-belt.webp","Metal fiber woven tape"),
+      ("img/en-sh-cloth.webp","Metal fiber woven cloth"),("img/sleeve-04.webp","Sleeved rollers in service")]),
 
-dict(f="p-element.html", idx="04", en="FILTER ELEMENTS", bg="img/sh-cartridge.webp",
+dict(f="p-element.html", idx="04", en="FILTER ELEMENTS", bg="img/en-sh-element.webp",
  h1="Elements built from the media up",
  lead="Pleated cartridges, sintered mesh elements and high-temperature metal filter bags — made in house from our own media, so the rating, the structure and the end fittings are all specified together.",
  kpis=[("30","MPa","Maximum working pressure"),("1250","mm","Maximum element length"),("1000","°C","Bag filter rating")],
@@ -99,7 +99,7 @@ dict(f="p-element.html", idx="04", en="FILTER ELEMENTS", bg="img/sh-cartridge.we
        "High-pressure hydraulic and fuel filtration","High-temperature gas and dust filtration",
        "Vacuum pump protection and pre-filtration"],
  notes="A typical configuration: 316L sintered felt at 10 µm and 0.4 mm thick, inner support mesh 304 at 0.125 mm wire and 48 mesh, outer protective mesh 304 at 0.224 mm wire and 40 mesh. Dimensions and fittings are made to your housing.",
- gal=[("img/sh-cartridge.webp","Pleated metal fiber cartridge"),("img/cart-04.webp","Cartridges in production"),
+ gal=[("img/en-sh-element.webp","Pleated metal fiber cartridge"),("img/cart-04.webp","Cartridges in production"),
       ("img/media-01.webp","Sintered media discs"),("img/media-02.webp","Sintered mesh and discs")]),
 
 dict(f="p-equipment.html", idx="05", en="OIL RECOVERY SYSTEMS", bg="img/fts-bamo-02.webp",
@@ -128,7 +128,7 @@ dict(f="p-equipment.html", idx="05", en="OIL RECOVERY SYSTEMS", bg="img/fts-bamo
         "Dissolved oil content in extraction liquor is generally 5–40 ppm depending on the extractant and mixing regime, and still requires deep treatment. Recovering the non-dissolved fraction first is what reduces that downstream load."),
  notes="Systems can be trialled on your own liquor before a proposal is issued. Customer names in China are not published without written consent; our installed base includes leading nickel-cobalt hydrometallurgy producers.",
  gal=[("img/fts-bamo-02.webp","Trough-type system, 160 m³/h"),("img/fts-huayou-02.webp","600 m³/h system"),
-      ("img/fts-site-05.webp","Extraction plant installation"),("img/micro-coalesce.webp","Coalescence, schematic")]),
+      ("img/fts-site-05.webp","Extraction plant installation"),("img/en-micro-coalesce.webp","Coalescence, schematic")]),
 ]
 
 for L in LINES:

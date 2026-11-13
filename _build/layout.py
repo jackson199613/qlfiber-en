@@ -59,7 +59,7 @@ def _title(t, n=62):
     return _clip(t, n)
 
 
-def head(title, desc, canonical, keywords="", schema=None, og="img/hero-main.webp", extra_css=""):
+def head(title, desc, canonical, keywords="", schema=None, og="img/en-hero.webp", extra_css=""):
     title = _title(title)
     desc = _clip(desc, 158)
     sc = f'\n<script type="application/ld+json">{schema}</script>' if schema else ""
