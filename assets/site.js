@@ -70,4 +70,17 @@
       });
     });
   });
+
+  // 产品详情：缩略图切换主图
+  var pdMain = d.querySelector('.pd-main img');
+  if (pdMain) {
+    d.querySelectorAll('.pd-thumbs img').forEach(function (th) {
+      th.addEventListener('click', function () {
+        var s0 = pdMain.getAttribute('src'), a0 = pdMain.getAttribute('alt');
+        pdMain.setAttribute('src', th.getAttribute('src'));
+        pdMain.setAttribute('alt', th.getAttribute('alt'));
+        th.setAttribute('src', s0); th.setAttribute('alt', a0);
+      });
+    });
+  }
 })();

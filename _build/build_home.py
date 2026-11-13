@@ -110,7 +110,7 @@ html = head(
     <div class="hero-grid">
       <div>
         <div class="eyebrow rv">Metal fiber, end to end</div>
-        <h1 class="h-xl rv d1">When heat, chemistry or current destroys the material you use now, <mark>metal fiber holds.</mark></h1>
+        <h1 class="h-xl rv d1">When heat, chemistry or current <em>destroys</em> the material you use now, <mark>metal fiber holds.</mark></h1>
         <p class="lead rv d2">We draw stainless steel down to 2&nbsp;µm and build it into yarns, technical textiles, sintered media, filter elements and separation equipment — in our own plants, to your operating conditions.</p>
         <div class="hero-cta rv d3">
           <a class="btn btn-pri" href="applications.html">Find your application<svg><use href="#i-arrow"/></svg></a>

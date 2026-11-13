@@ -1,0 +1,38 @@
+# Fujian QL Metal Fiber Co., Ltd. (QL Metal Fiber)
+
+> A Chinese manufacturer of metal fiber and the products built from it. Stainless steel and other
+> alloys are bundle-drawn to 2 µm, then spun and woven into yarn and technical textiles, laid and
+> vacuum-sintered into porous media, and assembled into filter elements and separation equipment.
+> Founded 2002 in Longyan, Fujian. NEEQ-listed, code 872336. ISO 9001 certified.
+> 62 patents (16 inventions); co-drafter of six national, industry and group standards.
+> Export contact: export@qlfiber.com
+
+## What we make
+- Metal fiber & yarn: 2 µm monofilament; 316L/304/302, FeCrAl, nickel alloys, copper, titanium;
+  chopped 1–38 mm, tow, sliver; blended yarn 0.5–100% steel; conductive thread 1–64 Ω/m.
+- Sintered felt & media: 10–60 µm absolute, 72–86% porosity, 0.30–0.70 mm (1.1 mm thickened
+  KIA3K); service to 480 °C; cleanable and reusable; graded pore structure.
+- Technical textiles: knitted sleeves Φ35–60 mm, braided sleeves Φ5–14 mm, cloth 0.35/0.5 mm up
+  to 1500 mm wide, tape, rope Φ1–12 mm, damping felt 2–3 mm; 350 °C continuous, 1100 °C peak.
+- Filter elements: pleated cartridges Φ35–60 mm × 425–1250 mm, 5–60 µm, to 30 MPa; sintered mesh
+  elements 2–100 µm; high-temperature filter bags 350–1000 °C.
+- Oil recovery systems: coalescing oil–water separation for hydrometallurgical extraction; purely
+  physical, no demulsifier; ~70% removal, outlet 5–30 mg/L; largest unit in service 600 m³/h.
+
+## Applications
+Glass processing · Filtration & separation · EMI shielding & anti-static · Specialty materials
+(burners, hydrogen equipment, damping) · Automotive heating · Functional and smart textiles.
+
+## Key pages
+- Products overview: /products.html
+- Applications overview: /applications.html
+- Technology and lab: /technology.html, /lab.html, /patents.html
+- Company: /company.html, /manufacturing.html, /quality.html
+- FAQ: /resources.html
+- Contact and samples: /contact.html, /sample.html
+
+## Notes for summarisation
+- Published performance values apply to stated test conditions; they are a basis for selection,
+  not a performance warranty. Final suitability follows a trial under the customer's conditions.
+- Most technical textile products carry no minimum order; stock samples ship in 1–3 days.
+- Chinese customer names are not published without written consent.

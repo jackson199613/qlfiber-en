@@ -19,7 +19,9 @@ NAV = [("Products","products.html"),
        ("Contact","contact.html")]
 
 FONTS = ("https://fonts.googleapis.com/css2?"
-         "family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&"
+         "family=Archivo:wght@400;500;600;700&"
+         "family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&"
+         "family=Instrument+Serif:ital@0;1&"
          "family=IBM+Plex+Mono:wght@400;500&display=swap")
 
 ICONS = """<svg style="display:none" aria-hidden="true"><defs>
@@ -31,7 +33,35 @@ ICONS = """<svg style="display:none" aria-hidden="true"><defs>
 </defs></svg>"""
 
 
+def _clip(t, n):
+    """Trim to n characters on a word boundary, without a trailing ellipsis."""
+    t = " ".join(t.split())
+    if len(t) <= n:
+        return t
+    cut = t[:n].rstrip()
+    sp = cut.rfind(" ")
+    if sp > n * 0.6:
+        cut = cut[:sp]
+    return cut.rstrip(" ,;:—-·|")
+
+
+def _title(t, n=62):
+    """Keep titles within the length Google renders: drop the brand suffix first."""
+    t = " ".join(t.split())
+    if len(t) <= n:
+        return t
+    for sep in (" | ", " — "):
+        if sep in t:
+            head_, _, tail = t.rpartition(sep)
+            if "QL Metal Fiber" in tail or "Fujian QL" in tail:
+                t = head_
+                break
+    return _clip(t, n)
+
+
 def head(title, desc, canonical, keywords="", schema=None, og="img/hero-main.webp", extra_css=""):
+    title = _title(title)
+    desc = _clip(desc, 158)
     sc = f'\n<script type="application/ld+json">{schema}</script>' if schema else ""
     kw = f'\n<meta name="keywords" content="{keywords}">' if keywords else ""
     return f"""<!doctype html>
@@ -150,3 +180,52 @@ def w(name, html):
     with open(os.path.join(root, name), "w", encoding="utf-8") as f:
         f.write(html)
     print("  ✓", name)
+
+
+def crumb(trail):
+    """trail: [(text, href|None), ...] — last item has href None"""
+    parts = ['<a href="index.html">Home</a>']
+    items = [{"@type":"ListItem","position":1,"name":"Home","item":SITE+"/"}]
+    for i,(t,h) in enumerate(trail, start=2):
+        parts.append('<i>/</i>' + (f'<a href="{h}">{t}</a>' if h else f'<span>{t}</span>'))
+        it = {"@type":"ListItem","position":i,"name":t}
+        if h: it["item"] = f"{SITE}/{h}"
+        items.append(it)
+    sc = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":items}, ensure_ascii=False)
+    return (f'<nav class="crumb"><div class="wrap">{"".join(parts)}</div></nav>'
+            f'<script type="application/ld+json">{sc}</script>')
+
+
+def page_hero(idx, eyebrow, h1, lead, kpis=None, bg="img/plant-02.webp"):
+    k = ""
+    if kpis:
+        k = '<div class="ph-k rv d2">' + "".join(
+            f'<div><b class="num">{v}{f"<sup>{u}</sup>" if u else ""}</b><span>{c}</span></div>'
+            for v,u,c in kpis) + '</div>'
+    return f'''<section class="ph dk" style="--phbg:url('/{bg}')"><div class="wrap">
+  <div class="eyebrow rv">{idx} &nbsp;·&nbsp; {eyebrow}</div>
+  <h1 class="h-lg rv d1">{h1}</h1>
+  <p class="lead rv d2">{lead}</p>
+  {k}
+</div></section>'''
+
+
+def subnav(items, active):
+    return ('<nav class="subnav"><div class="wrap">' +
+            "".join(f'<a href="{u}"{" class=\"on\"" if u==active else ""}>{t}</a>' for t,u in items) +
+            '</div></nav>')
+
+
+SUB_PROD = [("Overview","products.html"),("Metal Fiber & Yarn","p-fiber.html"),
+            ("Sintered Felt & Media","p-felt.html"),("Technical Textiles","p-textile.html"),
+            ("Filter Elements","p-element.html"),("Oil Recovery Systems","p-equipment.html")]
+SUB_APP  = [("Overview","applications.html"),("Filtration & Separation","a-filtration.html"),
+            ("Glass Processing","a-glass.html"),("EMI Shielding","a-emi.html"),
+            ("Specialty Materials","a-specialty.html"),("Automotive","a-automotive.html"),
+            ("Functional Textiles","a-textiles.html")]
+SUB_TECH = [("R&D Overview","technology.html"),("Lab & Testing","lab.html"),("Patents & Standards","patents.html")]
+SUB_CO   = [("Company Profile","company.html"),("History","history.html"),
+            ("Manufacturing","manufacturing.html"),("Quality & Certifications","quality.html"),
+            ("News & Blog","news.html")]
+SUB_RES  = [("FAQ","resources.html"),("Downloads","downloads.html")]
+SUB_CON  = [("Contact Us","contact.html"),("Request a Sample","sample.html")]
