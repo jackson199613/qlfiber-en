@@ -120,7 +120,7 @@ def header(active=""):
 """
 
 
-CTA_BAND = """<section class="band"><div class="wrap">
+CTA_BAND = """<section class="band dk"><div class="wrap">
   <div class="eyebrow rv">Tell us your conditions</div>
   <h2 class="h-lg rv d1" style="margin:18px 0 16px;max-width:20ch">Send us your operating conditions, and we will send samples.</h2>
   <p class="lead rv d2">Temperature, medium, pressure, filtration rating, resistance or porosity — give us the numbers you work with and our engineers will recommend a configuration, quote it and arrange samples for your own testing.</p>

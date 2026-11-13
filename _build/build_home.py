@@ -118,7 +118,8 @@ html = head(
         </div>
       </div>
       <figure class="hero-fig rv d2" style="margin:0">
-        <img src="img/film-poster.webp" alt="Metal fiber web being formed on the production line" width="1200" height="675">
+        <img src="img/sh-felt.webp" alt="Sintered metal fiber felt, rolled" width="1200" height="900">
+        <figcaption>Sintered metal fiber felt &mdash; 10&ndash;60&nbsp;µm absolute, 72&ndash;86% porosity, cleanable</figcaption>
       </figure>
     </div>
 
