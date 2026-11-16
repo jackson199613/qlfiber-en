@@ -7,7 +7,7 @@ COMPANY = "Fujian QL Metal Fiber Co., Ltd."
 BRAND  = "QL Metal Fiber"
 TEL    = "+86 181 5982 1773"
 TEL_RAW= "+8618159821773"
-MAIL   = "export@qlfiber.com"
+MAIL   = "qianglun2026@gmail.com"
 ADDR   = "No. 11 Huangbang Road, Longyan Economic & Technological Development Zone, Longyan, Fujian, China"
 CN_SITE= "https://www.qlfiber.com/"
 

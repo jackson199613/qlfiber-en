@@ -22,7 +22,7 @@ ORG = json.dumps({"@context":"https://schema.org","@type":"Organization","name":
   "url":SITE+"/","logo":f"{SITE}/img/logo.png","foundingDate":"2002",
   "address":{"@type":"PostalAddress","streetAddress":"No. 11 Huangbang Road, Longyan Economic & Technological Development Zone",
              "addressLocality":"Longyan","addressRegion":"Fujian","addressCountry":"CN"},
-  "email":"export@qlfiber.com","telephone":"+86 181 5982 1773"}, ensure_ascii=False)
+  "email":"qianglun2026@gmail.com","telephone":"+86 181 5982 1773"}, ensure_ascii=False)
 
 html = head(f"Company Profile — {COMPANY}",
   "Founded in 2002 in Longyan, Fujian. A NEEQ-listed metal fiber manufacturer covering fiber drawing, yarn and textiles, sintered media, filter elements and separation equipment.",
@@ -57,7 +57,7 @@ html = head(f"Company Profile — {COMPANY}",
         ("Core material","Bundle-drawn metal fiber, 2 µm and up"),
         ("Alloys","316L, 304, 302, FeCrAl, nickel-based alloys, Hastelloy, Monel, copper, titanium"),
         ("Export markets","Europe, India, Southeast Asia, Türkiye and the Middle East, Japan and Korea, the Americas"),
-        ("Contact","export@qlfiber.com"),
+        ("Contact","qianglun2026@gmail.com"),
       ])}
       <div class="note" style="margin-top:26px">We supply direct from the factory and through distributors. Most technical textile products carry no minimum order, so a first trial can be a single length.</div>
     </div>
