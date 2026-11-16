@@ -48,6 +48,8 @@
   </a>
   <nav class="menu" id="menu"><a href="products.html">Products</a><a href="applications.html">Applications</a><a href="technology.html">Technology</a><a href="resources.html">Resources</a><a href="company.html">Company</a><a href="contact.html" class="on">Contact</a></nav>
   <div class="nav-r">
+    <a class="icon-btn" href="search.html" aria-label="Search this site" title="Search">
+      <svg class="i"><use href="#i-search"/></svg></a>
     <a class="btn btn-line" href="contact.html">Contact</a>
     <a class="btn btn-pri" href="sample.html">Request a sample<svg><use href="#i-arrow"/></svg></a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span></button>
@@ -62,7 +64,8 @@
 <main>
 <section class="sec"><div class="wrap">
   <div class="form-wrap">
-    <form class="form rv" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+    <form class="form rv" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          enctype="multipart/form-data" action="thanks.html">
       <input type="hidden" name="form-name" value="enquiry">
       <p hidden><label>Do not fill this in: <input name="bot-field"></label></p>
       <div class="fgrid">
@@ -73,6 +76,15 @@
         <div class="f"><label for="role">Your role</label><select name="role" id="role"><option value=""></option><option value="Engineering">Engineering</option><option value="Purchasing">Purchasing</option><option value="Quality">Quality</option><option value="R&D">R&D</option><option value="Management">Management</option><option value="Distribution">Distribution</option><option value="Other">Other</option></select></div>
         <div class="f"><label for="product">Product area</label><select name="product" id="product"><option value=""></option><option value="Metal fiber & yarn">Metal fiber & yarn</option><option value="Sintered felt & media">Sintered felt & media</option><option value="Technical textiles & sleeves">Technical textiles & sleeves</option><option value="Filter elements">Filter elements</option><option value="Oil recovery systems">Oil recovery systems</option><option value="Not sure yet">Not sure yet</option></select></div>
         <div class="f full"><label for="message">What do you need<i>*</i></label><textarea name="message" id="message" rows="7" placeholder="Medium and chemistry, temperature in service and at peak, pressure and differential pressure, flow, particle size and load, cleaning regime, dimensions or a drawing, and what you use now." required></textarea></div>
+        <div class="f full">
+          <label for="attachment">Drawing or specification <span class="opt">optional</span></label>
+          <div class="fileb">
+            <input type="file" name="attachment" id="attachment"
+                   accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.iges,.doc,.docx,.xls,.xlsx,.csv,.txt,.png,.jpg,.jpeg,.webp,.zip">
+            <span class="fileb-ui"><svg class="i"><use href="#i-arrow"/></svg><b>Choose a file</b>
+              <em>PDF, DWG, STEP, Office, image or ZIP · up to 8 MB</em></span>
+          </div>
+        </div>
       </div>
       <div class="fconsent"><label><input type="checkbox" name="consent" required> I agree that my details may be used to answer this enquiry, as described in the <a href="privacy.html">privacy policy</a>.</label></div>
       <button class="btn btn-pri" type="submit">Send enquiry<svg><use href="#i-arrow"/></svg></button>
@@ -88,6 +100,26 @@
   <p><a href="products.html">Product lines</a><br><a href="applications.html">Applications</a><br>
      <a href="downloads.html">Downloads</a><br><a href="https://www.qlfiber.com/" rel="noopener">Chinese website</a></p>
 </aside>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Where we are</div>
+    <h2 class="h-lg rv d1" style="margin-top:14px">Head office and plant</h2></div>
+  <div class="mapwrap rv">
+    <iframe title="QL Metal Fiber location, Longyan, Fujian, China" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+      src="https://www.google.com/maps?q=No.%2011%20Huangbang%20Road%2C%20Longyan%20Economic%20%26%20Technological%20Development%20Zone%2C%20Longyan%2C%20Fujian%2C%20China&amp;z=12&amp;output=embed"></iframe>
+    <div class="mapcard">
+      <div class="eyebrow">Factory visit</div>
+      <h4>Fujian QL Metal Fiber Co., Ltd.</h4>
+      <p>No. 11 Huangbang Road, Longyan Economic & Technological Development Zone, Longyan, Fujian, China</p>
+      <p class="small">Nearest airport: Longyan Guanzhishan (LCX). Xiamen Gaoqi (XMN) is about three hours by road or high-speed rail, and is the usual route for overseas visitors.</p>
+      <div class="cta-row" style="margin-top:20px">
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=No.%2011%20Huangbang%20Road%2C%20Longyan%20Economic%20%26%20Technological%20Development%20Zone%2C%20Longyan%2C%20Fujian%2C%20China" target="_blank" rel="noopener">Open in Google Maps<svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <p class="small" style="margin-top:18px">Tell us when you plan to travel and we will arrange the plant tour and have the engineers for your product line available.</p>
+    </div>
   </div>
 </div></section>
 

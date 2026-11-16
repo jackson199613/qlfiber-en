@@ -503,3 +503,44 @@ a.row-i:hover h4{color:var(--muted)}
 /* ---------- 首页主视觉图注 ---------- */
 .hero-fig figcaption{margin-top:13px;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
   text-transform:uppercase;color:var(--muted-d);line-height:1.6}
+
+/* ---------- 页头搜索入口 ---------- */
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border:1px solid var(--line);border-radius:50%;color:var(--ink);background:var(--white);
+  transition:border-color .25s,background .25s,color .25s;flex:none}
+.icon-btn .i{width:17px;height:17px}
+.icon-btn:hover{border-color:var(--ink);background:var(--ink);color:#fff}
+@media(max-width:860px){.icon-btn{width:38px;height:38px}}
+
+/* ---------- 联系页地图 ---------- */
+.mapwrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:0;
+  border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--white)}
+.mapwrap iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.22)}
+.mapcard{padding:38px 36px 40px;border-left:1px solid var(--line)}
+.mapcard h4{font-family:var(--display);font-size:20px;margin:14px 0 10px;letter-spacing:-.018em}
+.mapcard p{font-size:14.8px;line-height:1.72;color:var(--muted)}
+.mapcard .small{font-size:13.2px;color:var(--muted-2);line-height:1.68;margin-top:14px}
+@media(max-width:900px){.mapwrap{grid-template-columns:1fr}
+  .mapwrap iframe{min-height:300px}
+  .mapcard{border-left:0;border-top:1px solid var(--line);padding:30px 24px 34px}}
+
+/* ---------- 附件上传 ---------- */
+.f .opt{font-family:var(--sans);font-size:11.5px;letter-spacing:0;text-transform:none;
+  color:var(--muted-2);margin-left:7px}
+.fileb{position:relative}
+.fileb input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.fileb-ui{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  border:1px dashed var(--line);border-radius:var(--r);background:var(--paper);
+  padding:16px 18px;transition:border-color .25s,background .25s}
+.fileb:hover .fileb-ui,.fileb input:focus + .fileb-ui{border-color:var(--ink);background:var(--white)}
+.fileb-ui .i{width:15px;height:15px;color:var(--muted-2);transform:rotate(-90deg);flex:none}
+.fileb-ui b{font-size:14.4px;font-weight:560}
+.fileb-ui em{font-style:normal;font-size:12.4px;color:var(--muted-2);flex:1 1 100%}
+.fileb.has .fileb-ui{border-style:solid;border-color:var(--gold-2);background:#fffdf2}
+
+/* ---------- 表单提交反馈 ---------- */
+.fmsg{font-size:13.6px;line-height:1.7;margin-top:16px;padding:14px 16px;border-radius:var(--r);
+  border:1px solid var(--line);background:var(--paper);color:var(--muted);max-width:62ch}
+.fmsg.warn{border-color:var(--gold-2);background:#fffdf2;color:var(--ink-3)}
+.fmsg a{border-bottom:1px solid var(--gold-2);color:var(--ink)}
+.form button[disabled]{opacity:.55;pointer-events:none}

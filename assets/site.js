@@ -63,10 +63,14 @@
       btn.addEventListener('click', function () {
         bar.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); });
         btn.classList.add('on');
-        var k = btn.getAttribute('data-k');
+        var k = btn.getAttribute('data-k'), shown = 0;
         items.forEach(function (it) {
-          it.style.display = (!k || k === 'all' || (it.getAttribute('data-tag') || '').indexOf(k) > -1) ? '' : 'none';
+          var hit = !k || k === 'all' || (it.getAttribute('data-tag') || '').indexOf(k) > -1;
+          it.style.display = hit ? '' : 'none';
+          if (hit) shown++;
         });
+        var none = d.getElementById('nofilter');
+        if (none) none.hidden = shown > 0;
       });
     });
   });
@@ -83,4 +87,83 @@
       });
     });
   }
+
+  /* ---------- 表单提交：Netlify Forms + 邮件兜底 ----------
+     若站点未启用表单识别，提交会返回 404/405。此时不静默失败，
+     改为打开预填好的邮件草稿，保证询盘不会丢。 */
+  var MAIL_TO = 'export@qlfiber.com';
+  var MAX_FILE = 8 * 1024 * 1024;
+
+  d.querySelectorAll('.fileb input[type=file]').forEach(function (inp) {
+    inp.addEventListener('change', function () {
+      var box = inp.closest('.fileb'), ui = box.querySelector('.fileb-ui b'),
+          sub = box.querySelector('.fileb-ui em'), f = inp.files && inp.files[0];
+      if (!f) { box.classList.remove('has'); ui.textContent = 'Choose a file';
+        sub.textContent = 'PDF, DWG, STEP, Office, image or ZIP · up to 8 MB'; return; }
+      if (f.size > MAX_FILE) {
+        inp.value = ''; box.classList.remove('has');
+        ui.textContent = 'File too large';
+        sub.textContent = 'That file is over 8 MB. Send it to ' + MAIL_TO + ' instead and we will match it to your enquiry.';
+        return;
+      }
+      box.classList.add('has');
+      ui.textContent = f.name;
+      sub.textContent = Math.max(1, Math.round(f.size / 1024)) + ' KB · attached to this enquiry';
+    });
+  });
+
+  function mailtoFallback(form) {
+    var fd = new FormData(form), lines = [], file = null;
+    var labels = {};
+    form.querySelectorAll('label[for]').forEach(function (l) {
+      labels[l.getAttribute('for')] = l.childNodes[0].textContent.trim();
+    });
+    fd.forEach(function (v, k) {
+      if (v instanceof File) { if (v.name) file = v.name; return; }
+      if (k === 'form-name' || k === 'bot-field' || k === 'consent' || !String(v).trim()) return;
+      lines.push((labels[k] || k) + ': ' + v);
+    });
+    if (file) lines.push('Attachment: ' + file + ' (please attach it to this email)');
+    var subject = (form.getAttribute('name') === 'sample'
+      ? 'Sample request from ' : 'Enquiry from ') + (fd.get('company') || fd.get('name') || 'the website');
+    return 'mailto:' + MAIL_TO + '?subject=' + encodeURIComponent(subject)
+         + '&body=' + encodeURIComponent(lines.join('\n'));
+  }
+
+  function notice(form, html, kind) {
+    var el = form.querySelector('.fmsg');
+    if (!el) { el = d.createElement('p'); el.className = 'fmsg'; 
+      form.querySelector('.fnote').before(el); }
+    el.className = 'fmsg ' + (kind || '');
+    el.innerHTML = html;
+  }
+
+  d.querySelectorAll('form[data-netlify]').forEach(function (form) {
+    form.addEventListener('submit', function (ev) {
+      if (!form.checkValidity()) return;          // 交给浏览器原生校验
+      ev.preventDefault();
+      var btn = form.querySelector('button[type=submit]');
+      var label = btn ? btn.innerHTML : '';
+      if (btn) { btn.disabled = true; btn.innerHTML = 'Sending…'; }
+
+      var fd = new FormData(form);
+      fd.set('form-name', form.getAttribute('name'));
+
+      fetch('/', { method: 'POST', body: fd })
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          window.location.href = form.getAttribute('action') || 'thanks.html';
+        })
+        .catch(function () {
+          if (btn) { btn.disabled = false; btn.innerHTML = label; }
+          var href = mailtoFallback(form);
+          notice(form,
+            'We could not send this from the page just now. Your email program should open with '
+            + 'the details already filled in &mdash; please press send, or write to '
+            + '<a href="mailto:' + MAIL_TO + '">' + MAIL_TO + '</a> directly. '
+            + 'Nothing you typed has been lost.', 'warn');
+          window.location.href = href;
+        });
+    });
+  });
 })();

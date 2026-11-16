@@ -48,6 +48,8 @@
   </a>
   <nav class="menu" id="menu"><a href="products.html">Products</a><a href="applications.html">Applications</a><a href="technology.html">Technology</a><a href="resources.html">Resources</a><a href="company.html">Company</a><a href="contact.html" class="on">Contact</a></nav>
   <div class="nav-r">
+    <a class="icon-btn" href="search.html" aria-label="Search this site" title="Search">
+      <svg class="i"><use href="#i-search"/></svg></a>
     <a class="btn btn-line" href="contact.html">Contact</a>
     <a class="btn btn-pri" href="sample.html">Request a sample<svg><use href="#i-arrow"/></svg></a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span></button>
@@ -62,7 +64,8 @@
 <main>
 <section class="sec"><div class="wrap">
   <div class="form-wrap">
-    <form class="form rv" name="sample" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+    <form class="form rv" name="sample" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          enctype="multipart/form-data" action="thanks.html">
       <input type="hidden" name="form-name" value="sample">
       <p hidden><label>Do not fill this in: <input name="bot-field"></label></p>
       <div class="fgrid">
@@ -74,6 +77,15 @@
         <div class="f"><label for="spec">Grade or size, if known</label><input type="text" name="spec" id="spec" placeholder="e.g. 20KIA3, Φ50 mm sleeve, 10 µm cartridge"></div>
         <div class="f full"><label for="conditions">Operating conditions<i>*</i></label><textarea name="conditions" id="conditions" rows="5" placeholder="Medium, temperature in service and at peak, pressure and differential pressure, flow, particle size and load, cleaning regime." required></textarea></div>
         <div class="f full"><label for="address">Shipping address<i>*</i></label><textarea name="address" id="address" rows="3" placeholder="Company, street, city, postcode, country — and a contact phone number for the courier." required></textarea></div>
+        <div class="f full">
+          <label for="attachment">Drawing or specification <span class="opt">optional</span></label>
+          <div class="fileb">
+            <input type="file" name="attachment" id="attachment"
+                   accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.iges,.doc,.docx,.xls,.xlsx,.csv,.txt,.png,.jpg,.jpeg,.webp,.zip">
+            <span class="fileb-ui"><svg class="i"><use href="#i-arrow"/></svg><b>Choose a file</b>
+              <em>PDF, DWG, STEP, Office, image or ZIP · up to 8 MB</em></span>
+          </div>
+        </div>
       </div>
       <div class="fconsent"><label><input type="checkbox" name="consent" required> I agree that my details may be used to process this sample request, as described in the <a href="privacy.html">privacy policy</a>.</label></div>
       <button class="btn btn-pri" type="submit">Request sample<svg><use href="#i-arrow"/></svg></button>

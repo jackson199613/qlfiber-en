@@ -112,6 +112,8 @@ def header(active=""):
   </a>
   <nav class="menu" id="menu">{links}</nav>
   <div class="nav-r">
+    <a class="icon-btn" href="search.html" aria-label="Search this site" title="Search">
+      <svg class="i"><use href="#i-search"/></svg></a>
     <a class="btn btn-line" href="contact.html">Contact</a>
     <a class="btn btn-pri" href="sample.html">Request a sample<svg><use href="#i-arrow"/></svg></a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span></button>

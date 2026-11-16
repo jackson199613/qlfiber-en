@@ -33,7 +33,7 @@ def dot(v):
     lab={"●":"Core property","○":"Available on request","—":"Not a primary use"}[v]
     return f'<td><span class="{cls}" title="{lab}" aria-label="{lab}"></span></td>'
 
-cards="".join(f'''<a class="line rv" href="{f}">
+cards="".join(f'''<a class="line rv" href="{f}" data-tag="{tag}">
   <div class="im"><img src="{img}" alt="{name}" loading="lazy" width="600" height="400"></div>
   <div class="bd"><span class="n">{idx}</span><h3>{name}</h3><p>{lead}</p>
     <ul class="kpis">{"".join(f"<li>{k}</li>" for k in kpi)}</ul>
@@ -62,7 +62,16 @@ html = head("Products — Metal Fiber, Felt, Textiles, Elements and Systems | QL
   <div class="sec-h"><div class="eyebrow rv">Product lines</div>
     <h2 class="h-lg rv d1" style="margin-top:14px">Choose by form, or tell us the <em>duty</em></h2>
     <p class="lead rv d2" style="margin-top:16px">If you already know the form you need, start here. If you know only the temperature, the medium and the pressure, go to Applications — we will work back from the conditions.</p></div>
+  <div class="pills rv" data-filter=".line" style="margin-bottom:30px">
+    <button class="on" data-k="all">All product lines</button>
+    <button data-k="filtration">Filtration</button>
+    <button data-k="textile">Textiles</button>
+    <button data-k="fiber">Fiber &amp; yarn</button>
+    <button data-k="element">Elements</button>
+    <button data-k="equipment">Equipment</button>
+  </div>
   <div class="lines">{cards}</div>
+  <p class="tnote" id="nofilter" hidden>No product line matches that filter. <a class="tlink" href="contact.html">Ask an engineer</a> and we will work back from your conditions.</p>
 </div></section>
 
 <section class="sec alt"><div class="wrap">

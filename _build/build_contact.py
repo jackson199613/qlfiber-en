@@ -50,7 +50,8 @@ html = head(f"Contact — Talk to an Engineer | {COMPANY}",
 <main>
 <section class="sec"><div class="wrap">
   <div class="form-wrap">
-    <form class="form rv" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+    <form class="form rv" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          enctype="multipart/form-data" action="thanks.html">
       <input type="hidden" name="form-name" value="enquiry">
       <p hidden><label>Do not fill this in: <input name="bot-field"></label></p>
       <div class="fgrid">
@@ -61,12 +62,41 @@ html = head(f"Contact — Talk to an Engineer | {COMPANY}",
         {field("role","Your role",req=False,half=True,opts=["","Engineering","Purchasing","Quality","R&D","Management","Distribution","Other"])}
         {field("product","Product area",req=False,half=True,opts=["","Metal fiber & yarn","Sintered felt & media","Technical textiles & sleeves","Filter elements","Oil recovery systems","Not sure yet"])}
         {field("message","What do you need",req=True,rows_=7,ph="Medium and chemistry, temperature in service and at peak, pressure and differential pressure, flow, particle size and load, cleaning regime, dimensions or a drawing, and what you use now.")}
+        <div class="f full">
+          <label for="attachment">Drawing or specification <span class="opt">optional</span></label>
+          <div class="fileb">
+            <input type="file" name="attachment" id="attachment"
+                   accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.iges,.doc,.docx,.xls,.xlsx,.csv,.txt,.png,.jpg,.jpeg,.webp,.zip">
+            <span class="fileb-ui"><svg class="i"><use href="#i-arrow"/></svg><b>Choose a file</b>
+              <em>PDF, DWG, STEP, Office, image or ZIP · up to 8 MB</em></span>
+          </div>
+        </div>
       </div>
       <div class="fconsent"><label><input type="checkbox" name="consent" required> I agree that my details may be used to answer this enquiry, as described in the <a href="privacy.html">privacy policy</a>.</label></div>
       <button class="btn btn-pri" type="submit">Send enquiry<svg><use href="#i-arrow"/></svg></button>
       {FORM_NOTE}
     </form>
     {ASIDE}
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Where we are</div>
+    <h2 class="h-lg rv d1" style="margin-top:14px">Head office and plant</h2></div>
+  <div class="mapwrap rv">
+    <iframe title="QL Metal Fiber location, Longyan, Fujian, China" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+      src="https://www.google.com/maps?q=No.%2011%20Huangbang%20Road%2C%20Longyan%20Economic%20%26%20Technological%20Development%20Zone%2C%20Longyan%2C%20Fujian%2C%20China&amp;z=12&amp;output=embed"></iframe>
+    <div class="mapcard">
+      <div class="eyebrow">Factory visit</div>
+      <h4>{COMPANY}</h4>
+      <p>{ADDR}</p>
+      <p class="small">Nearest airport: Longyan Guanzhishan (LCX). Xiamen Gaoqi (XMN) is about three hours by road or high-speed rail, and is the usual route for overseas visitors.</p>
+      <div class="cta-row" style="margin-top:20px">
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=No.%2011%20Huangbang%20Road%2C%20Longyan%20Economic%20%26%20Technological%20Development%20Zone%2C%20Longyan%2C%20Fujian%2C%20China" target="_blank" rel="noopener">Open in Google Maps<svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <p class="small" style="margin-top:18px">Tell us when you plan to travel and we will arrange the plant tour and have the engineers for your product line available.</p>
+    </div>
   </div>
 </div></section>
 
@@ -92,7 +122,8 @@ html = head(f"Request a Sample — Metal Fiber, Felt, Sleeves | {COMPANY}",
 <main>
 <section class="sec"><div class="wrap">
   <div class="form-wrap">
-    <form class="form rv" name="sample" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+    <form class="form rv" name="sample" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          enctype="multipart/form-data" action="thanks.html">
       <input type="hidden" name="form-name" value="sample">
       <p hidden><label>Do not fill this in: <input name="bot-field"></label></p>
       <div class="fgrid">
@@ -104,6 +135,15 @@ html = head(f"Request a Sample — Metal Fiber, Felt, Sleeves | {COMPANY}",
         {field("spec","Grade or size, if known",req=False,half=True,ph="e.g. 20KIA3, Φ50 mm sleeve, 10 µm cartridge")}
         {field("conditions","Operating conditions",req=True,rows_=5,ph="Medium, temperature in service and at peak, pressure and differential pressure, flow, particle size and load, cleaning regime.")}
         {field("address","Shipping address",req=True,rows_=3,ph="Company, street, city, postcode, country — and a contact phone number for the courier.")}
+        <div class="f full">
+          <label for="attachment">Drawing or specification <span class="opt">optional</span></label>
+          <div class="fileb">
+            <input type="file" name="attachment" id="attachment"
+                   accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.iges,.doc,.docx,.xls,.xlsx,.csv,.txt,.png,.jpg,.jpeg,.webp,.zip">
+            <span class="fileb-ui"><svg class="i"><use href="#i-arrow"/></svg><b>Choose a file</b>
+              <em>PDF, DWG, STEP, Office, image or ZIP · up to 8 MB</em></span>
+          </div>
+        </div>
       </div>
       <div class="fconsent"><label><input type="checkbox" name="consent" required> I agree that my details may be used to process this sample request, as described in the <a href="privacy.html">privacy policy</a>.</label></div>
       <button class="btn btn-pri" type="submit">Request sample<svg><use href="#i-arrow"/></svg></button>
