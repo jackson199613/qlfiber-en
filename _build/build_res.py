@@ -48,7 +48,9 @@ html = head("FAQ — Metal Fiber, Filtration and Textiles | QL Metal Fiber",
 w("resources.html", html)
 
 # ------------------------------------------------------------------ Downloads
-DL=[("Company profile","PDF","Company introduction, divisions, plant and capability","company-profile"),
+DL=[("316L material test report (275×3)","PDF","Grade chemical composition, issued by CTI — English original","material-316l-en.pdf","file"),
+ ("RoHS test report (metal fibre thread 275×3)","PDF","Lead, cadmium, mercury, hexavalent chromium — CTI, 16 May 2026","rohs-275x3-2026.pdf","file"),
+ ("Company profile","PDF","Company introduction, divisions, plant and capability","company-profile"),
  ("Sintered felt — KIA3 technical data","PDF","Rating, thickness, efficiency, bubble point and permeability by series","kia3-data"),
  ("Filter element catalogue","PDF","Pleated cartridges, sintered mesh elements, high-temperature bags","element-catalogue"),
  ("Technical textiles catalogue","PDF","Sleeves, cloth, tape, rope and damping felt for high-temperature service","textile-catalogue"),
@@ -57,10 +59,17 @@ DL=[("Company profile","PDF","Company introduction, divisions, plant and capabil
  ("ISO 9001 certificate","PDF","Certificate and scope","iso9001"),
  ("Selection questionnaire","PDF","The conditions we need in order to quote","questionnaire")]
 
-rowsd="".join(f'''<div class="row-i rv"><div class="dt">{k}</div>
+def _dl(it):
+    t,k,d,ref = it[0],it[1],it[2],it[3]
+    direct = len(it)>4 and it[4]=="file"
+    if direct:
+        return (f'''<div class="row-i rv has"><div class="dt">{k}</div>
+  <div><h4>{t}<span class="rdy">Available now</span></h4><p>{d}</p></div>
+  <a class="tlink dlb" href="files/{ref}" download><svg style="width:13px;height:13px"><use href="#i-arrow"/></svg>Download</a></div>''')
+    return (f'''<div class="row-i rv"><div class="dt">{k}</div>
   <div><h4>{t}</h4><p>{d}</p></div>
-  <a class="tlink dlb" href="contact.html?doc={s}">Request<svg style="width:13px;height:13px"><use href="#i-arrow"/></svg></a></div>'''
-  for t,k,d,s in DL)
+  <a class="tlink dlb" href="contact.html?doc={ref}">Request<svg style="width:13px;height:13px"><use href="#i-arrow"/></svg></a></div>''')
+rowsd="".join(_dl(it) for it in DL)
 
 html = head("Downloads — Catalogues, Data Sheets and Certificates | QL Metal Fiber",
   "Technical data sheets, catalogues, certificates and the selection questionnaire. Request any document and we will email it the same working day.",
@@ -74,7 +83,7 @@ html = head("Downloads — Catalogues, Data Sheets and Certificates | QL Metal F
 <section class="sec"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Available on request</div>
     <h2 class="h-lg rv d1" style="margin-top:14px">Catalogues, data and certificates</h2>
-    <p class="lead rv d2" style="margin-top:16px">We send documents on request rather than publishing them for download, so that the data sheet you receive matches the grade and the conditions you are working with — and so we know who to tell when a specification changes.</p></div>
+    <p class="lead rv d2" style="margin-top:16px">Test reports marked <b>Available now</b> download directly. The rest we send on request, so that the data sheet you receive matches the grade and the conditions you are working with — and so we know who to tell when a specification changes.</p></div>
   <div class="rows">{rowsd}</div>
   <div class="note rv" style="margin-top:34px">Some certificates and standards documents exist in Chinese only. Where an English version is needed for a qualification file, we provide a certified English summary.</div>
 </div></section>

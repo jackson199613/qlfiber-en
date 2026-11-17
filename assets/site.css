@@ -544,3 +544,10 @@ a.row-i:hover h4{color:var(--muted)}
 .fmsg.warn{border-color:var(--gold-2);background:#fffdf2;color:var(--ink-3)}
 .fmsg a{border-bottom:1px solid var(--gold-2);color:var(--ink)}
 .form button[disabled]{opacity:.55;pointer-events:none}
+
+/* ---------- 可直接下载的资料 ---------- */
+.row-i.has{background:linear-gradient(90deg,#fffdf4,var(--white) 40%)}
+.row-i h4 .rdy{display:inline-block;margin-left:9px;font-family:var(--mono);font-size:10.2px;
+  letter-spacing:.07em;text-transform:uppercase;color:#8a6d0b;background:#fdf6e0;
+  border:1px solid #f0e2b4;border-radius:999px;padding:3px 9px;vertical-align:2px}
+.row-i .dlb svg{transform:rotate(90deg);margin-right:5px}
