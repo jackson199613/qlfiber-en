@@ -20,7 +20,7 @@ def gal(items):
 # ------------------------------------------------------------- Company Profile
 ORG = json.dumps({"@context":"https://schema.org","@type":"Organization","name":COMPANY,
   "url":SITE+"/","logo":f"{SITE}/img/logo.png","foundingDate":"2002",
-  "address":{"@type":"PostalAddress","streetAddress":"No. 11 Huangbang Road, Longyan Economic & Technological Development Zone",
+  "address":{"@type":"PostalAddress","streetAddress":"No. 11 Huangbang Road, Dongxiao Town, Longyan Economic & Technological Development Zone",
              "addressLocality":"Longyan","addressRegion":"Fujian","addressCountry":"CN"},
   "email":"qianglun2026@gmail.com","telephone":"+86 181 5982 1773"}, ensure_ascii=False)
 

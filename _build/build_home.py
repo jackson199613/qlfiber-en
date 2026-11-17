@@ -63,7 +63,7 @@ SCHEMA = json.dumps({
   {"@type":"Organization","@id":SITE+"/#org","name":COMPANY,"alternateName":"QL Metal Fiber",
    "url":SITE+"/","logo":SITE+"/img/logo.png","foundingDate":"2002",
    "description":"Vertically integrated metal fiber manufacturer: micron-scale stainless steel fibers, yarns, technical textiles, sintered filter media, filter elements and separation equipment.",
-   "address":{"@type":"PostalAddress","streetAddress":"No. 11 Huangbang Road, Longyan Economic & Technological Development Zone","addressLocality":"Longyan","addressRegion":"Fujian","addressCountry":"CN"},
+   "address":{"@type":"PostalAddress","streetAddress":"No. 11 Huangbang Road, Dongxiao Town, Longyan Economic & Technological Development Zone","addressLocality":"Longyan","addressRegion":"Fujian","addressCountry":"CN"},
    "email":MAIL,"telephone":TEL,
    "hasCredential":["ISO 9001 certified quality management system","National High-Tech Enterprise",
                     "National Specialized, Refined, Distinctive and Innovative \"Little Giant\" Enterprise"]},

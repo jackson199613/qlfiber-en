@@ -86,14 +86,14 @@ html = head(f"Contact — Talk to an Engineer | {COMPANY}",
   <div class="mapwrap rv">
     <iframe title="QL Metal Fiber location, Longyan, Fujian, China" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade" allowfullscreen
-      src="https://www.google.com/maps?q=No.%2011%20Huangbang%20Road%2C%20Longyan%20Economic%20%26%20Technological%20Development%20Zone%2C%20Longyan%2C%20Fujian%2C%20China&amp;z=12&amp;output=embed"></iframe>
+      src="https://www.google.com/maps?q=No.%2011%20Huangbang%20Road%2C%20Dongxiao%20Town%2C%20Longyan%20Economic%20%26%20Technological%20Development%20Zone%2C%20Longyan%2C%20Fujian%2C%20China&amp;z=12&amp;output=embed"></iframe>
     <div class="mapcard">
       <div class="eyebrow">Factory visit</div>
       <h4>{COMPANY}</h4>
       <p>{ADDR}</p>
       <p class="small">Nearest airport: Longyan Guanzhishan (LCX). Xiamen Gaoqi (XMN) is about three hours by road or high-speed rail, and is the usual route for overseas visitors.</p>
       <div class="cta-row" style="margin-top:20px">
-        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=No.%2011%20Huangbang%20Road%2C%20Longyan%20Economic%20%26%20Technological%20Development%20Zone%2C%20Longyan%2C%20Fujian%2C%20China" target="_blank" rel="noopener">Open in Google Maps<svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=No.%2011%20Huangbang%20Road%2C%20Dongxiao%20Town%2C%20Longyan%20Economic%20%26%20Technological%20Development%20Zone%2C%20Longyan%2C%20Fujian%2C%20China" target="_blank" rel="noopener">Open in Google Maps<svg><use href="#i-arrow"/></svg></a>
       </div>
       <p class="small" style="margin-top:18px">Tell us when you plan to travel and we will arrange the plant tour and have the engineers for your product line available.</p>
     </div>
