@@ -56,6 +56,133 @@
   </div>
 </div></header>
 
+<div id="intro" aria-hidden="true" hidden>
+  <canvas id="iCv"></canvas>
+  <div class="i-read"><span class="lbl">FILAMENT &Oslash;</span><b id="iNum">1000</b><span class="u">&micro;m</span></div>
+  <div class="i-brand">
+    <div class="i-mark">QL<span>METAL FIBER</span></div>
+    <div class="i-rule"></div>
+    <p>Stainless steel, drawn down to two microns.</p>
+  </div>
+  <button class="i-skip" type="button">Skip</button>
+  <div class="i-bar"><i id="iBar"></i></div>
+</div>
+<style>
+#intro{position:fixed;inset:0;z-index:9999;background:#08090b;color:#fff;overflow:hidden;
+  clip-path:inset(0 0 0 0);transition:clip-path 1s cubic-bezier(.76,0,.24,1)}
+#intro.out{clip-path:inset(0 0 100% 0)}
+#intro canvas{position:absolute;inset:0;width:100%;height:100%}
+#intro .i-read{position:absolute;left:0;right:0;top:50%;margin-top:-152px;text-align:center;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;opacity:0;transition:opacity .5s ease}
+#intro.s1 .i-read{opacity:1}
+#intro.s3 .i-read{opacity:0}
+#intro .i-read .lbl{display:block;font-size:10px;letter-spacing:.34em;color:#6f7781;margin-bottom:10px}
+#intro .i-read b{font-size:clamp(40px,7vw,78px);font-weight:400;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;transition:color .4s ease}
+#intro .i-read .u{font-size:17px;color:#9aa2ac;margin-left:7px}
+#intro.fin .i-read b{color:#ffd400}
+#intro .i-brand{position:absolute;left:0;right:0;top:50%;transform:translateY(14px);
+  text-align:center;opacity:0;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1);padding:0 24px}
+#intro.s3 .i-brand{opacity:1;transform:translateY(-6px)}
+#intro .i-mark{font-family:"Archivo",system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;
+  font-size:clamp(34px,5.6vw,62px);line-height:1;display:flex;align-items:baseline;gap:14px;justify-content:center}
+#intro .i-mark span{font-size:clamp(12px,1.5vw,17px);font-weight:500;letter-spacing:.3em;color:#aeb5be}
+#intro .i-rule{width:54px;height:2px;background:#ffd400;margin:22px auto 18px}
+#intro .i-brand p{font-size:clamp(13px,1.5vw,16px);color:#8d949d;letter-spacing:.01em;margin:0}
+#intro .i-skip{position:absolute;right:24px;bottom:26px;z-index:3;background:transparent;color:#848b94;
+  border:1px solid #23262b;border-radius:999px;padding:9px 20px;font:inherit;font-size:12.5px;
+  letter-spacing:.06em;cursor:pointer;transition:color .25s,border-color .25s}
+#intro .i-skip:hover{color:#fff;border-color:#4a4f57}
+#intro .i-bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:rgba(255,255,255,.07)}
+#intro .i-bar i{display:block;height:100%;width:0;background:#ffd400}
+body.pre{overflow:hidden}
+body.pre .rv{opacity:0!important;transform:translateY(22px)!important}
+@media(prefers-reduced-motion:reduce){#intro{display:none}}
+</style>
+<script>
+(function(){
+  var d=document, q=location.search.indexOf('intro=1')>-1, seen=false;
+  try{ seen = sessionStorage.getItem('qlEnIntro')==='1'; }catch(e){}
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches || (seen && !q)) return;
+  var el=d.getElementById('intro'); if(!el) return;
+
+  d.body.classList.add('pre'); el.hidden=false;
+  var cv=d.getElementById('iCv'), cx=cv.getContext('2d');
+  var num=d.getElementById('iNum'), bar=d.getElementById('iBar');
+  var W,H,dpr=Math.min(2,window.devicePixelRatio||1), T0=performance.now(), raf, dead=false;
+  function size(){ W=innerWidth; H=innerHeight; cv.width=W*dpr; cv.height=H*dpr; cx.setTransform(dpr,0,0,dpr,0,0); }
+  size(); addEventListener('resize',size);
+
+  var DIES=[.20,.38,.56,.74], STEPS=[1000,500,100,50,12,2];
+  var N=innerWidth<620?96:160, F=[];
+  for(var i=0;i<N;i++) F.push({ s:(i/(N-1))*2-1, ph:Math.random()*6.28, sp:.6+Math.random()*.9, g:Math.random()<.07 });
+
+  // 束宽随 x 递减：每过一道模具收一档
+  function base(){ return Math.min(H*0.92, W*0.46); }   // 竖屏按短边收敛，避免散开
+  function spread(x){
+    var t=x/W, k=0;
+    for(var i=0;i<DIES.length;i++) if(t>DIES[i]) k=i+1;
+    return base()*[.62,.42,.26,.128,.045][k];
+  }
+  function draw(t){
+    var e=(t-T0)/1000, cy=H/2;
+    cx.fillStyle='#08090b'; cx.fillRect(0,0,W,H);
+    var head = e<2.0 ? (e/2.0)*W*1.02 : W*1.02;          // 拉拔头推进
+    var burst = e>2.05 ? Math.min(1,(e-2.05)/0.75) : 0;   // 末端散开
+    cx.lineWidth=1;
+    for(var i=0;i<N;i++){
+      var f=F[i];
+      cx.beginPath();
+      var started=false;
+      for(var x=0;x<=Math.min(head,W);x+=9){
+        var sp=spread(x)*(1+burst*5.5*Math.pow(x/W,2.2));
+        var wob=Math.sin(x*0.012*f.sp+f.ph+e*1.6)*spread(x)*0.10;
+        var y=cy+f.s*sp+wob;
+        if(!started){cx.moveTo(x,y);started=true;} else cx.lineTo(x,y);
+      }
+      var a=(0.30+0.42*Math.abs(1-Math.abs(f.s)))*(1-burst*0.55);
+      cx.strokeStyle = f.g ? 'rgba(255,212,0,'+(a*0.9)+')' : 'rgba(206,214,223,'+a+')';
+      cx.stroke();
+    }
+    // 模具环
+    for(var j=0;j<DIES.length;j++){
+      var dx=DIES[j]*W, passed=head>dx, r=spread(dx+2)*1.5+16;
+      var lit = passed && head<dx+W*0.10;
+      cx.strokeStyle = lit ? 'rgba(255,212,0,.95)' : (passed?'rgba(255,255,255,.16)':'rgba(255,255,255,.07)');
+      cx.lineWidth = lit?2:1;
+      cx.beginPath(); cx.ellipse(dx,cy,10,r,0,0,6.2832); cx.stroke();
+      if(lit){ cx.save(); cx.globalAlpha=.3; cx.filter='blur(6px)';
+        cx.beginPath(); cx.ellipse(dx,cy,10,r,0,0,6.2832); cx.stroke(); cx.restore(); }
+    }
+    cx.lineWidth=1;
+    bar.style.width=Math.min(100,e/3.5*100)+'%';
+    if(!dead) raf=requestAnimationFrame(draw);
+  }
+  raf=requestAnimationFrame(draw);
+
+  var tms=[];
+  function at(ms,fn){ tms.push(setTimeout(fn,ms)); }
+  at(120, function(){ el.classList.add('s1'); });
+  STEPS.forEach(function(v,i){ at(260+i*300, function(){ num.textContent=v; if(v===2) el.classList.add('fin'); }); });
+  at(2150, function(){ el.classList.add('s3'); });
+  at(3250, finish);
+  at(5200, finish);                                   // 保险：无论如何都收场
+
+  function finish(){
+    if(dead) return; dead=true;
+    try{ sessionStorage.setItem('qlEnIntro','1'); }catch(e){}
+    tms.forEach(clearTimeout); cancelAnimationFrame(raf);
+    el.classList.add('out');
+    d.body.classList.remove('pre');
+    setTimeout(function(){ el.remove(); d.dispatchEvent(new CustomEvent('ql:intro-done')); }, 1050);
+  }
+  el.querySelector('.i-skip').addEventListener('click', finish);
+  addEventListener('keydown', function(ev){ if(ev.key==='Escape'||ev.key===' ') finish(); });
+  addEventListener('wheel', finish, {passive:true, once:true});
+  addEventListener('touchstart', finish, {passive:true, once:true});
+})();
+</script>
+
 <main>
 <section class="hero dk">
   <div class="wrap">
