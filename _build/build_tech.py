@@ -111,11 +111,11 @@ html = head("Lab & Testing — In-house Metal Fiber Testing | QL Metal Fiber",
   "Bubble point, permeability, filtration efficiency, porosity, resistance and metallography, measured in our own laboratory on every material we propose.",
   "lab.html","metal fiber testing, bubble point, filtration efficiency test, SEM",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"Lab & Testing","url":f"{SITE}/lab.html"},ensure_ascii=False),
-  "img/en-ph-lab.webp") + header("technology.html") + crumb([("Technology","technology.html"),("Lab & Testing",None)]) + page_hero(
+  "img/lab-wide-01.webp") + header("technology.html") + crumb([("Technology","technology.html"),("Lab & Testing",None)]) + page_hero(
   "02","LAB &amp; TESTING","Every claim on this site has a measurement behind it",
   "We test in house because a buyer qualifying a new supplier needs numbers that can be repeated — and because a material we cannot measure is a material we cannot improve.",
   [("9","","Standard test methods in house"),("100","%","Lots with an inspection report"),("1","–3 days","Typical sample lead time")],
-  "img/en-ph-lab.webp") + subnav(SUB_TECH,"lab.html") + f"""
+  "img/lab-wide-01.webp") + subnav(SUB_TECH,"lab.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Test capability</div>
@@ -142,7 +142,66 @@ html = head("Lab & Testing — In-house Metal Fiber Testing | QL Metal Fiber",
         <li>Dimensions and fittings, or a drawing</li>
       </ul>
     </div>
-    <div class="rv d1">{gal([("img/lab-01.webp","Laboratory bench and test equipment"),("img/lab-02.webp","Sample preparation and inspection"),("img/en-micro-network.webp","Fiber network, micrograph"),("img/en-micro-gradient.webp","Graded pore structure through the thickness")])}</div>
+    <div class="rv d1">{gal([("img/lab-op-01.webp","Data acquisition at the instrument workstation"),("img/lab-op-02.webp","Reading results from an analyser"),("img/en-micro-network.webp","Fiber network, micrograph"),("img/en-micro-gradient.webp","Graded pore structure through the thickness")])}</div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Instruments</div>
+    <h2 class="h-lg rv d1" style="margin-top:14px">What we measure it <em>with</em></h2>
+    <p class="lead rv d2" style="margin-top:16px">Our own instruments, photographed as they stand. Where a qualification calls for a method we do not hold, we say so and arrange a third-party laboratory rather than substitute a different one.</p></div>
+  <div class="g2" style="gap:48px;align-items:start">
+    <div class="rv">
+      <figure class="eqfig"><img src="img/sem-screen.webp" alt="Metal fiber morphology and EDS spectrum on the SEM workstation" loading="lazy" width="1400" height="933">
+        <figcaption><b>Morphology and composition, in one session</b>The electron microscope reads filament diameter, how fibers overlap and the quality of each sintered bond directly; the energy-dispersive spectrum alongside it identifies the elements present.</figcaption></figure>
+    </div>
+    <div class="rv d1">
+      <div class="eqlist">
+        <div class="eq"><img src="img/eq-sem.webp" alt="KYKY-EM8000F scanning electron microscope" loading="lazy" width="1200" height="800">
+          <div><h4>Scanning electron microscope</h4><span class="mod">KYKY-EM8000F</span>
+            <p>Filament diameter and its distribution, three-dimensional fiber network, sintered bond quality, and the graded layer structure seen in cross-section.</p></div></div>
+        <div class="eq"><img src="img/eq-afs.webp" alt="GGX-810 atomic fluorescence spectrometer" loading="lazy" width="1200" height="800">
+          <div><h4>Atomic fluorescence spectrometer</h4><span class="mod">GGX-810</span>
+            <p>Metallic element content, used to confirm alloy grade, control impurities and verify incoming wire.</p></div></div>
+        <div class="eq"><img src="img/eq-sem-col.webp" alt="Electron column and detectors" loading="lazy" width="1200" height="800">
+          <div><h4>Electron column and detectors</h4><span class="mod">SE / BSE</span>
+            <p>Secondary-electron imaging for surface topography, backscattered imaging for compositional contrast.</p></div></div>
+        <div class="eq"><img src="img/sem-sample.webp" alt="Specimen loaded into the SEM chamber" loading="lazy" width="1200" height="800">
+          <div><h4>Specimen preparation</h4><span class="mod">Chamber loading</span>
+            <p>How fiber and felt are cut, mounted and made conductive decides image quality — and whether two lots can honestly be compared.</p></div></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Reports on file</div>
+    <h2 class="h-lg rv d1" style="margin-top:14px">Already tested, already issued</h2>
+    <p class="lead rv d2" style="margin-top:16px">Taking metal fiber thread as the example, these reports exist today and can be supplied with a quotation or a qualification file. Most were issued by independent laboratories; where a document exists only in Chinese, we provide a certified English summary on request.</p></div>
+  <div class="rv">{spec("Metal fiber thread — reports held", ["Report","What it covers","Issued by","Language"], [
+    ("RoHS four substances<br><span class=\"sub\">1000×3 / 275×3 / 100×3</span>","Lead, cadmium, mercury and hexavalent chromium against the RoHS limits, 16 May 2026","CTI (Centre Testing International)","EN on request"),
+    ("Material test report<br><span class=\"sub\">275×3, 316L</span>","Grade chemical composition, 22 May 2026","CTI (Centre Testing International)","<b>English original available</b>"),
+    ("Tensile test<br><span class=\"sub\">275×3</span>","Tensile strength and elongation at break","Shanghai Fuda Testing Technology Group","CN"),
+    ("Resistance before and after washing","Change in electrical resistance across wash cycles — the durability evidence behind conductive thread","Standard Testing Group","CN"),
+    ("Far-infrared performance","Far-infrared emissivity, to GB/T 30127-2013, for heating and functional textile use","Independent laboratory","CN"),
+    ("Infrared reflectance spectrum<br><span class=\"sub\">275×3</span>","Reflectance behaviour across the infrared band","Shanghai Fuda Testing Technology Group","CN"),
+    ("Magnetic properties<br><span class=\"sub\">100×3</span>","Magnetic characterisation, for shielding and special-duty selection","Shanghai Fuda Testing Technology Group","CN"),
+  ], "Reports for other product lines are issued to order or commissioned from a third-party laboratory. Values apply to the sample and conditions stated in each report.")}</div>
+  <div class="note rv" style="margin-top:30px">The 316L material report and the RoHS report are on the <a class="tlink" href="downloads.html">Downloads</a> page and can be taken straight away. The rest we send on request so that the document matches the grade you are qualifying.</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">The laboratory</div>
+    <h2 class="h-lg rv d1" style="margin-top:14px">Where the numbers come from</h2></div>
+  <div class="labgal bento rv">
+    <figure class="big"><img src="img/lab-wide-01.webp" alt="Materials and application laboratory" loading="lazy" width="2000" height="1333"><figcaption>Materials and application laboratory</figcaption></figure>
+    <figure><img src="img/lab-chem-02.webp" alt="Analytical balances and reagent bench" loading="lazy" width="1200" height="800"><figcaption>Analytical balances and reagents</figcaption></figure>
+    <figure><img src="img/lab-chem-03.webp" alt="Titration and colorimetric analysis area" loading="lazy" width="1200" height="800"><figcaption>Titration and colorimetry</figcaption></figure>
+  </div>
+  <div class="labgal rv" style="margin-top:14px">
+    <figure><img src="img/lab-chem-01.webp" alt="Fume hood and sample preparation" loading="lazy" width="1200" height="800"><figcaption>Fume hood and sample preparation</figcaption></figure>
+    <figure><img src="img/lab-chem-04.webp" alt="Chemical analysis bench" loading="lazy" width="1200" height="800"><figcaption>Chemical analysis bench</figcaption></figure>
+    <figure><img src="img/lab-wide-02.webp" alt="Clean area of the laboratory" loading="lazy" width="2000" height="1333"><figcaption>Clean area</figcaption></figure>
   </div>
 </div></section>
 
