@@ -166,4 +166,21 @@
         });
     });
   });
+
+  // 企业宣传片：点击后才真正加载视频
+  var filmBtn = d.querySelector('.film-play');
+  if (filmBtn) {
+    filmBtn.addEventListener('click', function () {
+      var box = filmBtn.closest('.film'), v = box.querySelector('video');
+      var src = v.querySelector('source[data-src]');
+      if (src && !src.getAttribute('src')) {
+        src.setAttribute('src', src.getAttribute('data-src'));
+        v.load();
+      }
+      box.classList.add('on');
+      v.controls = true;
+      var play = v.play();
+      if (play && play.catch) play.catch(function () {});
+    });
+  }
 })();

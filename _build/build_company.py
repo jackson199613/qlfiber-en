@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys, os, json
 sys.path.insert(0, os.path.dirname(__file__))
-from layout import head, header, footer, w, CTA_BAND, crumb, page_hero, subnav, SUB_CO, SITE, ADDR, COMPANY
+from layout import head, header, footer, w, CTA_BAND, film_block, crumb, page_hero, subnav, SUB_CO, SITE, ADDR, COMPANY
 
 def rows(items):
     return '<div class="rows">' + "".join(
@@ -70,6 +70,8 @@ html = head(f"Company Profile — {COMPANY}",
   {gal([("img/plant-02.webp","Production workshop"),("img/plant-07.webp","Sintering and lamination area"),
         ("img/plant-10.webp","Finished media and roll goods"),("img/team-cadre2024.webp","The team, 2024")])}
 </div></section>
+
+{film_block("Corporate film", "See the company, not just the <em>page</em>", "A walk through the plants, the laboratory and the finished products, with English narration and bilingual subtitles. Three minutes and forty-nine seconds.")}
 
 {CTA_BAND}
 </main>

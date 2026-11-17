@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys, os, json
 sys.path.insert(0, os.path.dirname(__file__))
-from layout import head, header, footer, w, CTA_BAND, SITE, COMPANY, MAIL, TEL, ADDR
+from layout import head, header, footer, w, CTA_BAND, film_block, SITE, COMPANY, MAIL, TEL, ADDR
 
 APPS = [
  ("a-glass.html","Glass Processing","Lead track",
@@ -220,6 +220,8 @@ html = head(
     <p class="rv" style="margin-top:30px"><a class="tlink" href="resources.html">Full FAQ and downloads<svg class="i" style="width:14px;height:14px"><use href="#i-arrow"/></svg></a></p>
   </div>
 </section>
+
+{film_block("Corporate film", "Twenty-four years, in <em>four minutes</em>", "From the drawing bench to sintered media, filter elements and the systems built around them — the plants, the laboratory and the people behind the material. English narration with bilingual subtitles.")}
 
 {CTA_BAND}
 </main>

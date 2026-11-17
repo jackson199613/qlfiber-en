@@ -231,3 +231,23 @@ SUB_CO   = [("Company Profile","company.html"),("History","history.html"),
             ("News & Blog","news.html")]
 SUB_RES  = [("FAQ","resources.html"),("Downloads","downloads.html")]
 SUB_CON  = [("Contact Us","contact.html"),("Request a Sample","sample.html")]
+
+def film_block(eyebrow, title, lead, idx=""):
+    """企业宣传片播放模块：海报占位，点击后才加载视频，不拖慢首屏。"""
+    return f"""<section class="sec film-sec"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">{eyebrow}</div>
+    <h2 class="h-lg rv d1" style="margin-top:14px">{title}</h2>
+    <p class="lead rv d2" style="margin-top:16px">{lead}</p></div>
+  <figure class="film rv">
+    <video id="qlfilm" poster="img/film-en-poster.webp" preload="none" playsinline
+           width="1600" height="900" aria-label="QL Metal Fiber corporate film">
+      <source data-src="video/film-en-1080p.mp4" type="video/mp4">
+      Your browser does not support embedded video.
+      <a href="video/film-en-1080p.mp4">Download the film instead</a>.
+    </video>
+    <button class="film-play" type="button" aria-label="Play the corporate film">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      <span>Watch the film<em>3 min 49 s &middot; English with bilingual subtitles</em></span>
+    </button>
+  </figure>
+</div></section>"""
