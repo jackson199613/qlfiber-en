@@ -18,6 +18,7 @@ PAGES=[("Home","index.html","Brand positioning, key figures, products, applicati
  ("Specialty Materials","a-specialty.html","Burners, hydrogen equipment, damping and acoustics."),
  ("Automotive","a-automotive.html","Seat, steering wheel and battery-adjacent heating."),
  ("Functional Textiles","a-textiles.html","Heated apparel, smart wearables and conductive thread."),
+ ("More Applications · Co-Development","a-more.html","Custom metal fiber materials for conditions outside the six industries."),
  ("R&D Overview","technology.html","Team, development method and research partnerships."),
  ("Lab & Testing","lab.html","In-house test methods and the qualification process."),
  ("Patents & Standards","patents.html","62 patents, six standards and recognitions."),
@@ -35,9 +36,9 @@ PAGES=[("Home","index.html","Brand positioning, key figures, products, applicati
  ("Sitemap","sitemap.html","Every page on this site.")]
 
 # ------------------------------------------------------------------- Sitemap
-groups=[("Home",PAGES[0:1]),("Products",PAGES[1:8]),("Applications",PAGES[8:15]),
-        ("Technology",PAGES[15:18]),("Company",PAGES[18:23]),("Resources",PAGES[23:25]),
-        ("Contact",PAGES[25:27]),("Utility",PAGES[27:])]
+groups=[("Home",PAGES[0:1]),("Products",PAGES[1:8]),("Applications",PAGES[8:16]),
+        ("Technology",PAGES[16:19]),("Company",PAGES[19:24]),("Resources",PAGES[24:26]),
+        ("Contact",PAGES[26:28]),("Utility",PAGES[28:])]
 cols="".join(f'''<div class="smg rv"><h3>{g}</h3><ul>''' +
   "".join(f'<li><a href="{u}">{t}</a><span>{d}</span></li>' for t,u,d in items) + '</ul></div>'
   for g,items in groups)
@@ -114,7 +115,7 @@ html = head("Page not found | "+COMPANY,"That page does not exist. Find metal fi
   </div>
   <div class="rows rv d3" style="margin-top:50px">
     <a class="row-i" href="products.html"><div><h4>Products</h4><p>Five product lines, from fiber to finished system.</p></div></a>
-    <a class="row-i" href="applications.html"><div><h4>Applications</h4><p>Six industries, each with its own selection logic.</p></div></a>
+    <a class="row-i" href="applications.html"><div><h4>Applications</h4><p>Seven solutions, each with its own selection logic.</p></div></a>
     <a class="row-i" href="contact.html"><div><h4>Contact</h4><p>Send your operating conditions and we will reply within a working day.</p></div></a>
   </div>
 </div></section></main>

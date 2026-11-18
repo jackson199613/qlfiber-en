@@ -22,6 +22,9 @@ APPS = [
  ("a-textiles.html","Functional Textiles &amp; Smart Wearables","",
   "Weavable, sewable, washable conductive and heating yarns that run on standard textile equipment.",
   "img/en-textiles.webp"),
+ ("a-more.html","More Applications · Co-Development","",
+  "Not on this list? Tell us your temperature, medium and target properties — we propose the fiber, the form and the alloy, and send samples.",
+  "img/en-micro-network.webp"),
 ]
 
 LINES = [

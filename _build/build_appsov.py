@@ -22,6 +22,9 @@ CARDS = [
  ("a-textiles.html","06","Functional Textiles &amp; Smart Wearables","","img/en-textiles.webp",
   "Weavable, sewable, washable conductive and heating yarns for apparel and workwear.",
   "1–64 Ω/m · 12 µm monofilament"),
+ ("a-more.html","07","More Applications · Co-Development","Your conditions","img/en-micro-network.webp",
+  "Not on this list? Tell us the conditions and we propose the fiber, the form and the alloy.",
+  "7 forms · 6 properties · samples first"),
 ]
 
 STEPS = [
@@ -55,15 +58,15 @@ sc = json.dumps({"@context":"https://schema.org","@type":"ItemList","name":"Appl
                      "url":f"{SITE}/{u}"} for i,(u,n,t,tag,img,d,k) in enumerate(CARDS)]}, ensure_ascii=False)
 
 html = head("Application Solutions | Metal Fiber by Operating Condition — QL Metal Fiber",
- "Six metal fiber application solutions — glass processing, filtration and separation, EMI shielding and anti-static, specialty materials, automotive, functional textiles — plus co-development for conditions outside them.",
+ "Seven metal fiber application solutions — glass processing, filtration and separation, EMI shielding and anti-static, specialty materials, automotive, functional textiles, and co-development for conditions outside them.",
  "applications.html",
  "metal fiber applications, glass processing sleeve, metal fiber filtration, EMI shielding fiber, conductive yarn",
  sc, "img/en-filtration.webp") \
  + header("applications.html") + crumb([("Applications", None)]) \
  + page_hero("", "APPLICATION SOLUTIONS",
-   "Six solutions, organised by the conditions you run",
+   "Seven solutions, organised by the conditions you run",
    "Buyers rarely ask what products we have. They ask whether a material will survive their furnace temperature, their solvent, their precision requirement — and for how long. Each solution starts from that question and ends with a sample on your line.",
-   [("6","","Application solutions"),("7","forms","Product forms available"),("2","µm","Finest fiber diameter")],
+   [("7","","Application solutions"),("7","forms","Product forms available"),("2","µm","Finest fiber diameter")],
    "img/en-filtration.webp") \
  + subnav(SUB_APP, "applications.html") + f"""
 <main>
@@ -78,7 +81,7 @@ html = head("Application Solutions | Metal Fiber by Operating Condition — QL M
       <h2 class="h-lg rv d1" style="margin:16px 0 16px">Your conditions, our fiber.</h2>
       <p class="lead rv d2">Metal fiber is a platform material, not a single product. If your process needs the heat, corrosion and conductivity of metal together with the flexibility and porosity of a fiber, the application does not have to be on this list. Tell us the conditions and we will propose the fiber, the form and the alloy, build samples in our lab and work with you through small-batch validation to stable supply.</p>
       <p class="rv d3" style="margin-top:14px;color:var(--muted);font-size:14.8px;line-height:1.75">Directions already in service include regenerative heat-exchanger media, high-temperature silencer and sound-absorbing material, resin grinding wheels, high-temperature conveyor belts and seat moulds, fluidised-bed gas distribution plates, membrane supports, catalyst carriers, vacuum-pump protection filtration, pipeline freeze-protection heating, heating elements for medical devices and robot cabling.</p>
-      <div class="cta-row rv d3"><a class="btn btn-dark" href="contact.html">Start a co-development<svg><use href="#i-arrow"/></svg></a></div>
+      <div class="cta-row rv d3"><a class="btn btn-dark" href="a-more.html">Explore co-development<svg><use href="#i-arrow"/></svg></a></div>
     </div>
     <div class="rv d1">{steps}</div>
   </div>

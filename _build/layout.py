@@ -141,7 +141,8 @@ def footer():
                       ("Oil Recovery Systems","p-equipment.html")]),
         ("Applications", [("Filtration & Separation","a-filtration.html"),("Glass Processing","a-glass.html"),
                           ("EMI Shielding & Anti-static","a-emi.html"),("Specialty Materials","a-specialty.html"),
-                          ("Automotive","a-automotive.html"),("Functional Textiles","a-textiles.html")]),
+                          ("Automotive","a-automotive.html"),("Functional Textiles","a-textiles.html"),
+                          ("Co-Development","a-more.html")]),
         ("Company", [("Company Profile","company.html"),("History","history.html"),
                      ("Manufacturing","manufacturing.html"),("Quality & Certifications","quality.html"),
                      ("News & Blog","news.html")]),
@@ -224,7 +225,7 @@ SUB_PROD = [("Overview","products.html"),("Metal Fiber & Yarn","p-fiber.html"),
 SUB_APP  = [("Overview","applications.html"),("Filtration & Separation","a-filtration.html"),
             ("Glass Processing","a-glass.html"),("EMI Shielding","a-emi.html"),
             ("Specialty Materials","a-specialty.html"),("Automotive","a-automotive.html"),
-            ("Functional Textiles","a-textiles.html")]
+            ("Functional Textiles","a-textiles.html"),("Co-Development","a-more.html")]
 SUB_TECH = [("R&D Overview","technology.html"),("Lab & Testing","lab.html"),("Patents & Standards","patents.html")]
 SUB_CO   = [("Company Profile","company.html"),("History","history.html"),
             ("Manufacturing","manufacturing.html"),("Quality & Certifications","quality.html"),
