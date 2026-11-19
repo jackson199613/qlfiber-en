@@ -91,7 +91,7 @@
   /* ---------- 表单提交：Netlify Forms + 邮件兜底 ----------
      若站点未启用表单识别，提交会返回 404/405。此时不静默失败，
      改为打开预填好的邮件草稿，保证询盘不会丢。 */
-  var MAIL_TO = 'qianglun2026@gmail.com';
+  var MAIL_TO = 'hcq@jl-jiber.com';
   var MAX_FILE = 8 * 1024 * 1024;
 
   d.querySelectorAll('.fileb input[type=file]').forEach(function (inp) {

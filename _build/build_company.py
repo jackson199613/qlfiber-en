@@ -22,7 +22,7 @@ ORG = json.dumps({"@context":"https://schema.org","@type":"Organization","name":
   "url":SITE+"/","logo":f"{SITE}/img/logo.png","foundingDate":"2002",
   "address":{"@type":"PostalAddress","streetAddress":"No. 11 Huangbang Road, Dongxiao Town, Longyan Economic & Technological Development Zone",
              "addressLocality":"Longyan","addressRegion":"Fujian","addressCountry":"CN"},
-  "email":"qianglun2026@gmail.com","telephone":"+86 181 5982 1773"}, ensure_ascii=False)
+  "email":"hcq@jl-jiber.com","telephone":"+86 153 5992 7344"}, ensure_ascii=False)
 
 html = head(f"Company Profile — {COMPANY}",
   "Founded in 2002 in Longyan, Fujian. A NEEQ-listed metal fiber manufacturer covering fiber drawing, yarn and textiles, sintered media, filter elements and separation equipment.",
@@ -57,7 +57,7 @@ html = head(f"Company Profile — {COMPANY}",
         ("Core material","Bundle-drawn metal fiber, 2 µm and up"),
         ("Alloys","316L, 304, 302, FeCrAl, nickel-based alloys, Hastelloy, Monel, copper, titanium"),
         ("Export markets","Europe, India, Southeast Asia, Türkiye and the Middle East, Japan and Korea, the Americas"),
-        ("Contact","qianglun2026@gmail.com"),
+        ("Contact","hcq@jl-jiber.com"),
       ])}
       <div class="note" style="margin-top:26px">We supply direct from the factory and through distributors. Most technical textile products carry no minimum order, so a first trial can be a single length.</div>
     </div>
@@ -139,7 +139,7 @@ html = head("Manufacturing — From Wire to Finished Element | QL Metal Fiber",
   <div class="sec-h"><div class="eyebrow rv">Inside the plant</div>
     <h2 class="h-md rv d1" style="margin-top:14px">Production and finished goods</h2></div>
   {gal([("img/plant-02.webp","Production workshop"),("img/plant-10.webp","Roll goods and finished media"),
-        ("img/cart-04.webp","Element assembly"),("img/media-05.webp","Media, discs and cut parts")])}
+        ("img/cart-04.webp","Element assembly"),("img/jl-felt-fan.webp","Sintered felt in several grades")])}
 </div></section>
 {CTA_BAND}
 </main>

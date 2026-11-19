@@ -71,7 +71,20 @@ POSTS=[
    "<p>Pleated cartridges run Φ35 to 60 mm and 425 to 1250 mm long with end fittings made to your drawing. Because we make the media, the support mesh assembly and the element, rating, strength and fit are specified together rather than negotiated between suppliers.</p>"]),
 ]
 
-CATS=sorted({p["cat"] for p in POSTS})
+# 旧的两篇公司新闻（600 m³/h 设备、FILTECH）按甲方新闻清单撤下，由下方新闻取代
+POSTS=[p for p in POSTS if p["s"] not in ("article-4","article-6")]
+from news_data_en import NEWS
+import re as _re
+def _html(paras):
+    return "".join(f"<h3>{t[2:]}</h3>" if t.startswith("##") else f"<p>{t}</p>" for t in paras)
+for n in NEWS:
+    words=len(_re.findall(r"\w+"," ".join(n["body"])))
+    POSTS.append(dict(s=n["s"],cat=n["cat"],date=n["date"],read=f'{max(1,round(words/220))} min',t=n["t"],sum=n["sum"],
+                      img=n["img"],cap=n["cap"],body=[_html(n["body"])],gal=n["gal"],src=n["src"],link=n["link"],news=True))
+POSTS.sort(key=lambda p:p["date"],reverse=True)
+
+CAT_ORDER=["Company News","Events","Media","Technical","Application"]
+CATS=[c for c in CAT_ORDER if any(p["cat"]==c for p in POSTS)]
 
 cards="".join(f'''<a class="post rv" href="{p["s"]}.html" data-tag="{p["cat"]}">
   <div class="im"><img src="{p["img"]}" alt="{p["t"]}" loading="lazy" width="600" height="400"></div>
@@ -84,11 +97,11 @@ sc=json.dumps({"@context":"https://schema.org","@type":"ItemList","name":"News &
                     for i,p in enumerate(POSTS)]},ensure_ascii=False)
 
 html = head("News & Blog — Metal Fiber Technical Articles | QL Metal Fiber",
-  "Technical articles and company news on metal fiber filtration, coalescing oil recovery, glass processing textiles and conductive yarn.",
+  "Company news, events, media coverage and technical articles from QL Metal Fiber — metal fiber, sintered filter media, coalescing oil recovery and conductive yarn.",
   "news.html","metal fiber blog, filtration technical article, oil recovery news", sc, "img/en-micro-gradient.webp"
  ) + header("company.html") + crumb([("Company","company.html"),("News & Blog",None)]) + page_hero(
   "05","NEWS &amp; BLOG","What we have learned, written down",
-  "Technical notes from selection and trial work, and the occasional company announcement. No product launches dressed as articles.",
+  "Company news, events and media coverage, alongside technical notes from selection and trial work.",
   None,"img/en-micro-gradient.webp") + subnav(SUB_CO,"news.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
@@ -104,10 +117,17 @@ html = head("News & Blog — Metal Fiber Technical Articles | QL Metal Fiber",
 w("news.html", html)
 
 # ------------------------------------------------------------- article pages
+NOTE = '''<div class="note rv" style="max-width:760px;margin:40px auto 0">Values quoted apply to the stated test or operating conditions and are a basis for selection, not a performance warranty. Final suitability is established by a trial under your own conditions.</div>'''
+def GAL(p):
+    g=p.get("gal") or []
+    if not g: return ""
+    cls={1:"c1",2:"c2",3:"c3"}.get(len(g),"")
+    return (f'<div class="gal {cls} rv" style="max-width:1100px;margin:44px auto 0">' +
+            "".join(f'<figure><img src="{u}" alt="{c}" loading="lazy" width="600" height="450"><figcaption>{c}</figcaption></figure>' for u,c in g) + '</div>')
 for i,p in enumerate(POSTS):
     prev=POSTS[i-1] if i>0 else None
     nxt=POSTS[i+1] if i<len(POSTS)-1 else None
-    sc=json.dumps({"@context":"https://schema.org","@type":"TechArticle" if p["cat"]!="Company" else "NewsArticle",
+    sc=json.dumps({"@context":"https://schema.org","@type":"NewsArticle" if p.get("news") else "TechArticle",
       "headline":p["t"],"description":p["sum"],"datePublished":p["date"],
       "image":f'{SITE}/{p["img"]}',"mainEntityOfPage":f'{SITE}/{p["s"]}.html',
       "author":{"@type":"Organization","name":COMPANY},
@@ -125,10 +145,12 @@ for i,p in enumerate(POSTS):
     <div class="pmeta rv"><span class="tg">{p["cat"]}</span><span>{p["date"]}</span><span>{p["read"]} read</span></div>
     <h1 class="h-lg rv d1">{p["t"]}</h1>
     <p class="lead rv d2">{p["sum"]}</p>
+    {(f'<p class="tnote rv d2" style="margin-top:14px">{p["src"]}' + (f' · <a class="tlink" href="{p["link"]}" target="_blank" rel="noopener">View original</a>' if p.get("link") else '') + '</p>') if p.get("src") else ''}
   </header>
   <figure class="art-fig wrap rv"><img src="{p["img"]}" alt="{p["cap"]}" width="1200" height="800"><figcaption>{p["cap"]}</figcaption></figure>
   <div class="wrap"><div class="prose art-body rv">{"".join(p["body"])}</div>
-    <div class="note rv" style="max-width:760px;margin:40px auto 0">Values quoted apply to the stated test or operating conditions and are a basis for selection, not a performance warranty. Final suitability is established by a trial under your own conditions.</div>
+    {GAL(p)}
+    {"" if p.get("news") else NOTE}
     {nav}
   </div>
 </article>

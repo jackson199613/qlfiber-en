@@ -97,6 +97,6 @@ const GATE_HTML = `<!doctype html>
   </div>
   <div class="ft">
     福建强纶新材料股份有限公司 · 新三板 872336<br>
-    外贸业务：<a href="mailto:export@qlfiber.com">export@qlfiber.com</a>
+    外贸业务：<a href="mailto:hcq@jl-jiber.com">hcq@jl-jiber.com</a>
   </div>
 </div></body></html>`;

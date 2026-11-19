@@ -38,7 +38,7 @@ dict(f="p-fiber.html", idx="01", en="METAL FIBER & YARN", bg="img/en-sh-yarn.web
        "Reinforcing fiber for friction materials and high-temperature composites",
        "Feedstock for sintered felt, woven textiles and filter elements"],
  notes="Fiber resistance at room temperature varies with the state of the stainless steel fiber. If your product has a resistance limit, state it at enquiry and we will test samples before qualification.",
- gal=[("img/en-sh-yarn.webp","Metal fiber yarn on cone"),("img/en-sh-fiber.webp","Blended yarn"),
+ gal=[("img/jl-yarn-blend.webp","Metal fiber yarns on cones"),("img/en-sh-fiber.webp","Blended yarn"),
       ("img/en-micro-drawing.webp","Bundle drawing, schematic"),("img/prod-heatwire.webp","Insulated heating wire")]),
 
 dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/en-sh-felt.webp",
@@ -60,8 +60,8 @@ dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/en-sh-felt.w
         FELT,
         "Typical values for reference. Final values are confirmed on the factory inspection report for each lot. Bubble point reflects the largest pore and rises as the rating gets finer; air permeability moves in the opposite direction, which is the trade-off to balance at selection."),
  notes="Thickened KIA3K media (1.1 mm) raises dirt-holding capacity and flow at the same rating — useful when the rating is fixed but differential pressure is rising too quickly.",
- gal=[("img/en-sh-felt.webp","Sintered metal fiber felt"),("img/en-micro-gradient.webp","Graded pore structure"),
-      ("img/en-micro-network.webp","Fiber network, micrograph"),("img/media-05.webp","Media and discs")]),
+ gal=[("img/jl-felt.webp","Sintered metal fiber felt"),("img/en-micro-gradient.webp","Graded pore structure"),
+      ("img/en-micro-network.webp","Fiber network, micrograph"),("img/jl-felt-stack.webp","Felt sheets, stacked")]),
 
 dict(f="p-textile.html", idx="03", en="TECHNICAL TEXTILES & SLEEVES", bg="img/en-sh-sleeve.webp",
  h1="Woven, knitted and braided metal — for heat that destroys fabric",
@@ -81,8 +81,8 @@ dict(f="p-textile.html", idx="03", en="TECHNICAL TEXTILES & SLEEVES", bg="img/en
        "Hot bending mould covers for automotive glass","Thermocouple and cable sleeving",
        "Suction cup and clamp cushioning, container pusher bars","Equipment earthing and static elimination"],
  notes="Sharp cut edges and heavily abrasive duty still benefit from edge treatment — tell us the installation and we will advise whether the ends should be finished.",
- gal=[("img/en-sh-sleeve.webp","Braided metal fiber sleeve"),("img/sh-belt.webp","Metal fiber woven tape"),
-      ("img/en-sh-cloth.webp","Metal fiber woven cloth"),("img/sleeve-04.webp","Sleeved rollers in service")]),
+ gal=[("img/jl-sleeve-flat.webp","Braided metal fiber sleeve"),("img/sh-belt.webp","Metal fiber woven tape"),
+      ("img/en-sh-cloth.webp","Metal fiber woven cloth"),("img/jl-tape-spool.webp","Woven tape on spool")]),
 
 dict(f="p-element.html", idx="04", en="FILTER ELEMENTS", bg="img/en-sh-element.webp",
  h1="Elements built from the media up",
@@ -99,8 +99,8 @@ dict(f="p-element.html", idx="04", en="FILTER ELEMENTS", bg="img/en-sh-element.w
        "High-pressure hydraulic and fuel filtration","High-temperature gas and dust filtration",
        "Vacuum pump protection and pre-filtration"],
  notes="A typical configuration: 316L sintered felt at 10 µm and 0.4 mm thick, inner support mesh 304 at 0.125 mm wire and 48 mesh, outer protective mesh 304 at 0.224 mm wire and 40 mesh. Dimensions and fittings are made to your housing.",
- gal=[("img/en-sh-element.webp","Pleated metal fiber cartridge"),("img/cart-04.webp","Cartridges in production"),
-      ("img/media-01.webp","Sintered media discs"),("img/media-02.webp","Sintered mesh and discs")]),
+ gal=[("img/jl-cartridge-pleat.webp","Pleated metal fiber cartridge"),("img/jl-cartridge-set.webp","Cartridge range"),
+      ("img/media-01.webp","Sintered media discs"),("img/jl-disc.webp","Leaf disc filter")]),
 
 dict(f="p-equipment.html", idx="05", en="OIL RECOVERY SYSTEMS", bg="img/fts-bamo-02.webp",
  h1="Oil removal without a single drop of demulsifier",

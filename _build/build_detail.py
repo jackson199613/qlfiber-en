@@ -37,7 +37,7 @@ html = head("20KIA3 Sintered Metal Fiber Felt — 20 µm Absolute | QL Metal Fib
       <div class="pd-thumbs">
         <img src="img/en-micro-gradient.webp" alt="Graded pore structure" loading="lazy" width="300" height="225">
         <img src="img/en-micro-network.webp" alt="Fiber network micrograph" loading="lazy" width="300" height="225">
-        <img src="img/media-05.webp" alt="Cut media and discs" loading="lazy" width="300" height="225">
+        <img src="img/jl-felt-stack.webp" alt="Sintered felt sheets" loading="lazy" width="300" height="225">
       </div>
     </div>
     <div class="pd-info rv d1">

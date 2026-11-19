@@ -26,7 +26,7 @@ PAGES=[("Home","index.html","Brand positioning, key figures, products, applicati
  ("History","history.html","Milestones from 2002."),
  ("Manufacturing","manufacturing.html","The eight process steps from wire to element."),
  ("Quality & Certifications","quality.html","ISO 9001, control plan and lot reports."),
- ("News & Blog","news.html","Technical articles and company news."),
+ ("News & Blog","news.html","Company news, events, media coverage and technical articles."),
  ("FAQ","resources.html","Answers on materials, filtration, textiles and working with us."),
  ("Downloads","downloads.html","Catalogues, data sheets and certificates on request."),
  ("Contact Us","contact.html","Enquiry form, address and direct contact."),

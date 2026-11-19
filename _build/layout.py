@@ -5,9 +5,9 @@ import os, json
 SITE   = "https://qlfiber-en.netlify.app"
 COMPANY = "Fujian QL Metal Fiber Co., Ltd."
 BRAND  = "QL Metal Fiber"
-TEL    = "+86 181 5982 1773"
-TEL_RAW= "+8618159821773"
-MAIL   = "qianglun2026@gmail.com"
+TEL    = "+86 153 5992 7344"
+TEL_RAW= "+8615359927344"
+MAIL   = "hcq@jl-jiber.com"
 ADDR   = "No. 11 Huangbang Road, Dongxiao Town, Longyan Economic & Technological Development Zone, Longyan, Fujian, China"
 CN_SITE= "https://www.qlfiber.com/"
 
@@ -108,7 +108,7 @@ def header(active=""):
 <header id="hdr"><div class="wrap nav">
   <a class="brand" href="index.html" aria-label="{BRAND} home">
     <img src="img/logo.png" alt="{BRAND}" width="40" height="40">
-    <span><b>QL Metal Fiber</b><small>Fujian QL · Since 2002</small></span>
+    <span><b>QL Metal Fiber</b><small>QLfiber · Since 2002</small></span>
   </a>
   <nav class="menu" id="menu">{links}</nav>
   <div class="nav-r">
@@ -156,7 +156,7 @@ def footer():
     <div>
       <a class="brand" href="index.html" style="margin-bottom:20px">
         <img src="img/logo.png" alt="" width="40" height="40">
-        <span><b style="color:#fff">QL Metal Fiber</b><small>Fujian QL · Since 2002</small></span>
+        <span><b style="color:#fff">QL Metal Fiber</b><small>QLfiber · Since 2002</small></span>
       </a>
       <p class="blurb">A vertically integrated metal fiber manufacturer — from micron-scale stainless steel fibers to yarns, technical textiles, sintered media, filter elements and separation equipment.</p>
       <p style="font-size:13.4px;line-height:1.7">{ADDR}</p>

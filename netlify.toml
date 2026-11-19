@@ -39,3 +39,14 @@
   from = "/sitemap"
   to = "/sitemap.html"
   status = 301
+
+# 撤下的旧公司新闻，旧链接转到新闻列表
+[[redirects]]
+  from = "/article-4.html"
+  to = "/news.html"
+  status = 301
+
+[[redirects]]
+  from = "/article-6.html"
+  to = "/news.html"
+  status = 301
