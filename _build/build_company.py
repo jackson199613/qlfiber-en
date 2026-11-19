@@ -71,7 +71,7 @@ html = head(f"Company Profile — {COMPANY}",
         ("img/plant-10.webp","Finished media and roll goods"),("img/team-cadre2024.webp","The team, 2024")])}
 </div></section>
 
-{film_block("Corporate film", "See the company, not just the <em>page</em>", "A walk through the plants, the laboratory and the finished products, with English narration and bilingual subtitles. Three minutes and forty-nine seconds.")}
+{film_block("Corporate film", "See the company, not just the <em>page</em>", "A walk through the plants, the laboratory and the finished products, with English narration and bilingual subtitles. Three minutes and forty-five seconds.")}
 
 {CTA_BAND}
 </main>
