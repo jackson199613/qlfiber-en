@@ -348,7 +348,7 @@ table.spec tbody tr:last-child td{border-bottom:0}
 .gal.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .gal.c1{grid-template-columns:minmax(0,1fr);max-width:760px!important}
 .gal figure{margin:0;border-radius:var(--r);overflow:hidden;background:var(--paper-2)}
-.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .9s var(--ease)}
+.gal img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .9s var(--ease)}
 .gal figure:hover img{transform:scale(1.04)}
 .gal figcaption{padding:11px 2px 0;font-size:12.4px;color:var(--muted-2)}
 @media(max-width:860px){.gal,.gal.c3{grid-template-columns:repeat(2,minmax(0,1fr))}}

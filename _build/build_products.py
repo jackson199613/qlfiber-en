@@ -38,8 +38,8 @@ dict(f="p-fiber.html", idx="01", en="METAL FIBER & YARN", bg="img/en-sh-yarn.web
        "Reinforcing fiber for friction materials and high-temperature composites",
        "Feedstock for sintered felt, woven textiles and filter elements"],
  notes="If your product has a resistance limit, state it at enquiry and we will test samples before qualification.",
- gal=[("img/jl-yarn-blend.webp","Metal fiber yarns on cones"),("img/en-sh-fiber.webp","Blended yarn"),
-      ("img/en-micro-drawing.webp","Bundle drawing, schematic"),("img/prod-heatwire.webp","Insulated metal fiber thread")]),
+ gal=[("img/yarn-real-set.webp","Metal fiber yarn and thread range"),("img/yarn-real-thread-set.webp","QL metal fiber thread"),
+      ("img/yarn-real-silicone.webp","Silicone-insulated metal fiber thread"),("img/en-micro-drawing.webp","Bundle drawing, schematic")]),
 
 dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/en-sh-felt.webp",
  h1="Depth filtration you can wash and put back",

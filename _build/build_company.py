@@ -67,8 +67,8 @@ html = head(f"Company Profile — {COMPANY}",
 <section class="sec alt"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">The plant</div>
     <h2 class="h-lg rv d1" style="margin-top:14px">Where it is made</h2></div>
-  {gal([("img/plant-02.webp","Production workshop"),("img/plant-07.webp","Sintering and lamination area"),
-        ("img/plant-10.webp","Finished media and roll goods"),("img/team-cadre2024.webp","The team, 2024")])}
+  {gal([("img/mfg-draw-line.webp","Metal fiber production line"),("img/mfg-sinter-01.webp","Vacuum sintering furnace"),
+        ("img/mfg-store-02.webp","Finished goods store"),("img/team-cadre2024.webp","The team, 2024")])}
 </div></section>
 
 {film_block("Corporate film", "See the company, not just the <em>page</em>", "A walk through the plants, the laboratory and the finished products, with English narration and bilingual subtitles. Three minutes and forty-five seconds.")}
@@ -95,10 +95,10 @@ html = head("History — Metal Fiber Since 2002 | QL Metal Fiber",
   "From bundle-drawn fiber in 2002 to sintered media, filter elements, conductive textiles and 600 m³/h oil recovery systems today.",
   "history.html","QL Metal Fiber history, metal fiber manufacturer since 2002",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"History","url":f"{SITE}/history.html"},ensure_ascii=False),
-  "img/plant-07.webp") + header("company.html") + crumb([("Company","company.html"),("History",None)]) + page_hero(
+  "img/mfg-draw-line.webp") + header("company.html") + crumb([("Company","company.html"),("History",None)]) + page_hero(
   "02","HISTORY","One capability at a time",
   "Each step below was taken because a customer's problem could not be solved with what we had. That is still how the range grows.",
-  None,"img/plant-07.webp") + subnav(SUB_CO,"history.html") + f"""
+  None,"img/mfg-draw-line.webp") + subnav(SUB_CO,"history.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Milestones</div>
@@ -138,8 +138,10 @@ html = head("Manufacturing — From Wire to Finished Element | QL Metal Fiber",
 <section class="sec alt"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Inside the plant</div>
     <h2 class="h-md rv d1" style="margin-top:14px">Production and finished goods</h2></div>
-  {gal([("img/plant-02.webp","Production workshop"),("img/plant-10.webp","Roll goods and finished media"),
-        ("img/cart-04.webp","Element assembly"),("img/jl-felt-fan.webp","Sintered felt in several grades")])}
+  {gal([("img/mfg-draw-line.webp","Metal fiber production line"),("img/mfg-draw-unit.webp","Fiber production equipment"),
+        ("img/mfg-sinter-01.webp","Vacuum sintering furnace"),("img/mfg-sinter-03.webp","Vacuum sintering equipment"),
+        ("img/mfg-loom-01.webp","Wire mesh weaving"),("img/mfg-laser-cut.webp","Laser cutting"),
+        ("img/mfg-lathe.webp","CNC turning"),("img/mfg-weld.webp","Welding and assembly")])}
 </div></section>
 {CTA_BAND}
 </main>
