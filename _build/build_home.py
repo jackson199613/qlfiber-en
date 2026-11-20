@@ -32,7 +32,7 @@ LINES = [
  ("p-felt.html","02","Sintered Felt &amp; Media","KIA3 / KIA3K / KIC4 sintered felts, 10–60&nbsp;µm absolute, 72–86% porosity, cleanable and reusable.","img/jl-felt.webp"),
  ("p-textile.html","03","Technical Textiles &amp; Sleeves","Knitted and braided sleeves, woven fabrics, tapes and ropes rated 350–1100&nbsp;°C.","img/jl-sleeve-flat.webp"),
  ("p-element.html","04","Filter Elements","Pleated cartridges to 30&nbsp;MPa, sintered mesh elements, high-temperature metal filter bags.","img/jl-cartridge-set.webp"),
- ("p-equipment.html","05","Oil Recovery Systems","Coalescing oil–water separation for hydrometallurgy — no demulsifiers, largest unit in service 600&nbsp;m³/h.","img/fts-render-tank.webp"),
+ ("p-equipment.html","05","Oil Recovery Systems","Coalescing oil–water separation for hydrometallurgy — no demulsifiers, single-unit capacity up to 600&nbsp;m³/h.","img/fts-render-tank.webp"),
 ]
 
 MATRIX = [
@@ -47,7 +47,7 @@ MATRIX = [
 MCOLS = ["Conductive","High&nbsp;temp","Corrosion","Porous / permeable","Flexible / weavable","Damping"]
 
 FAQ = [
- ("What is the finest fiber you can produce, and in which alloys?",
+ ("How fine can your fiber go, and in which alloys?",
   "Our bundle-drawing line produces stainless steel fiber down to 2&nbsp;µm. Standard alloys are 316L, 304 and 302; we also run FeCrAl, 904L, nickel-based alloys, copper and titanium. Alloy choice is driven by the service temperature and the chemistry of your medium, so tell us both and we will propose the material."),
  ("Do you have a minimum order quantity?",
   "There is no minimum order for glass-processing sleeves — we can supply by the metre so you can trial them on one furnace first. Other product lines are quoted by specification and operating conditions, and we support sampling and application testing before any volume commitment."),
@@ -256,10 +256,10 @@ html = head(
     </div>
 
     <div class="stats">
-      <div class="stat rv"><b class="num"><span data-count="2">2</span><sup>µm</sup></b><span>Finest fiber diameter we draw</span></div>
+      <div class="stat rv"><b class="num"><span data-count="2">2</span><sup>µm</sup></b><span>Fiber diameter down to</span></div>
       <div class="stat rv d1"><b class="num"><span data-count="62">62</span><sup>pat.</sup></b><span>Granted patents, 16 of them inventions</span></div>
       <div class="stat rv d2"><b class="num"><span data-count="6">6</span><sup>std.</sup></b><span>National &amp; industry standards co-drafted</span></div>
-      <div class="stat rv d3"><b class="num"><span data-count="600">600</span><sup>m³/h</sup></b><span>Largest oil recovery unit in service</span></div>
+      <div class="stat rv d3"><b class="num"><span data-count="600">600</span><sup>m³/h</sup></b><span>Oil recovery capacity per unit, up to</span></div>
     </div>
   </div>
 </section>
@@ -335,7 +335,7 @@ html = head(
             ("Everything made in-house","Fiber drawing, sintering, spinning, weaving, element fabrication and equipment assembly are all ours — so is the responsibility when something needs to change."),
             ("Testing you can check","In-house SEM, pore-size distribution, particle analysis and filtration rigs. We send the data with the sample, not instead of it."),
             ("Standards and patents behind it","Co-drafted 5 national and 1 industry standard; 62 granted patents including 16 inventions."),
-            ("Proven at industrial scale","Sintered felt supplied to China's viscose and chemical-fibre industry; oil recovery systems running at leading nickel-cobalt hydrometallurgy producers, up to 600 m³/h per unit."),
+            ("Proven at industrial scale","Sintered felt supplied to China's viscose and chemical-fibre industry; oil recovery systems running at nickel-cobalt hydrometallurgy producers, up to 600 m³/h per unit."),
           ],1))}
       </div>
     </div>

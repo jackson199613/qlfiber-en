@@ -5,7 +5,7 @@ from layout import head, header, footer, w, CTA_BAND, crumb, page_hero, subnav, 
 
 FAQ=[("Materials",[
  ("Which alloys can you supply as fiber?","316L, 304 and 302 are standard. FeCrAl, 904L, nickel-based alloys, Hastelloy, Monel, duplex alloys, copper and titanium are available, usually with a minimum quantity. Tell us the medium and temperature and we will propose the alloy rather than ask you to choose one."),
- ("How fine can the fiber be?","2 µm monofilament is the finest we draw. 12 µm is the usual diameter for textile and conductive applications, because it balances conductivity against the hand and strength of the yarn."),
+ ("How fine can the fiber be?","We draw monofilament down to 2 µm. 12 µm is the usual diameter for textile and conductive applications, because it balances conductivity against the hand and strength of the yarn."),
  ("Is the metal plated on, or is the fiber solid metal?","Solid metal. The fiber is drawn from wire, so conductivity and corrosion resistance do not wash out, flex off or degrade with time, as they do with metallised or plated fibers."),
  ("What temperature can the material take?","Depends on the alloy and the form. 316L textiles are rated 350 °C continuous with short-term peaks to 1100 °C; sintered felt is generally used to 480 °C in the process medium; high-temperature filter bags are rated 350–1000 °C. Always state both normal and peak temperature at enquiry."),
 ]),("Filtration",[

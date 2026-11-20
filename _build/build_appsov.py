@@ -66,7 +66,7 @@ html = head("Application Solutions | Metal Fiber by Operating Condition — QL M
  + page_hero("", "APPLICATION SOLUTIONS",
    "Seven solutions, organised by the conditions you run",
    "Buyers rarely ask what products we have. They ask whether a material will survive their furnace temperature, their solvent, their precision requirement — and for how long. Each solution starts from that question and ends with a sample on your line.",
-   [("7","","Application solutions"),("7","forms","Product forms available"),("2","µm","Finest fiber diameter")],
+   [("7","","Application solutions"),("7","forms","Product forms available"),("2","µm","Fiber diameter down to")],
    "img/en-filtration.webp") \
  + subnav(SUB_APP, "applications.html") + f"""
 <main>

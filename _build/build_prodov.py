@@ -17,7 +17,7 @@ LINES=[("01","p-fiber.html","Metal Fiber & Yarn","img/jl-yarn-blend.webp",
         ["5–60 µm rating","30 MPa working pressure","425–1250 mm length"],"element filtration"),
        ("05","p-equipment.html","Oil Recovery Systems","img/fts-render-tank.webp",
         "Coalescing oil–water separation for extraction circuits — no demulsifier, no chemical sludge, and the organic phase goes back into the process.",
-        ["600 m³/h largest unit","~70% oil removal","1–2 year payback"],"equipment filtration")]
+        ["Up to 600 m³/h per unit","~70% oil removal","1–2 year payback"],"equipment filtration")]
 
 FORMS=[("Fiber (filament, chopped, sliver)","●","●","●","○","●","○"),
        ("Yarn & thread (pure, blended, insulated)","●","●","●","—","●","—"),
@@ -55,7 +55,7 @@ html = head("Products — Metal Fiber, Felt, Textiles, Elements and Systems | QL
    sc,"img/en-ph-products.webp") + header("products.html") + crumb([("Products",None)]) + page_hero(
    "", "PRODUCTS", "One material, five product lines",
    "Everything we make starts as bundle-drawn metal fiber. What changes is the form it takes — and the form is chosen from your operating conditions, not from a catalogue page.",
-   [("5","lines","From fiber to finished system"),("2","µm","Finest monofilament"),("62","patents","Granted and pending")],
+   [("5","lines","From fiber to finished system"),("2","µm","Monofilament down to"),("62","patents","Granted and pending")],
    "img/en-ph-products.webp") + subnav(SUB_PROD,"products.html") + f"""
 <main>
 <section class="sec"><div class="wrap">

@@ -88,7 +88,7 @@ HIST=[("2002","Founded","The company is established in Longyan, Fujian, to produ
   ("2020","Oil recovery","The coalescing oil recovery system is commercialised for nickel-cobalt extraction circuits."),
   ("2021","NEEQ listing","The company lists on the National Equities Exchange and Quotations under code 872336."),
   ("2023","Smart wearables","A provincial project on flexible functional materials for smart wearables begins."),
-  ("2024","Scale","The largest coalescing oil recovery system to date, at 600 m³/h, enters service."),
+  ("2024","Scale","A 600 m³/h coalescing oil recovery system enters service."),
   ("2026","Equipment recognition","High-efficiency metal coalescing oil removal equipment is taken up as a provincial project and recognised as first-of-its-kind major technical equipment.")]
 
 html = head("History — Metal Fiber Since 2002 | QL Metal Fiber",
@@ -127,7 +127,7 @@ html = head("Manufacturing — From Wire to Finished Element | QL Metal Fiber",
   "img/en-ph-manufacturing.webp") + header("company.html") + crumb([("Company","company.html"),("Manufacturing",None)]) + page_hero(
   "03","MANUFACTURING","Wire in at one end, qualified element out at the other",
   "Eight process steps, all under one roof. The reason it matters is not pride in vertical integration — it is that a change at step four can solve a problem that appears at step eight.",
-  [("2","µm","Finest filament drawn"),("1500","mm","Maximum cloth width"),("8","","Process steps in house")],
+  [("2","µm","Filament diameter down to"),("1500","mm","Maximum cloth width"),("8","","Process steps in house")],
   "img/en-ph-manufacturing.webp") + subnav(SUB_CO,"manufacturing.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
