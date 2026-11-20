@@ -15,7 +15,7 @@ FAQ=[("Materials",[
  ("Can you make elements to fit our existing housings?","Yes. Pleated cartridges run Φ35–60 mm and 425–1250 mm long, with end fittings made to your drawing. We make the media, the support mesh assembly and the element, so rating, strength and fit are specified together."),
 ]),("Textiles and conductive products",[
  ("Do your sleeves shed fibers?","Finished goods are heat-set so that under normal cutting and handling they do not fuzz or shed. Sharp cut edges and heavily abrasive duty still benefit from edge treatment — describe the installation and we will advise."),
- ("What resistance can you hold on a conductive thread?","1 to 64 Ω/m, set by ply count and core count. Fiber resistance at room temperature varies with the state of the stainless steel fiber, so if your product has a resistance limit, state it at enquiry and we will test samples before qualification."),
+ ("What resistance can you hold on a conductive thread?","1 to 64 Ω/m. If your product has a resistance limit, state it at enquiry and we will test samples before qualification."),
  ("Can you blend metal fiber with our own yarn?","Yes. Blend ratios run from 0.5 to 100% stainless steel with aramid, polyester, PPS or cotton. We can trial-spin and trial-weave small quantities before you commit."),
 ]),("Working with us",[
  ("Is there a minimum order?","Most technical textile products have no minimum order — a trial can be a single length. Special alloys and custom constructions carry a minimum, which we state with the quotation."),

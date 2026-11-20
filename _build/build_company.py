@@ -46,7 +46,7 @@ html = head(f"Company Profile — {COMPANY}",
         <li><b>Purification equipment.</b> Coalescing oil recovery systems for hydrometallurgical extraction circuits.</li>
         <li><b>Thermal and power.</b> Metal fiber textiles for glass processing, burners and high-temperature service.</li>
       </ul>
-      <p>A separate yarn business supplies conductive fiber, blended yarn and heating wire for textile and electronics customers.</p>
+      <p>A separate yarn business supplies conductive fiber, blended yarn and metal fiber thread for textile and electronics customers.</p>
     </div>
     <div class="rv d1">
       {spec("Company facts", ["Item","Detail"], [

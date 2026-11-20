@@ -17,7 +17,7 @@ CARDS = [
   "Porous plates, burner media and damping felts for combustion, thermal shock and vibration.",
   "50–90% porosity · to 1100 °C"),
  ("a-automotive.html","05","Automotive","","img/en-automotive.webp",
-  "Mould covers, heating wire, chopped fiber, sintered media and hydraulic elements.",
+  "Mould covers, metal fiber thread, chopped fiber, sintered media and hydraulic elements.",
   "Glass forming to seat heating"),
  ("a-textiles.html","06","Functional Textiles &amp; Smart Wearables","","img/en-textiles.webp",
   "Weavable, sewable, washable conductive and heating yarns for apparel and workwear.",
