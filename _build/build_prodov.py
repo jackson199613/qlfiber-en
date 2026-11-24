@@ -52,11 +52,11 @@ sc=json.dumps({"@context":"https://schema.org","@type":"ItemList","name":"Produc
 html = head("Products — Metal Fiber, Felt, Textiles, Elements and Systems | QL Metal Fiber",
    "Five product lines built on one material: bundle-drawn metal fiber. Fiber and yarn, sintered felt, technical textiles, filter elements and oil recovery systems.",
    "products.html","metal fiber products, sintered felt, metal fiber sleeve, filter element, oil recovery system",
-   sc,"img/en-ph-products.webp") + header("products.html") + crumb([("Products",None)]) + page_hero(
+   sc,"img/mfg-sinter-01.webp") + header("products.html") + crumb([("Products",None)]) + page_hero(
    "", "PRODUCTS", "One material, five product lines",
    "Everything we make starts as bundle-drawn metal fiber. What changes is the form it takes — and the form is chosen from your operating conditions, not from a catalogue page.",
    [("5","lines","From fiber to finished system"),("2","µm","Monofilament down to"),("62","patents","Granted and pending")],
-   "img/en-ph-products.webp") + subnav(SUB_PROD,"products.html") + f"""
+   "img/mfg-sinter-01.webp") + subnav(SUB_PROD,"products.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Product lines</div>

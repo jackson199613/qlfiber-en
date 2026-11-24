@@ -2,6 +2,7 @@
 import sys, os, json
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, footer, w, CTA_BAND, crumb, page_hero, subnav, SUB_PROD, SITE
+from products_en import prod_cards, dept_block, BY_KEY, LINE_DEPT
 
 def tbl(caption, heads, rows, note=""):
     th = "".join(f'<th{" class=\"num\"" if h.startswith("#") else ""}>{h.lstrip("#")}</th>' for h in heads)
@@ -20,7 +21,7 @@ FELT = [("10KIA3","#10","#0.30","#75","#3700","#110"),("15KIA3","#15","#0.37","#
         ("60KIA3","#60","#0.70","#86","#620","#1200")]
 
 LINES = [
-dict(f="p-fiber.html", idx="01", en="METAL FIBER & YARN", bg="img/en-sh-yarn.webp",
+dict(f="p-fiber.html", idx="01", en="METAL FIBER & YARN", bg="img/jlw-yarn.webp",
  h1="Stainless steel drawn down to 2 µm",
  lead="Bundle-drawn metal fiber in long filament, chopped and tow form, and the yarns spun from it — pure metal, blended or insulated. This is the raw material behind every other product line.",
  kpis=[("2","µm","Monofilament down to"),("0.5","–100%","Steel content in blends"),("1","–64 Ω/m","Conductive thread resistance")],
@@ -39,9 +40,9 @@ dict(f="p-fiber.html", idx="01", en="METAL FIBER & YARN", bg="img/en-sh-yarn.web
        "Feedstock for sintered felt, woven textiles and filter elements"],
  notes="If your product has a resistance limit, state it at enquiry and we will test samples before qualification.",
  gal=[("img/yarn-real-set.webp","Metal fiber yarn and thread range"),("img/yarn-real-thread-set.webp","QL metal fiber thread"),
-      ("img/yarn-real-silicone.webp","Silicone-insulated metal fiber thread"),("img/en-micro-drawing.webp","Bundle drawing, schematic")]),
+      ("img/yarn-real-silicone.webp","Silicone-insulated metal fiber thread"),("img/mfg-draw-line.webp","Bundle drawing, schematic")]),
 
-dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/en-sh-felt.webp",
+dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/jlw-felt.webp",
  h1="Depth filtration you can wash and put back",
  lead="Non-woven metal fiber webs laminated and vacuum-sintered into a graded pore structure — 10 to 60 µm absolute, 72 to 86% porosity, and cleanable rather than disposable.",
  kpis=[("10","–60 µm","Absolute rating"),("72","–86%","Porosity"),("480","°C","Service temperature")],
@@ -60,33 +61,32 @@ dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/en-sh-felt.w
         FELT,
         "Typical values for reference. Final values are confirmed on the factory inspection report for each lot. Bubble point reflects the largest pore and rises as the rating gets finer; air permeability moves in the opposite direction, which is the trade-off to balance at selection."),
  notes="Thickened KIA3K media (1.1 mm) raises dirt-holding capacity and flow at the same rating — useful when the rating is fixed but differential pressure is rising too quickly.",
- gal=[("img/jl-felt.webp","Sintered metal fiber felt"),("img/en-micro-gradient.webp","Graded pore structure"),
-      ("img/en-micro-network.webp","Fiber network, micrograph"),("img/jl-felt-stack.webp","Felt sheets, stacked")]),
+ gal=[("img/jl-felt.webp","Sintered metal fiber felt"),("img/sem-felt-01.webp","Graded pore structure"),
+      ("img/sem-felt-02.webp","Fiber network, micrograph"),("img/jl-felt-stack.webp","Felt sheets, stacked")]),
 
-dict(f="p-textile.html", idx="03", en="TECHNICAL TEXTILES & SLEEVES", bg="img/en-sh-sleeve.webp",
- h1="Woven, knitted and braided metal — for heat that destroys fabric",
- lead="Elastic knitted sleeves, braided sleeves, woven cloth, tape and rope made from 316L metal fiber, rated 350 °C continuous and 1100 °C short term, with no coating to shed.",
- kpis=[("350","°C","Continuous service"),("1100","°C","Short-term peak"),("1500","mm","Maximum standard width")],
- intro="Metal fiber is soft enough to be knitted, braided and woven on textile machinery, so it can take the shape a part actually needs: a sleeve that grips a roller, a tape that wraps a toothed bar, a cloth that covers a bending mould. Finished goods are heat-set so that, under normal cutting and handling, they do not fuzz or shed.",
- specs=[("Standard material","316L stainless steel fiber; FeCrAl on request, subject to minimum order"),
-        ("Elastic knitted sleeve","TGZ112, Φ35 / 50 / 55 / 60 mm"),
-        ("Braided sleeve","TGBX112 / TGBX113, Φ5–14 mm"),
-        ("Knitted metal sleeve","ZDJX113 / ZDJF113, conformable to irregular parts"),
-        ("Woven cloth","Plain 0.35 mm, twill 0.5 mm"),
-        ("Standard widths","1000 / 1200 / 1500 mm; slitting and narrow widths available"),
-        ("Tape thickness","0.35–0.5 mm, custom thickness on evaluation"),
+dict(f="p-textile.html", idx="03", en="TECHNICAL TEXTILES & SLEEVES", bg="img/sleeve-06.webp",
+ h1="Heat-resistant cushioning materials for glass manufacturing",
+ lead="Rope, felt, thread, elastic sleeves, braided sleeves and tape or cloth made from 316L metal fiber, rated 350–1100 °C — protection and cushioning for the hot side of glass production.",
+ kpis=[("350–1100","°C","Service temperature"),("6","products","Rope, felt, thread, sleeves, tape / cloth"),("1500","mm","Maximum standard width")],
+ intro="Metal fiber is soft enough to be knitted, braided and woven on textile machinery, so it can take the shape a part actually needs: a sleeve that grips a ceramic roller, a braided sleeve over a chemical-tempering rack, a cloth that covers a forming mould, a felt pad under a suction cup. All six products share the same core properties: rated 350–1100 °C, excellent oxidation resistance in hot air, strong, abrasion and shear resistant, with a smooth, burr-free surface.",
+ specs=[("Standard material","316L stainless steel fiber; special materials and sizes on request"),
+        ("Service temperature","350–1100 °C"),
+        ("Elastic sleeve","TGZ111 / TGZ132 series, Φ50 / 55 / 60 / 65 mm"),
+        ("Braided sleeve","TGBX112 / TGBP112 series, Φ8 / 10 / 12 mm"),
+        ("Tape / cloth","0.35–0.5 mm thick; widths 1000 / 1200 / 1500 mm, tape width to order"),
         ("Rope","Φ1–12 mm, square or round section"),
-        ("Damping felt","2–3 mm thick")],
- uses=["Ceramic roller protection in glass tempering furnaces","Toothed bars and rack protection in chemical strengthening",
-       "Hot bending mould covers for automotive glass","Thermocouple and cable sleeving",
-       "Suction cup and clamp cushioning, container pusher bars","Equipment earthing and static elimination"],
- notes="Sharp cut edges and heavily abrasive duty still benefit from edge treatment — tell us the installation and we will advise whether the ends should be finished.",
- gal=[("img/jl-sleeve-flat.webp","Braided metal fiber sleeve"),("img/sh-belt.webp","Metal fiber woven tape"),
-      ("img/en-sh-cloth.webp","Metal fiber woven cloth"),("img/jl-tape-spool.webp","Woven tape on spool")]),
+        ("Felt","2–3 mm thick, up to 300 × 300 mm"),
+        ("Thread","100 / 275 / 1000 series")],
+ uses=["Ceramic roller sleeves in physical tempering furnaces","Rack protection in chemical tempering furnaces",
+       "Mould-covering tape and mould cloth in glass forming","Cushioning pads for glass suction cups and clamps",
+       "Covers for automotive glass mould frames and container-glass pusher bars","Gas turbines, cables, high-temperature equipment and EMI shielding"],
+ notes="Source: QL glass market product brochure (Thermal Division). Tell us the furnace type, roller diameter and temperature, and we will send matching samples.",
+ gal=[("img/sleeve-06.webp","Tempering line rollers"),("img/sleeve-04.webp","Sleeved rollers on the line"),
+      ("img/rd-braid.webp","Braided metal fiber sleeve"),("img/rd-tape.webp","Metal fiber tape and cloth")]),
 
-dict(f="p-element.html", idx="04", en="FILTER ELEMENTS", bg="img/en-sh-element.webp",
+dict(f="p-element.html", idx="04", en="FILTER ELEMENTS", bg="img/jlw-cart-pleat.webp",
  h1="Elements built from the media up",
- lead="Pleated cartridges, sintered mesh elements and high-temperature metal filter bags — made in house from our own media, so the rating, the structure and the end fittings are all specified together.",
+ lead="Hydraulic, dust collection, air compressor and industrial fluid filter elements made to drawing, plus pleated metal fiber cartridges built from our own media — with filter cores and metal parts machined in the same workshop.",
  kpis=[("30","MPa","Maximum working pressure"),("1250","mm","Maximum element length"),("1000","°C","Bag filter rating")],
  intro="An element is a system: the felt sets the rating and the dirt-holding capacity, the mesh sets the strength, and the end fittings decide whether it drops into your housing. Because we make the media, the support mesh assembly and the element, those three decisions are taken together rather than passed between suppliers.",
  specs=[("Pleated cartridge diameter","Φ35–60 mm"),("Pleated cartridge length","425–1250 mm"),
@@ -128,7 +128,7 @@ dict(f="p-equipment.html", idx="05", en="OIL RECOVERY SYSTEMS", bg="img/fts-bamo
         "Dissolved oil content in extraction liquor is generally 5–40 ppm depending on the extractant and mixing regime, and still requires deep treatment. Recovering the non-dissolved fraction first is what reduces that downstream load."),
  notes="Systems can be trialled on your own liquor before a proposal is issued. Customer names in China are not published without written consent; our installed base includes nickel-cobalt hydrometallurgy producers.",
  gal=[("img/fts-bamo-02.webp","Trough-type system, 160 m³/h"),("img/fts-huayou-02.webp","600 m³/h system"),
-      ("img/fts-site-05.webp","Extraction plant installation"),("img/en-micro-coalesce.webp","Coalescence, schematic")]),
+      ("img/fts-site-05.webp","Extraction plant installation"),("img/fts-principle.webp","Coalescence, schematic")]),
 ]
 
 for L in LINES:
@@ -147,7 +147,13 @@ for L in LINES:
         + page_hero(L["idx"], L["en"], L["h1"], L["lead"], L["kpis"], L["bg"]) \
         + subnav(SUB_PROD, L["f"]) + f"""
 <main>
-<section class="sec"><div class="wrap">
+<section class="sec tight-top"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Products</div>
+    <h2 class="h-md rv d1" style="margin-top:14px">Products in this line</h2></div>
+  <div class="pcards">{prod_cards(L["f"])}</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
   <div class="g2" style="gap:56px;align-items:start">
     <div class="prose rv">
       <p class="lede">{L["intro"]}</p>
@@ -159,12 +165,19 @@ for L in LINES:
   <div class="note rv" style="margin-top:34px">{L["notes"]}</div>
 </div></section>
 
-{f'<section class="sec alt"><div class="wrap">{extra}</div></section>' if extra else ''}
+{f'<section class="sec"><div class="wrap">{extra}</div></section>' if extra else ''}
 
-<section class="sec{'' if extra else ' alt'}"><div class="wrap">
+<section class="sec{' alt' if extra else ''}"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Gallery</div>
     <h2 class="h-md rv d1" style="margin-top:14px">Product and application</h2></div>
   {gal}
+</div></section>
+
+<section class="sec{'' if extra else ' alt'}" id="dvcontact"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Contact</div>
+    <h2 class="h-md rv d1" style="margin-top:14px">Talk to the {BY_KEY[LINE_DEPT[L["f"]]]["name"]}</h2>
+    <p class="lead rv d2" style="margin-top:12px">The team that makes this product line answers directly — for selection, samples and quotations.</p></div>
+  <div class="cdepts rv">{dept_block(BY_KEY[LINE_DEPT[L["f"]]])}{dept_block(BY_KEY["sales"], "Sales Management (general enquiries)")}</div>
 </div></section>
 
 {CTA_BAND}

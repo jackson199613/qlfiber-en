@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys, os, json
 sys.path.insert(0, os.path.dirname(__file__))
+from products_en import DEPTS, OFFICES, dept_block, PHONE_SVG
 from layout import (head, header, footer, w, crumb, page_hero, subnav, SUB_CON,
                     SITE, COMPANY, ADDR, MAIL, TEL, CN_SITE)
 
@@ -80,7 +81,16 @@ html = head(f"Contact — Talk to an Engineer | {COMPANY}",
   </div>
 </div></section>
 
-<section class="sec" style="padding-top:0"><div class="wrap">
+<section class="sec alt" id="departments"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Contacts by department</div>
+    <h2 class="h-lg rv d1" style="margin-top:14px">Talk directly to the right team</h2>
+    <p class="lead rv d2" style="margin-top:14px">Each product line is looked after by its own division. For general enquiries, contact Sales Management.</p></div>
+  <div class="cdepts rv">{"".join(dept_block(d) for d in DEPTS)}
+    <div class="cdept"><h3><i>{PHONE_SVG}</i>Offices</h3><ul class="offs">{"".join(f'<li><span class="who">{n}</span><span>{a}</span></li>' for n, a in OFFICES)}</ul></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Where we are</div>
     <h2 class="h-lg rv d1" style="margin-top:14px">Head office and plant</h2></div>
   <div class="mapwrap rv">
@@ -114,11 +124,11 @@ html = head(f"Request a Sample — Metal Fiber, Felt, Sleeves | {COMPANY}",
  "Stock samples ship in one to three days. Most technical textile products carry no minimum order, so a trial can be a single length.",
  "sample.html","metal fiber sample, sintered felt sample, free sample",
  json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"Request a Sample","url":f"{SITE}/sample.html"},ensure_ascii=False),
- "img/en-ph-contact.webp") + header("contact.html") + crumb([("Contact","contact.html"),("Request a Sample",None)]) + page_hero(
+ "img/campus-gate-bright.webp") + header("contact.html") + crumb([("Contact","contact.html"),("Request a Sample",None)]) + page_hero(
  "02","REQUEST A SAMPLE","Test it on your own line",
  "A specification argued on paper is slower than a sample on a machine. Stock samples ship in one to three days, freight normally collect, and most technical textile products carry no minimum order.",
  [("1","–3 days","Stock sample lead time"),("0","MOQ","On most textile products"),("1","working day","Typical reply time")],
- "img/en-ph-contact.webp") + subnav(SUB_CON,"sample.html") + f"""
+ "img/campus-gate-bright.webp") + subnav(SUB_CON,"sample.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="form-wrap">

@@ -41,11 +41,11 @@ html = head("R&D Overview — Metal Fiber Research and Development | QL Metal Fi
   "A five-person core R&D team, eleven university and institute partnerships, four provincial research projects, and a laboratory that tests every material we propose.",
   "technology.html","metal fiber R&D, materials research, China metal fiber manufacturer",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"R&D Overview","url":f"{SITE}/technology.html"},ensure_ascii=False),
-  "img/en-ph-rd.webp") + header("technology.html") + crumb([("Technology","technology.html"),("R&D Overview",None)]) + page_hero(
+  "img/lab-wide-01.webp") + header("technology.html") + crumb([("Technology","technology.html"),("R&D Overview",None)]) + page_hero(
   "01","TECHNOLOGY","We develop the material, not just the part",
   "Metal fiber behaviour is set long before a part is made — at the drawing die, the web, the sintering cycle. That is where our research sits, and it is why we can change a property rather than only select from a catalogue.",
   [("5","","Core R&D engineers"),("11","","University and institute partners"),("4","","Provincial research projects")],
-  "img/en-ph-rd.webp") + subnav(SUB_TECH,"technology.html") + f"""
+  "img/lab-wide-01.webp") + subnav(SUB_TECH,"technology.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="g2" style="gap:56px;align-items:start">
@@ -142,7 +142,7 @@ html = head("Lab & Testing — In-house Metal Fiber Testing | QL Metal Fiber",
         <li>Dimensions and fittings, or a drawing</li>
       </ul>
     </div>
-    <div class="rv d1">{gal([("img/lab-op-01.webp","Data acquisition at the instrument workstation"),("img/lab-op-02.webp","Reading results from an analyser"),("img/en-micro-network.webp","Fiber network, micrograph"),("img/en-micro-gradient.webp","Graded pore structure through the thickness")])}</div>
+    <div class="rv d1">{gal([("img/lab-op-01.webp","Data acquisition at the instrument workstation"),("img/lab-op-02.webp","Reading results from an analyser"),("img/sem-felt-02.webp","Fiber network, micrograph"),("img/sem-felt-01.webp","Graded pore structure through the thickness")])}</div>
   </div>
 </div></section>
 
@@ -222,11 +222,11 @@ html = head("Patents & Standards — 62 Patents, 6 Standards | QL Metal Fiber",
   "62 granted and pending patents, 16 of them inventions, and participation in six national, industry and group standards for metal fiber materials and equipment.",
   "patents.html","metal fiber patents, national standard, industry standard",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"Patents & Standards","url":f"{SITE}/patents.html"},ensure_ascii=False),
-  "img/en-ph-patents.webp") + header("technology.html") + crumb([("Technology","technology.html"),("Patents & Standards",None)]) + page_hero(
+  "img/lab-chem-03.webp") + header("technology.html") + crumb([("Technology","technology.html"),("Patents & Standards",None)]) + page_hero(
   "03","PATENTS &amp; STANDARDS","Where our know-how is written down",
   "Intellectual property matters to a buyer for one practical reason: it shows the supplier owns the process rather than copying it, and that the specification you qualify will still exist in five years.",
   [("62","","Patents granted and pending"),("16","","Invention patents"),("6","","Standards co-drafted")],
-  "img/en-ph-patents.webp") + subnav(SUB_TECH,"patents.html") + f"""
+  "img/lab-chem-03.webp") + subnav(SUB_TECH,"patents.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="g2" style="gap:56px;align-items:start">

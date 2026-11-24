@@ -4,34 +4,34 @@ sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, footer, w, CTA_BAND, film_block, SITE, COMPANY, MAIL, TEL, ADDR
 
 APPS = [
- ("a-glass.html","Glass Processing","Lead track",
-  "Roller sleeves, braided sleeves and woven belts that take 1100&nbsp;°C, stay lint-free and leave no marks on the glass.",
-  "img/en-glass.webp"),
- ("a-filtration.html","Filtration &amp; Separation","Highest value per account",
+ ("a-glass.html","Glass Processing","",
+  "Roller sleeves, braided sleeves and woven belts that are rated 350–1100&nbsp;°C, stay lint-free and leave no marks on the glass.",
+  "img/sleeve-06.webp"),
+ ("a-filtration.html","Filtration &amp; Separation","",
   "Cleanable, reusable all-metal media for polymer melt, viscose and hot gas — plus chemical-free oil recovery for solvent extraction.",
-  "img/en-filtration.webp"),
- ("a-emi.html","EMI Shielding &amp; Anti-static","Broadest coverage",
+  "img/fts-site-huayou.webp"),
+ ("a-emi.html","EMI Shielding &amp; Anti-static","",
   "Conductivity comes from the fiber itself, not a coating, so anti-static and shielding performance survives repeated washing.",
-  "img/en-emi.webp"),
+  "img/yarn-cloth.webp"),
  ("a-specialty.html","Specialty Materials","",
   "Porous plates, burner media and damping felts where ceramics crack under thermal shock and foams lose strength.",
-  "img/en-specialty.webp"),
+  "img/jlw-felt.webp"),
  ("a-automotive.html","Automotive","",
   "From glass bending mould covers and heated seats to friction materials and hydraulic filtration.",
-  "img/en-automotive.webp"),
+  "img/yarn-carseat.webp"),
  ("a-textiles.html","Functional Textiles &amp; Smart Wearables","",
   "Weavable, sewable, washable conductive and heating yarns that run on standard textile equipment.",
-  "img/en-textiles.webp"),
+  "img/yarn-wearable.webp"),
  ("a-more.html","More Applications · Co-Development","",
   "Not on this list? Tell us your temperature, medium and target properties — we propose the fiber, the form and the alloy, and send samples.",
-  "img/en-micro-network.webp"),
+  "img/sem-felt-02.webp"),
 ]
 
 LINES = [
  ("p-fiber.html","01","Metal Fiber &amp; Yarn","Bundle-drawn stainless steel fiber down to 2&nbsp;µm, supplied as long fiber, chopped fiber, tow, pure-metal and blended yarn.","img/jl-yarn-blend.webp"),
  ("p-felt.html","02","Sintered Felt &amp; Media","KIA3 / KIA3K / KIC4 sintered felts, 10–60&nbsp;µm absolute, 72–86% porosity, cleanable and reusable.","img/jl-felt.webp"),
- ("p-textile.html","03","Technical Textiles &amp; Sleeves","Knitted and braided sleeves, woven fabrics, tapes and ropes rated 350–1100&nbsp;°C.","img/jl-sleeve-flat.webp"),
- ("p-element.html","04","Filter Elements","Pleated cartridges to 30&nbsp;MPa, sintered mesh elements, high-temperature metal filter bags.","img/jl-cartridge-set.webp"),
+ ("p-textile.html","03","Technical Textiles &amp; Sleeves","Rope, felt, thread, elastic and braided sleeves, tape and cloth for glass manufacturing, rated 350–1100&nbsp;°C.","img/rd-elastic.webp"),
+ ("p-element.html","04","Filter Elements","Hydraulic, dust collection, air compressor and industrial fluid elements made to drawing, plus pleated metal fiber cartridges.","img/jl-cartridge-set.webp"),
  ("p-equipment.html","05","Oil Recovery Systems","Coalescing oil–water separation for hydrometallurgy — no demulsifiers, single-unit capacity up to 600&nbsp;m³/h.","img/fts-render-tank.webp"),
 ]
 
@@ -250,7 +250,7 @@ html = head(
         </div>
       </div>
       <figure class="hero-fig rv d2" style="margin:0">
-        <img src="img/en-hero.webp" alt="Sintered metal fiber felt, rolled" width="1200" height="900">
+        <img src="img/jlw-felt.webp" alt="Sintered metal fiber felt, rolled" width="1200" height="900">
         <figcaption>Sintered metal fiber felt &mdash; 10&ndash;60&nbsp;µm absolute, 72&ndash;86% porosity, cleanable</figcaption>
       </figure>
     </div>

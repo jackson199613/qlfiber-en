@@ -209,7 +209,7 @@ table.mx tbody tr:hover td,table.mx tbody tr:hover th{background:#fcfbf2}
 /* ---------- 深色条 / CTA ---------- */
 .band{position:relative;background:var(--ink);color:#fff;overflow:hidden}
 .band::after{content:"";position:absolute;inset:0;z-index:0;
-  background-image:url("/img/en-cta-bg.webp");background-size:cover;background-position:66% 50%;
+  background-image:url("/img/mfg-draw-unit.webp");background-size:cover;background-position:66% 50%;
   filter:brightness(1.35) contrast(1.05)}
 .band::before{content:"";position:absolute;inset:0;z-index:1;
   background:
@@ -616,3 +616,65 @@ table.spec .sub{display:block;font-family:var(--mono);font-size:11px;color:var(-
 .film.on .film-play{display:none}
 @media(max-width:620px){.film-play{flex-direction:column;gap:14px;padding:0 24px;text-align:center}
   .film-play span{text-align:center;font-size:16.5px}}
+
+/* ===== 2026.11.24 client feedback 2.0 (applied as on the Chinese site) ===== */
+/* logo: no rounded clipping */
+.brand img,.foot .brand img{border-radius:0!important;background:none!important;box-shadow:none!important;object-fit:contain}
+/* headings: no italic accent; accent shown in deep gold, no highlighter */
+.h-xl em,.h-lg em,.h-md em,h1 em,h2 em,h3 em{font-family:inherit!important;font-style:normal!important;font-weight:inherit!important;color:#a87a00;background:none!important}
+.dk .h-xl em,.dk .h-lg em,.dk .h-md em,.band h2 em,.ph h1 em{color:var(--gold)}
+/* small type enlarged — labels, captions and notes at least 13–14px */
+.eyebrow{font-size:13px!important}
+.topbar,.topbar .tb-l{font-size:13px!important}
+.brand small{font-size:11px!important}
+.stat > span,.ph-k div > span,.kpi3 span{font-size:14px!important}
+.chip,.chip b{font-size:13.5px!important}
+.appc .tag,.line .n,.card .n,.line .kpis li,.pmeta,.art-nav span,.eq .mod,table.spec .sub,.film-play em{font-size:12.5px!important}
+.appc .more,.line p,.eq p,.consent,.fconsent,.fmsg,.mapcard .small{font-size:15px!important}
+table.mx th,table.mx td,table.mx tbody th{font-size:14.5px!important}
+table.mx thead th,table.spec thead th,.f label,.aside h4{font-size:12.5px!important}
+table.spec caption,.tnote,.f-note,.fnote,.aside .small,.smg li span,.prose ul.tags li,.mx-key,.crumb .wrap,.foot-bot,.fileb-ui em{font-size:14px!important}
+.gal figcaption,.fig figcaption,.art-fig figcaption,.hero-fig figcaption{font-size:14px!important}
+.row-i .dt,.row-i .tg,.row-i h4 .rdy{font-size:13px!important}
+.foot h5{font-size:12.5px!important}
+.f .opt{font-size:13px!important}
+table.spec td,table.spec th{font-size:14.5px}
+.prose p,.prose li{font-size:16px}
+
+/* product cards inside each product line */
+.tight-top{padding-top:56px!important}
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pcard{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;scroll-margin-top:120px}
+.pcard .im{aspect-ratio:4/3;background:#fafafa;overflow:hidden}
+.pcard .im img{width:100%;height:100%;object-fit:cover;display:block}
+.pcard .bd{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pcard h3{font-family:var(--display);font-size:19px;font-weight:650;letter-spacing:-.01em;margin:0}
+.pcard p{font-size:15px;line-height:1.7;color:var(--muted);margin:0}
+.pcard .tlink{margin-top:auto;font-size:14.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+/* related products on application pages */
+.rpcs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rpcs.c4{grid-template-columns:repeat(4,1fr)}
+.rpc{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;color:inherit;transition:box-shadow .3s,transform .3s}
+.rpc:hover{box-shadow:0 20px 40px -24px rgba(0,0,0,.25);transform:translateY(-3px)}
+.rpc .im{aspect-ratio:4/3;background:#fafafa;overflow:hidden}
+.rpc .im img{width:100%;height:100%;object-fit:cover;display:block}
+.rpc .bd{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.rpc .cat{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8a6a00}
+.rpc h3{font-family:var(--display);font-size:18px;font-weight:650;margin:0}
+.rpc p{font-size:14.5px;line-height:1.7;color:var(--muted);margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.rpc .more{margin-top:auto;padding-top:6px;font-weight:600;font-size:14.5px;display:inline-flex;align-items:center;gap:6px}
+/* division contacts (same layout as the client's reference) */
+.cdepts{display:grid;grid-template-columns:1fr 1fr;gap:40px 64px}
+.cdept h3{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:21px;font-weight:650;margin:0 0 16px}
+.cdept h3 i{width:36px;height:36px;border-radius:50%;background:var(--gold);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.cdept h3 svg{width:18px;height:18px;fill:none;stroke:#1a1a1a;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cdept ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.cdept li{display:grid;grid-template-columns:110px 180px 1fr;gap:12px;align-items:baseline;font-size:15.5px;color:#333}
+.cdept li a{color:#333}.cdept li a:hover{color:#a87a00}
+.cdept .tel{font-family:var(--mono);font-size:15px}
+.cdept .offs li{grid-template-columns:170px 1fr}
+@media(max-width:1000px){.pcards,.rpcs,.rpcs.c4{grid-template-columns:1fr 1fr}.cdepts{grid-template-columns:1fr;gap:32px}}
+@media(max-width:600px){.pcards,.rpcs,.rpcs.c4{grid-template-columns:1fr}.cdept li,.cdept .offs li{grid-template-columns:1fr;gap:2px;padding-bottom:8px;border-bottom:1px dashed var(--line)}}
+/* item 18: no highlighter blocks on headings */
+mark,.dk mark,.hero mark{background:none!important;color:var(--gold)!important;padding:0!important}
+body:not(.dk) main .sec mark{color:#a87a00!important}

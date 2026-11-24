@@ -27,11 +27,11 @@ ORG = json.dumps({"@context":"https://schema.org","@type":"Organization","name":
 html = head(f"Company Profile — {COMPANY}",
   "Founded in 2002 in Longyan, Fujian. A NEEQ-listed metal fiber manufacturer covering fiber drawing, yarn and textiles, sintered media, filter elements and separation equipment.",
   "company.html","metal fiber manufacturer China, QL Metal Fiber company profile, Fujian",
-  ORG,"img/en-ph-company.webp") + header("company.html") + crumb([("Company","company.html"),("Company Profile",None)]) + page_hero(
+  ORG,"img/campus-gate-bright.webp") + header("company.html") + crumb([("Company","company.html"),("Company Profile",None)]) + page_hero(
   "01","COMPANY","Twenty-four years on one material",
   "We have made metal fiber since 2002 and almost nothing else. The product range widened — yarn, textiles, media, elements, equipment — but it all still starts at the same drawing bench.",
   [("2002","","Founded"),("872336","","NEEQ listing code"),("4","","Business divisions")],
-  "img/en-ph-company.webp") + subnav(SUB_CO,"company.html") + f"""
+  "img/campus-gate-bright.webp") + subnav(SUB_CO,"company.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="g2" style="gap:56px;align-items:start">
@@ -124,11 +124,11 @@ html = head("Manufacturing — From Wire to Finished Element | QL Metal Fiber",
   "Bundle drawing, spinning and weaving, web laying, vacuum sintering, element assembly and equipment fabrication — the whole chain in our own plants.",
   "manufacturing.html","metal fiber manufacturing, bundle drawing, vacuum sintering",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"Manufacturing","url":f"{SITE}/manufacturing.html"},ensure_ascii=False),
-  "img/en-ph-manufacturing.webp") + header("company.html") + crumb([("Company","company.html"),("Manufacturing",None)]) + page_hero(
+  "img/mfg-hero-loom.webp") + header("company.html") + crumb([("Company","company.html"),("Manufacturing",None)]) + page_hero(
   "03","MANUFACTURING","Wire in at one end, qualified element out at the other",
   "Eight process steps, all under one roof. The reason it matters is not pride in vertical integration — it is that a change at step four can solve a problem that appears at step eight.",
   [("2","µm","Filament diameter down to"),("1500","mm","Maximum cloth width"),("8","","Process steps in house")],
-  "img/en-ph-manufacturing.webp") + subnav(SUB_CO,"manufacturing.html") + f"""
+  "img/mfg-hero-loom.webp") + subnav(SUB_CO,"manufacturing.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Process</div>
@@ -138,10 +138,10 @@ html = head("Manufacturing — From Wire to Finished Element | QL Metal Fiber",
 <section class="sec alt"><div class="wrap">
   <div class="sec-h"><div class="eyebrow rv">Inside the plant</div>
     <h2 class="h-md rv d1" style="margin-top:14px">Production and finished goods</h2></div>
-  {gal([("img/mfg-draw-line.webp","Metal fiber production line"),("img/mfg-draw-unit.webp","Fiber production equipment"),
-        ("img/mfg-sinter-01.webp","Vacuum sintering furnace"),("img/mfg-sinter-03.webp","Vacuum sintering equipment"),
+  {gal([("img/mfg-draw-unit.webp","Fiber production equipment"),("img/mfg-sinter-01.webp","Vacuum sintering furnace"),
         ("img/mfg-loom-01.webp","Wire mesh weaving"),("img/mfg-laser-cut.webp","Laser cutting"),
-        ("img/mfg-lathe.webp","CNC turning"),("img/mfg-weld.webp","Welding and assembly")])}
+        ("img/mfg-lathe.webp","CNC turning"),("img/mfg-weld.webp","Welding and assembly"),
+        ("img/mfg-store-02.webp","Finished goods store"),("img/mfg-qc-office.webp","Quality control and production management")])}
 </div></section>
 {CTA_BAND}
 </main>
@@ -167,11 +167,11 @@ html = head("Quality & Certifications — ISO 9001, Lot Reports | QL Metal Fiber
   "ISO 9001 certified quality management, inspection at incoming, in-process, final and release stages, and a lot inspection report with every shipment.",
   "quality.html","ISO 9001 metal fiber, quality certification, lot inspection report",
   json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"Quality & Certifications","url":f"{SITE}/quality.html"},ensure_ascii=False),
-  "img/en-ph-quality.webp") + header("company.html") + crumb([("Company","company.html"),("Quality & Certifications",None)]) + page_hero(
+  "img/mfg-qc-office.webp") + header("company.html") + crumb([("Company","company.html"),("Quality & Certifications",None)]) + page_hero(
   "04","QUALITY &amp; CERTIFICATIONS","Numbers you can put in a supplier file",
   "A new supplier is qualified on documents before it is qualified on performance. Everything in this section exists so that your purchasing and quality departments can close that file quickly.",
   [("9001","ISO","Certified quality system"),("100","%","Lots with an inspection report"),("8","","Control points from wire to release")],
-  "img/en-ph-quality.webp") + subnav(SUB_CO,"quality.html") + f"""
+  "img/mfg-qc-office.webp") + subnav(SUB_CO,"quality.html") + f"""
 <main>
 <section class="sec"><div class="wrap">
   <div class="g2" style="gap:56px;align-items:start">

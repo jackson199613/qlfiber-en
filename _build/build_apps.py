@@ -3,6 +3,7 @@ import sys, os, json
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import (head, header, footer, w, CTA_BAND, crumb, page_hero, subnav,
                     SUB_APP, SITE)
+from products_en import PBY
 
 def tbl(caption, heads, rows, note=""):
     th = "".join(f'<th{" class=\"num\"" if h.startswith("#") else ""}>{h.lstrip("#")}</th>' for h in heads)
@@ -17,10 +18,10 @@ def bullets(items):
     return '<ul>' + "".join(f'<li>{i}</li>' for i in items) + '</ul>'
 
 APPS = [
-dict(f="a-glass.html", idx="01", en="GLASS PROCESSING", bg="img/en-glass.webp",
+dict(f="a-glass.html", idx="01", en="GLASS PROCESSING", bg="img/sleeve-06.webp",
  h1="Roller sleeves and textiles that outlive the furnace cycle",
  lead="For tempering, bending and forming lines: heat-resistant metal fiber sleeves, fabrics, tapes and ropes that keep glass surfaces clean and cut the cost of stopping a furnace to change consumables.",
- kpis=[("1100","°C","Short-term peak rating"),("350","°C","Continuous service"),("0","MOQ","No minimum order")],
+ kpis=[("350–1100","°C","Service temperature"),("6","products","Rope, felt, thread, sleeves, tape / cloth"),("0","MOQ","No minimum order")],
  buyers="Physical tempering furnace OEMs and parts suppliers · architectural and automotive glass processors · electronic and chemically strengthened glass plants · container glass works",
  conds="Ceramic rollers in physical tempering furnaces (350–1100 °C), molten potassium nitrate in chemical strengthening, hot bending moulds, suction cups and clamps, container pusher bars",
  products="TGZ112 elastic knitted sleeve · TGBX112 / TGBX113 braided sleeve · metal fiber woven cloth and tape · high-temperature rope · damping felt",
@@ -47,10 +48,10 @@ dict(f="a-glass.html", idx="01", en="GLASS PROCESSING", bg="img/en-glass.webp",
          "How closely the sleeve fits, how easily it installs, and how consistent the sizing is."],
  pitch="Roller sleeves that crack, shed fibers or mark the glass cost you downtime and rejected panels. QL's TGZ112 elastic knitted sleeves are made from 316L stainless steel fiber, rated 350–1100 °C, fit snugly around ceramic rollers and keep a smooth, lint-free surface without cracking or dusting at end of life. For chemical tempering, our TGBX braided sleeves resist molten potassium nitrate, acids and alkalis. No minimum order — tell us your furnace type and roller diameter and we will send matching samples.",
  sell="Rated to 1100 °C, lint-free and non-marking — fewer furnace stops and fewer rejected panels.",
- gal=[("img/en-glass.webp","Tempering line in operation"),("img/sleeve-04.webp","Sleeved rollers on the line"),
-      ("img/en-sh-sleeve.webp","Braided metal fiber sleeve"),("img/yarn-glassbelt.webp","Metal fiber woven tape")]),
+ gal=[("img/sleeve-06.webp","Tempering line in operation"),("img/sleeve-04.webp","Sleeved rollers on the line"),
+      ("img/rd-braid.webp","Braided metal fiber sleeve"),("img/yarn-glassbelt.webp","Metal fiber woven tape")]),
 
-dict(f="a-filtration.html", idx="02", en="FILTRATION & SEPARATION", bg="img/en-filtration.webp",
+dict(f="a-filtration.html", idx="02", en="FILTRATION & SEPARATION", bg="img/fts-site-huayou.webp",
  h1="Cleanable all-metal media, and oil recovery without chemicals",
  lead="For polymer melt, viscose, hot gas and solvent extraction: sintered metal fiber media that can be washed and reused, and coalescing oil recovery that turns a consumable cost into recovered organic phase.",
  kpis=[("10","–60 µm","Absolute filtration rating"),("30","MPa","Max working pressure"),("600","m³/h","Single-unit capacity up to")],
@@ -81,9 +82,9 @@ dict(f="a-filtration.html", idx="02", en="FILTRATION & SEPARATION", bg="img/en-f
  pitch="Struggling with fast pressure build-up, frequent filter changes or costly oil removal in your solvent-extraction circuit? QL manufactures sintered metal fiber felts (10–60 µm absolute), pleated metal filter cartridges rated up to 30 MPa, and high-temperature metal filter bags — all cleanable and reusable. For hydrometallurgy, our coalescing oil recovery systems remove emulsified and dispersed oil physically, without demulsifiers, and let you reuse the recovered organic phase. Send us your process conditions and we will recommend a configuration and arrange filtration testing.",
  sell="All-metal media you can wash and reuse, plus chemical-free oil recovery — filtration and oil removal stop being a pure consumable.",
  gal=[("img/fts-huayou-02.webp","Oil recovery system, 600 m³/h"),("img/fts-bamo-02.webp","Trough-type system, 160 m³/h"),
-      ("img/en-sh-element.webp","Pleated metal fiber cartridge"),("img/en-sh-felt.webp","Sintered metal fiber felt")]),
+      ("img/jlw-cart-pleat.webp","Pleated metal fiber cartridge"),("img/jlw-felt.webp","Sintered metal fiber felt")]),
 
-dict(f="a-emi.html", idx="03", en="EMI SHIELDING & ANTI-STATIC", bg="img/en-emi.webp",
+dict(f="a-emi.html", idx="03", en="EMI SHIELDING & ANTI-STATIC", bg="img/yarn-cloth.webp",
  h1="Conductivity that does not wash out",
  lead="100% metal conductive fiber for anti-static and shielding products — supplied as tow, blended yarn, chopped fiber, conductive thread, braided sleeve and woven tape, in every form your process already runs.",
  kpis=[("0.5","–100%","Steel content in blended yarn"),("1","–64 Ω/m","Conductive thread resistance"),("2","µm","Fiber diameter down to")],
@@ -112,10 +113,10 @@ dict(f="a-emi.html", idx="03", en="EMI SHIELDING & ANTI-STATIC", bg="img/en-emi.
          "Resistance consistency between batches."],
  pitch="If your conductive fabrics lose performance after washing, the problem is usually the conductive layer, not the fabric. QL supplies 100% stainless steel fibers in every form you need — blended tow, blended yarn (0.5–100% steel content with aramid, polyester, PPS or cotton), chopped fiber for conductive compounds, conductive thread (1–64 Ω/m) and braided sleeves. Because the conductor is pure metal, anti-static and shielding performance does not fade with washing. We can blend to your ratio and send trial yarn for your machines.",
  sell="Pure metal conductive fiber — anti-static and shielding performance does not fade with washing.",
- gal=[("img/en-emi.webp","Shielded enclosure and cabinets"),("img/en-sh-cloth.webp","Metal fiber woven cloth"),
-      ("img/en-sh-fiber.webp","Blended metal fiber yarn"),("img/sh-belt.webp","Metal fiber woven tape")]),
+ gal=[("img/yarn-cloth.webp","Shielded enclosure and cabinets"),("img/rd-tape.webp","Metal fiber woven cloth"),
+      ("img/jlw-staple.webp","Blended metal fiber yarn"),("img/rd-tape.webp","Metal fiber woven tape")]),
 
-dict(f="a-specialty.html", idx="04", en="SPECIALTY MATERIALS", bg="img/en-specialty.webp",
+dict(f="a-specialty.html", idx="04", en="SPECIALTY MATERIALS", bg="img/jlw-felt.webp",
  h1="Where ceramics crack and foams give up",
  lead="Metal fiber formed into porous plates, burner media, sintered felts and damping mats — for surface combustion, gas distribution, thermal shock, vibration and precision gas duties that ordinary porous materials cannot hold.",
  kpis=[("50","–90%","Porosity, by design"),("1100","°C","Peak service rating"),("2","–3 mm","Damping felt thickness")],
@@ -144,10 +145,10 @@ dict(f="a-specialty.html", idx="04", en="SPECIALTY MATERIALS", bg="img/en-specia
          "Damping and sound absorption, and performance retention after high-temperature ageing."],
  pitch="When ceramics crack under thermal shock and foams lose strength, metal fiber offers a different answer. QL sinters micron-scale metal fibers into porous plates (50–90% porosity by design), burner media in FeCrAl, Inconel, titanium or stainless steel, and damping felts rated 350–1100 °C. They can be cut, welded and shaped to your drawing. Share your operating conditions and we will propose a material, build samples and support your bench testing.",
  sell="The strength of metal with the flexibility and porosity of a fiber — built for heat and thermal shock.",
- gal=[("img/en-sh-felt.webp","Sintered metal fiber felt"),("img/en-micro-network.webp","Three-dimensional fiber network"),
-      ("img/en-sh-pad.webp","Metal fiber damping element"),("img/en-micro-burner.webp","Metal fiber burner, cross-section")]),
+ gal=[("img/jlw-felt.webp","Sintered metal fiber felt"),("img/sem-felt-02.webp","Three-dimensional fiber network"),
+      ("img/rd-felt-sheet.webp","Metal fiber damping element"),("img/jlw-staple.webp","Metal fiber burner, cross-section")]),
 
-dict(f="a-automotive.html", idx="05", en="AUTOMOTIVE", bg="img/en-automotive.webp",
+dict(f="a-automotive.html", idx="05", en="AUTOMOTIVE", bg="img/yarn-carseat.webp",
  h1="From glass forming to heated seats, one material family",
  lead="Metal fiber components across the automotive chain — bending mould covers, insulated metal fiber thread, chopped fiber for friction materials, sintered porous media for exhaust treatment and hydraulic filtration.",
  kpis=[("1","–64 Ω/m","Metal fiber thread resistance options"),("30","MPa","Hydraulic element rating"),("12","µm","Monofilament diameter")],
@@ -175,10 +176,10 @@ dict(f="a-automotive.html", idx="05", en="AUTOMOTIVE", bg="img/en-automotive.web
          "Batch consistency and long-term supply capability."],
  pitch="From bending moulds for automotive glass to heated seats and friction materials, metal fiber does jobs that ordinary fibers cannot. QL supplies stainless steel fiber fabrics for glass bending mould covers, insulated metal fiber thread with stable resistance for seat and steering-wheel heating, chopped fiber for friction materials, and sintered porous media for exhaust treatment. Tell us your part and specification — we will match the material and support your validation.",
  sell="From glass forming to seat heating — stable metal fiber materials that improve component consistency.",
- gal=[("img/en-automotive.webp","Seat heating layer"),("img/prod-heatwire.webp","Insulated metal fiber thread"),
-      ("img/en-sh-cloth.webp","Metal fiber woven cloth"),("img/en-sh-element.webp","Hydraulic filter element")]),
+ gal=[("img/yarn-carseat.webp","Seat heating layer"),("img/prod-heatwire.webp","Insulated metal fiber thread"),
+      ("img/rd-tape.webp","Metal fiber woven cloth"),("img/jlw-cart-pleat.webp","Hydraulic filter element")]),
 
-dict(f="a-textiles.html", idx="06", en="FUNCTIONAL TEXTILES & SMART WEARABLES", bg="img/en-textiles.webp",
+dict(f="a-textiles.html", idx="06", en="FUNCTIONAL TEXTILES & SMART WEARABLES", bg="img/yarn-wearable.webp",
  h1="Conductive and heating yarns your machines already accept",
  lead="Weavable, sewable and washable metal fiber yarns and insulated metal fiber threads — so apparel brands and contract manufacturers can add heating, conductivity and protection without changing their weaving or sewing process.",
  kpis=[("1","–64 Ω/m","Resistance options"),("12","µm","Monofilament diameter"),("100","%","Steel content available")],
@@ -206,9 +207,9 @@ dict(f="a-textiles.html", idx="06", en="FUNCTIONAL TEXTILES & SMART WEARABLES", 
          "Machine efficiency in sewing and weaving."],
  pitch="Heated jackets, gloves and blankets fail when the heating element drifts, breaks or overheats. QL's stainless steel fiber yarns and insulated metal fiber threads deliver stable resistance (1–64 Ω/m options), even heat and long flex and wash life — and they run on standard sewing and weaving equipment. For workwear, our blended yarns provide anti-static and shielding performance that lasts through washing. Tell us your voltage and heating layout and we will recommend a resistance and send samples.",
  sell="Weavable, sewable, washable conductive and heating yarn — safer, longer-lasting wearables.",
- gal=[("img/en-textiles.webp","Heating layout in a garment lining"),("img/yarn-heatpad.webp","Metal fiber heating panel"),
-      ("img/prod-heatwire.webp","Insulated metal fiber thread"),("img/en-sh-fiber.webp","Blended metal fiber yarn")]),
-dict(f="a-more.html", idx="07", en="MORE APPLICATIONS · CO-DEVELOPMENT", bg="img/en-micro-network.webp",
+ gal=[("img/yarn-wearable.webp","Heating layout in a garment lining"),("img/yarn-heatpad.webp","Metal fiber heating panel"),
+      ("img/prod-heatwire.webp","Insulated metal fiber thread"),("img/jlw-staple.webp","Blended metal fiber yarn")]),
+dict(f="a-more.html", idx="07", en="MORE APPLICATIONS · CO-DEVELOPMENT", bg="img/sem-felt-02.webp",
  h1="Your conditions, our fiber",
  lead="Metal fiber is a platform material, not a single product. If your process needs the heat, corrosion resistance and conductivity of metal together with the flexibility and porosity of a fiber, tell us the conditions — we propose the fiber, the form and the alloy, and prove it with samples.",
  kpis=[("7","forms","Product forms to build from"),("6","","Core properties to combine"),("2","µm","Fiber diameter down to")],
@@ -238,9 +239,22 @@ dict(f="a-more.html", idx="07", en="MORE APPLICATIONS · CO-DEVELOPMENT", bg="im
          "Batch consistency through small-batch validation before anything is scaled."],
  pitch="Don't see your industry here? Metal fiber is a platform material, not a single product. QL makes the whole chain in-house — from micron-scale fiber to yarn, textiles, sintered media, filter elements and separation equipment — so we can change the fiber diameter, the alloy and the form to fit a new duty. Tell us your temperature, medium, load and target properties, and we will propose a material, build samples and work with you through validation to stable supply.",
  sell="Your conditions, our fiber — a material proposed for your duty, not a catalogue number.",
- gal=[("img/lab-01.webp","In-house materials laboratory"),("img/en-micro-network.webp","Three-dimensional fiber network"),
-      ("img/eq-sem.webp","SEM analysis of fiber and media"),("img/en-sh-yarn.webp","Metal fiber yarn")]),
+ gal=[("img/lab-01.webp","In-house materials laboratory"),("img/sem-felt-02.webp","Three-dimensional fiber network"),
+      ("img/eq-sem.webp","SEM analysis of fiber and media"),("img/jlw-yarn.webp","Metal fiber yarn")]),
 ]
+
+REL = {'a-glass.html': [('p-textile.html', 'elastic'), ('p-textile.html', 'braid'), ('p-textile.html', 'tape'), ('p-textile.html', 'rope'), ('p-textile.html', 'felt'), ('p-textile.html', 'thread')], 'a-filtration.html': [('p-felt.html', 'felt'), ('p-felt.html', 'composite'), ('p-felt.html', 'alloy'), ('p-element.html', 'cartridge'), ('p-element.html', 'hydraulic'), ('p-element.html', 'fluid'), ('p-element.html', 'dust'), ('p-element.html', 'air'), ('p-element.html', 'parts'), ('p-equipment.html', 'tank'), ('p-equipment.html', 'trough'), ('p-equipment.html', 'retrofit')], 'a-emi.html': [('p-fiber.html', 'blend'), ('p-fiber.html', 'thread'), ('p-fiber.html', 'fiber'), ('p-fiber.html', 'tape'), ('p-textile.html', 'braid'), ('p-textile.html', 'tape')], 'a-specialty.html': [('p-felt.html', 'felt'), ('p-felt.html', 'alloy'), ('p-textile.html', 'felt'), ('p-fiber.html', 'fiber')], 'a-automotive.html': [('p-fiber.html', 'insulated'), ('p-fiber.html', 'thread'), ('p-textile.html', 'tape'), ('p-element.html', 'hydraulic')], 'a-textiles.html': [('p-fiber.html', 'insulated'), ('p-fiber.html', 'thread'), ('p-fiber.html', 'blend'), ('p-fiber.html', 'yarn'), ('p-fiber.html', 'tape'), ('p-textile.html', 'thread')], 'a-more.html': [('p-fiber.html', 'fiber'), ('p-fiber.html', 'yarn'), ('p-felt.html', 'felt'), ('p-textile.html', 'elastic'), ('p-element.html', 'cartridge'), ('p-equipment.html', 'tank')]}
+LINE_NAME = {"p-fiber.html":"Metal Fiber & Yarn","p-felt.html":"Sintered Felt & Media","p-textile.html":"Technical Textiles & Sleeves","p-element.html":"Filter Elements","p-equipment.html":"Oil Recovery Systems"}
+
+def rel_cards(f):
+    items = REL[f]
+    out = ""
+    for line, pid in items:
+        _, name, img, desc = PBY[(line, pid)]
+        out += (f'<a class="rpc rv" href="{line}#{pid}"><div class="im"><img src="{img}" alt="{name}" loading="lazy" width="600" height="450"></div>'
+                f'<div class="bd"><span class="cat">{LINE_NAME[line]}</span><h3>{name}</h3><p>{desc}</p><span class="more">View product<svg class="i" style="width:13px;height:13px"><use href="#i-arrow"/></svg></span></div></a>')
+    c4 = " c4" if len(items) % 3 and len(items) % 4 == 0 else ""
+    return f'<div class="rpcs{c4}">{out}</div>'
 
 for a in APPS:
     sc = json.dumps({"@context":"https://schema.org","@type":"WebPage","name":a["h1"],
@@ -274,10 +288,10 @@ for a in APPS:
   </div>
 </div></section>
 
-<section class="sec alt tight"><div class="wrap">
-  <div class="sec-h"><div class="eyebrow rv">Priority order</div>
-    <h2 class="h-md rv d1" style="margin-top:14px">Who we serve first, and why</h2></div>
-  {prio}
+<section class="sec alt"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Related products</div>
+    <h2 class="h-md rv d1" style="margin-top:14px">Products for this application</h2></div>
+  {rel_cards(a["f"])}
 </div></section>
 
 <section class="sec"><div class="wrap">
@@ -293,12 +307,6 @@ for a in APPS:
     <div class="prose rv d1"><h3 style="margin-top:0">What buyers verify</h3>{bullets(a["checks"])}</div>
   </div>
   <div class="note rv" style="margin-top:34px">{a["pitch"]}</div>
-</div></section>
-
-<section class="sec"><div class="wrap">
-  <div class="sec-h"><div class="eyebrow rv">In service</div>
-    <h2 class="h-md rv d1" style="margin-top:14px">Products and applications</h2></div>
-  {gal}
 </div></section>
 
 {CTA_BAND}
