@@ -736,3 +736,4 @@ h1 mark,h2 mark,h3 mark,.dk h1 mark,.hero h1 mark,body:not(.dk) main .sec h2 mar
 .othend{text-align:center;font-size:20px;font-weight:600;margin:56px auto 0;max-width:760px;line-height:1.6}
 @media(max-width:1100px){.oprops,.odirs{grid-template-columns:1fr 1fr}.othcall .wrap{grid-template-columns:1fr;gap:36px}.othwide{flex-direction:column;align-items:flex-start;padding:40px 30px}}
 @media(max-width:640px){.oprops,.odirs{grid-template-columns:1fr}.othcall h2{font-size:30px}}
+.num sup,b.num sup,.ph-k sup,.kpi sup{color:inherit!important;-webkit-text-fill-color:currentColor!important}
