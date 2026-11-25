@@ -39,8 +39,7 @@ dict(f="p-fiber.html", idx="01", en="METAL FIBER & YARN", bg="img/jlw-yarn.webp"
        "Reinforcing fiber for friction materials and high-temperature composites",
        "Feedstock for sintered felt, woven textiles and filter elements"],
  notes="If your product has a resistance limit, state it at enquiry and we will test samples before qualification.",
- gal=[("img/yarn-real-set.webp","Metal fiber yarn and thread range"),("img/yarn-real-thread-set.webp","QL metal fiber thread"),
-      ("img/yarn-real-silicone.webp","Silicone-insulated metal fiber thread"),("img/mfg-draw-line.webp","Bundle drawing, schematic")]),
+ gal=[("img/yarn-real-set.webp","Metal fiber yarn and thread range"),("img/yarn-real-thread-set.webp","QL metal fiber thread"),("img/yarn-real-filament.webp","Metal fiber filament"),("img/yarn-real-silicone.webp","Silicone-insulated metal fiber thread"),("img/yarn-real-ptfe.webp","PTFE-insulated metal fiber thread"),("img/yarn-real-bobbin.webp","Bobbin sewing thread")]),
 
 dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/jlw-felt.webp",
  h1="Depth filtration you can wash and put back",
@@ -61,8 +60,7 @@ dict(f="p-felt.html", idx="02", en="SINTERED FELT & MEDIA", bg="img/jlw-felt.web
         FELT,
         "Typical values for reference. Final values are confirmed on the factory inspection report for each lot. Bubble point reflects the largest pore and rises as the rating gets finer; air permeability moves in the opposite direction, which is the trade-off to balance at selection."),
  notes="Thickened KIA3K media (1.1 mm) raises dirt-holding capacity and flow at the same rating — useful when the rating is fixed but differential pressure is rising too quickly.",
- gal=[("img/jl-felt.webp","Sintered metal fiber felt"),("img/sem-felt-01.webp","Graded pore structure"),
-      ("img/sem-felt-02.webp","Fiber network, micrograph"),("img/jl-felt-stack.webp","Felt sheets, stacked")]),
+ gal=[("img/sem-felt-01.webp","Sintered felt, micrograph"),("img/sem-media-01.webp","Filter media, micrograph"),("img/sem-mesh-01.webp","Wire mesh, micrograph"),("img/media-03.webp","Sintered metal fiber felt"),("img/media-05.webp","Felt sheets, cut to size"),("img/media-02.webp","Sintered filter discs")]),
 
 dict(f="p-textile.html", idx="03", en="TECHNICAL TEXTILES & SLEEVES", bg="img/sleeve-06.webp",
  h1="Heat-resistant cushioning materials for glass manufacturing",
@@ -81,8 +79,7 @@ dict(f="p-textile.html", idx="03", en="TECHNICAL TEXTILES & SLEEVES", bg="img/sl
        "Mould-covering tape and mould cloth in glass forming","Cushioning pads for glass suction cups and clamps",
        "Covers for automotive glass mould frames and container-glass pusher bars","Gas turbines, cables, high-temperature equipment and EMI shielding"],
  notes="Source: QL glass market product brochure (Thermal Division). Tell us the furnace type, roller diameter and temperature, and we will send matching samples.",
- gal=[("img/sleeve-06.webp","Tempering line rollers"),("img/sleeve-04.webp","Sleeved rollers on the line"),
-      ("img/rd-braid.webp","Braided metal fiber sleeve"),("img/rd-tape.webp","Metal fiber tape and cloth")]),
+ gal=[("img/sleeve-06.webp","Sleeved tempering-furnace rollers"),("img/yarn-glassbelt.webp","On a glass forming line"),("img/sleeve-03.webp","Tempering line"),("img/tg-knit-hd.webp","Knitted sleeve"),("img/tg-braid-hd.webp","Braided sleeve"),("img/tg-rope.webp","Metal fiber rope")]),
 
 dict(f="p-element.html", idx="04", en="FILTER ELEMENTS", bg="img/jlw-cart-pleat.webp",
  h1="Elements built from the media up",
@@ -99,8 +96,7 @@ dict(f="p-element.html", idx="04", en="FILTER ELEMENTS", bg="img/jlw-cart-pleat.
        "High-pressure hydraulic and fuel filtration","High-temperature gas and dust filtration",
        "Vacuum pump protection and pre-filtration"],
  notes="A typical configuration: 316L sintered felt at 10 µm and 0.4 mm thick, inner support mesh 304 at 0.125 mm wire and 48 mesh, outer protective mesh 304 at 0.224 mm wire and 40 mesh. Dimensions and fittings are made to your housing.",
- gal=[("img/jl-cartridge-pleat.webp","Pleated metal fiber cartridge"),("img/jl-cartridge-set.webp","Cartridge range"),
-      ("img/media-01.webp","Sintered media discs"),("img/jl-disc.webp","Leaf disc filter")]),
+ gal=[("img/jl-cartridge-pleat.webp","Pleated metal fiber cartridge"),("img/jl-cartridge-set.webp","Cartridge range"),("img/jl-disc.webp","Leaf disc filter"),("img/jj-hall.webp","Machining workshop"),("img/jj-cnc.webp","CNC turning"),("img/cart-03.webp","Pleated elements")]),
 
 dict(f="p-equipment.html", idx="05", en="OIL RECOVERY SYSTEMS", bg="img/fts-bamo-02.webp",
  h1="Oil removal without a single drop of demulsifier",
@@ -127,8 +123,7 @@ dict(f="p-equipment.html", idx="05", en="OIL RECOVERY SYSTEMS", bg="img/fts-bamo
          ("Core material life","n/a","n/a","About one year, performance decays","<b>Long</b>, up to five years in service")],
         "Dissolved oil content in extraction liquor is generally 5–40 ppm depending on the extractant and mixing regime, and still requires deep treatment. Recovering the non-dissolved fraction first is what reduces that downstream load."),
  notes="Systems can be trialled on your own liquor before a proposal is issued. Customer names in China are not published without written consent; our installed base includes nickel-cobalt hydrometallurgy producers.",
- gal=[("img/fts-bamo-02.webp","Trough-type system, 160 m³/h"),("img/fts-huayou-02.webp","600 m³/h system"),
-      ("img/fts-site-05.webp","Extraction plant installation"),("img/fts-principle.webp","Coalescence, schematic")]),
+ gal=[("img/fts-bamo-02.webp","Trough-type system"),("img/fts-site-04.webp","Troughs in parallel"),("img/fts-bamo-03.webp","Trough and pipework"),("img/fts-tank-03.webp","Tank-type system"),("img/fts-site-05.webp","Extraction plant installation"),("img/fts-site-bamo.webp","Filtration plus oil removal")]),
 ]
 
 for L in LINES:
@@ -138,7 +133,7 @@ for L in LINES:
         "manufacturer":{"@type":"Organization","name":"Fujian QL Metal Fiber Co., Ltd."}}, ensure_ascii=False)
     spec = tbl("Specifications", ["Item","Value"], L["specs"])
     extra = tbl(*L["table"]) if L.get("table") else ""
-    gal = '<div class="gal rv">' + "".join(
+    gal = '<div class="gal c3 rv">' + "".join(
         f'<figure><img src="{u}" alt="{c}" loading="lazy" width="600" height="450"><figcaption>{c}</figcaption></figure>'
         for u,c in L["gal"]) + '</div>'
     html = head(f'{L["h1"]} | {L["en"].title()} — QL Metal Fiber', L["lead"], L["f"],

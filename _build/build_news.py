@@ -86,11 +86,11 @@ POSTS.sort(key=lambda p:p["date"],reverse=True)
 CAT_ORDER=["Company News","Events","Media","Technical","Application"]
 CATS=[c for c in CAT_ORDER if any(p["cat"]==c for p in POSTS)]
 
-cards="".join(f'''<a class="post rv" href="{p["s"]}.html" data-tag="{p["cat"]}">
-  <div class="im"><img src="{p["img"]}" alt="{p["t"]}" loading="lazy" width="600" height="400"></div>
+cards="".join(f'''<a class="post rv{' feat' if k == 0 else ''}" href="{p["s"]}.html" data-tag="{p["cat"]}">
+  <div class="im ncv" style="--cv:url('{p["img"]}')"><img src="{p["img"]}" alt="{p["t"]}" loading="lazy" width="600" height="400"></div>
   <div class="bd"><div class="pmeta"><span class="tg">{p["cat"]}</span><span>{p["date"]}</span><span>{p["read"]} read</span></div>
     <h3>{p["t"]}</h3><p>{p["sum"]}</p>
-    <span class="more">Read<svg class="i" style="width:13px;height:13px"><use href="#i-arrow"/></svg></span></div></a>''' for p in POSTS)
+    <span class="more">Read<svg class="i" style="width:13px;height:13px"><use href="#i-arrow"/></svg></span></div></a>''' for k, p in enumerate(POSTS))
 
 sc=json.dumps({"@context":"https://schema.org","@type":"ItemList","name":"News & Blog",
  "itemListElement":[{"@type":"ListItem","position":i+1,"name":p["t"],"url":f'{SITE}/{p["s"]}.html'}

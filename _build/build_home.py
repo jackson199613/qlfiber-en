@@ -28,11 +28,11 @@ APPS = [
 ]
 
 LINES = [
- ("p-fiber.html","01","Metal Fiber &amp; Yarn","Bundle-drawn stainless steel fiber down to 2&nbsp;µm, supplied as long fiber, chopped fiber, tow, pure-metal and blended yarn.","img/jl-yarn-blend.webp"),
- ("p-felt.html","02","Sintered Felt &amp; Media","KIA3 / KIA3K / KIC4 sintered felts, 10–60&nbsp;µm absolute, 72–86% porosity, cleanable and reusable.","img/jl-felt.webp"),
- ("p-textile.html","03","Technical Textiles &amp; Sleeves","Rope, felt, thread, elastic and braided sleeves, tape and cloth for glass manufacturing, rated 350–1100&nbsp;°C.","img/rd-elastic.webp"),
- ("p-element.html","04","Filter Elements","Hydraulic, dust collection, air compressor and industrial fluid elements made to drawing, plus pleated metal fiber cartridges.","img/jl-cartridge-set.webp"),
- ("p-equipment.html","05","Oil Recovery Systems","Coalescing oil–water separation for hydrometallurgy — no demulsifiers, single-unit capacity up to 600&nbsp;m³/h.","img/fts-render-tank.webp"),
+ ("p-fiber.html","01","Metal Fiber &amp; Yarn","Bundle-drawn stainless steel fiber down to 2&nbsp;µm, supplied as long fiber, chopped fiber, tow, pure-metal and blended yarn.","img/pc-yarn-blend.webp"),
+ ("p-felt.html","02","Sintered Felt &amp; Media","KIA3 / KIA3K / KIC4 sintered felts, 10–60&nbsp;µm absolute, 72–86% porosity, cleanable and reusable.","img/pc-media-felt.webp"),
+ ("p-textile.html","03","Technical Textiles &amp; Sleeves","Rope, felt, thread, elastic and braided sleeves, tape and cloth for glass manufacturing, rated 350–1100&nbsp;°C.","img/pc-thermo-elastic.webp"),
+ ("p-element.html","04","Filter Elements","Hydraulic, dust collection, air compressor and industrial fluid elements made to drawing, plus pleated metal fiber cartridges.","img/pc-mach-fluid.webp"),
+ ("p-equipment.html","05","Oil Recovery Systems","Coalescing oil–water separation for hydrometallurgy — no demulsifiers, single-unit capacity up to 600&nbsp;m³/h.","img/pc-purify-tank.webp"),
 ]
 
 MATRIX = [
@@ -86,7 +86,11 @@ app_cards = "".join(
       <div class="im"><img src="{img}" alt="{t.replace('&amp;','and')}" loading="lazy" width="800" height="600">
         {f'<span class="tag">{tag}</span>' if tag else ''}</div>
       <div class="bd"><h3>{t}</h3><p>{d}</p><span class="more">View solution<svg class="i" style="width:13px;height:13px"><use href="#i-arrow"/></svg></span></div>
-     </a>''' for i,(u,t,tag,d,img) in enumerate(APPS))
+     </a>''' for i,(u,t,tag,d,img) in enumerate(APPS) if u != 'a-more.html') + '''<a class="othwide rv" href="a-more.html" style="--bg:url('img/other-network.webp')">
+  <div><span class="cat">MORE APPLICATIONS · CO-DEVELOPMENT</span><h3>Your industry isn't listed? It could be the next one.</h3>
+  <p>In principle, metal fiber can work in almost any industry — and there are many we have not met yet. Bring us your requirement and we will look for the answer together.</p></div>
+  <span class="btn btn-pri">Explore what's possible<svg class="i" style="width:13px;height:13px"><use href="#i-arrow"/></svg></span>
+</a>'''
 
 line_cards = "".join(
  f'''<a class="line rv" href="{u}"><div class="im"><img src="{img}" alt="{t.replace('&amp;','and')}" loading="lazy" width="600" height="400"></div>
@@ -250,7 +254,7 @@ html = head(
         </div>
       </div>
       <figure class="hero-fig rv d2" style="margin:0">
-        <img src="img/jlw-felt.webp" alt="Sintered metal fiber felt, rolled" width="1200" height="900">
+        <img src="img/pc-media-felt.webp" alt="Sintered metal fiber felt" width="1200" height="900">
         <figcaption>Sintered metal fiber felt &mdash; 10&ndash;60&nbsp;µm absolute, 72&ndash;86% porosity, cleanable</figcaption>
       </figure>
     </div>

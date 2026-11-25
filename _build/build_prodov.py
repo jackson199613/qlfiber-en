@@ -3,19 +3,19 @@ import sys, os, json
 sys.path.insert(0, os.path.dirname(__file__))
 from layout import head, header, footer, w, CTA_BAND, crumb, page_hero, subnav, SUB_PROD, SITE
 
-LINES=[("01","p-fiber.html","Metal Fiber & Yarn","img/jl-yarn-blend.webp",
+LINES=[("01","p-fiber.html","Metal Fiber & Yarn","img/pc-yarn-blend.webp",
         "Bundle-drawn stainless steel fiber from 2 µm, in filament, chopped and tow form — and the pure, blended and insulated yarns spun from it.",
         ["2 µm monofilament","0.5–100% steel blends","1–64 Ω/m conductive thread"],"fiber yarn"),
-       ("02","p-felt.html","Sintered Felt & Media","img/jl-felt.webp",
+       ("02","p-felt.html","Sintered Felt & Media","img/pc-media-felt.webp",
         "Graded-pore metal fiber felt, 10–60 µm absolute at 72–86% porosity — depth filtration that can be cleaned and returned to service.",
         ["10–60 µm absolute","72–86% porosity","480 °C service"],"felt media filtration"),
-       ("03","p-textile.html","Technical Textiles & Sleeves","img/jl-sleeve-flat.webp",
+       ("03","p-textile.html","Technical Textiles & Sleeves","img/pc-thermo-elastic.webp",
         "Knitted, braided and woven metal fiber: sleeves, cloth, tape and rope rated 350 °C continuous and 1100 °C short term.",
         ["350 °C continuous","Φ5–60 mm sleeves","1500 mm cloth width"],"textile glass"),
-       ("04","p-element.html","Filter Elements","img/jl-cartridge-set.webp",
+       ("04","p-element.html","Filter Elements","img/pc-mach-fluid.webp",
         "Pleated cartridges, sintered mesh elements and high-temperature filter bags, built in house from our own media.",
         ["5–60 µm rating","30 MPa working pressure","425–1250 mm length"],"element filtration"),
-       ("05","p-equipment.html","Oil Recovery Systems","img/fts-render-tank.webp",
+       ("05","p-equipment.html","Oil Recovery Systems","img/pc-purify-tank.webp",
         "Coalescing oil–water separation for extraction circuits — no demulsifier, no chemical sludge, and the organic phase goes back into the process.",
         ["Up to 600 m³/h per unit","~70% oil removal","1–2 year payback"],"equipment filtration")]
 

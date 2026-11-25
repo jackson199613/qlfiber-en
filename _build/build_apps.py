@@ -243,7 +243,7 @@ dict(f="a-more.html", idx="07", en="MORE APPLICATIONS · CO-DEVELOPMENT", bg="im
       ("img/eq-sem.webp","SEM analysis of fiber and media"),("img/jlw-yarn.webp","Metal fiber yarn")]),
 ]
 
-REL = {'a-glass.html': [('p-textile.html', 'elastic'), ('p-textile.html', 'braid'), ('p-textile.html', 'tape'), ('p-textile.html', 'rope'), ('p-textile.html', 'felt'), ('p-textile.html', 'thread')], 'a-filtration.html': [('p-felt.html', 'felt'), ('p-felt.html', 'composite'), ('p-felt.html', 'alloy'), ('p-element.html', 'cartridge'), ('p-element.html', 'hydraulic'), ('p-element.html', 'fluid'), ('p-element.html', 'dust'), ('p-element.html', 'air'), ('p-element.html', 'parts'), ('p-equipment.html', 'tank'), ('p-equipment.html', 'trough'), ('p-equipment.html', 'retrofit')], 'a-emi.html': [('p-fiber.html', 'blend'), ('p-fiber.html', 'thread'), ('p-fiber.html', 'fiber'), ('p-fiber.html', 'tape'), ('p-textile.html', 'braid'), ('p-textile.html', 'tape')], 'a-specialty.html': [('p-felt.html', 'felt'), ('p-felt.html', 'alloy'), ('p-textile.html', 'felt'), ('p-fiber.html', 'fiber')], 'a-automotive.html': [('p-fiber.html', 'insulated'), ('p-fiber.html', 'thread'), ('p-textile.html', 'tape'), ('p-element.html', 'hydraulic')], 'a-textiles.html': [('p-fiber.html', 'insulated'), ('p-fiber.html', 'thread'), ('p-fiber.html', 'blend'), ('p-fiber.html', 'yarn'), ('p-fiber.html', 'tape'), ('p-textile.html', 'thread')], 'a-more.html': [('p-fiber.html', 'fiber'), ('p-fiber.html', 'yarn'), ('p-felt.html', 'felt'), ('p-textile.html', 'elastic'), ('p-element.html', 'cartridge'), ('p-equipment.html', 'tank')]}
+REL = {'a-glass.html': [('p-textile.html', 'elastic'), ('p-textile.html', 'braid'), ('p-textile.html', 'tape'), ('p-textile.html', 'rope'), ('p-textile.html', 'felt'), ('p-textile.html', 'thread')], 'a-filtration.html': [('p-felt.html', 'felt'), ('p-felt.html', 'composite'), ('p-felt.html', 'alloy'), ('p-element.html', 'cartridge'), ('p-element.html', 'hydraulic'), ('p-element.html', 'fluid'), ('p-element.html', 'dust'), ('p-element.html', 'air'), ('p-element.html', 'parts'), ('p-equipment.html', 'tank'), ('p-equipment.html', 'trough'), ('p-equipment.html', 'retrofit')], 'a-emi.html': [('p-fiber.html', 'blend'), ('p-fiber.html', 'thread'), ('p-fiber.html', 'fiber'), ('p-fiber.html', 'tape'), ('p-textile.html', 'braid'), ('p-textile.html', 'tape')], 'a-specialty.html': [('p-felt.html', 'felt'), ('p-felt.html', 'alloy'), ('p-textile.html', 'felt'), ('p-fiber.html', 'fiber')], 'a-automotive.html': [('p-fiber.html', 'insulated'), ('p-fiber.html', 'thread'), ('p-textile.html', 'tape'), ('p-element.html', 'hydraulic')], 'a-textiles.html': [('p-fiber.html', 'insulated'), ('p-fiber.html', 'thread'), ('p-fiber.html', 'blend'), ('p-fiber.html', 'yarn'), ('p-fiber.html', 'tape'), ('p-textile.html', 'thread')], 'a-more.html': [('p-fiber.html', 'fiber'), ('p-fiber.html', 'yarn'), ('p-felt.html', 'felt'), ('p-felt.html', 'alloy'), ('p-textile.html', 'felt'), ('p-textile.html', 'tape')]}
 LINE_NAME = {"p-fiber.html":"Metal Fiber & Yarn","p-felt.html":"Sintered Felt & Media","p-textile.html":"Technical Textiles & Sleeves","p-element.html":"Filter Elements","p-equipment.html":"Oil Recovery Systems"}
 
 def rel_cards(f):
@@ -257,6 +257,8 @@ def rel_cards(f):
     return f'<div class="rpcs{c4}">{out}</div>'
 
 for a in APPS:
+    if a["f"] == "a-more.html":
+        continue
     sc = json.dumps({"@context":"https://schema.org","@type":"WebPage","name":a["h1"],
                      "description":a["lead"],"url":f'{SITE}/{a["f"]}'}, ensure_ascii=False)
     quick = tbl("Solution at a glance", ["Item","Detail"], [
@@ -313,5 +315,77 @@ for a in APPS:
 </main>
 """ + footer()
     w(a["f"], html)
+
+MORE_DIRS = ["Regenerative heat-exchanger media", "High-temperature silencers", "Resin grinding wheels", "Conveyor belts and seat moulds",
+             "Gas distribution plates", "Membrane supports", "Catalyst carriers", "Vacuum-pump protection",
+             "Pipeline freeze protection", "Medical heating elements", "Robot cabling", "Burner media"]
+
+
+def more_page(a):
+    props = "".join(f'<div class="oprop rv"><span class="num">{i+1:02d}</span><h3>{t}</h3><p>{c}</p><p class="sm">{l}</p></div>'
+                    for i, (t, c, l) in enumerate(a["combo"]))
+    dirs = "".join(f'<div class="odir rv"><b>{d}</b></div>' for d in MORE_DIRS)
+    NICE = {"a-glass.html": "Glass Processing", "a-filtration.html": "Filtration & Separation", "a-emi.html": "EMI Shielding & Anti-static",
+            "a-specialty.html": "Specialty Materials", "a-automotive.html": "Automotive", "a-textiles.html": "Functional Textiles & Smart Wearables"}
+    done = "".join(f'<a href="{u}">{t.replace("&", "&amp;")}</a>' for u, t in NICE.items())
+    sc = json.dumps({"@context": "https://schema.org", "@type": "WebPage", "name": "More applications and co-development",
+                     "description": a["lead"], "url": f'{SITE}/{a["f"]}'}, ensure_ascii=False)
+    lead = ("Metal fiber has no fixed list of uses. If your industry is not on our list, bring us your requirement — "
+            "you know your process, we know metal fiber, and one conversation can open a new application.")
+    html = head("More Applications & Co-Development | What Else Metal Fiber Can Do — QL Metal Fiber",
+                lead, a["f"], "metal fiber new applications, custom metal fiber, co-development, QL Metal Fiber", sc, "img/other-network.webp") \
+        + header("applications.html") \
+        + crumb([("Applications", "applications.html"), ("More Applications", None)]) \
+        + f"""<section class="ph dk othhero" style="--phbg:url('/img/other-network.webp')"><div class="wrap">
+  <div class="eyebrow rv">07 &nbsp;·&nbsp; MORE APPLICATIONS · CO-DEVELOPMENT</div>
+  <h1 class="h-lg rv d1">Metal fiber goes further<br>than this list</h1>
+  <p class="lead rv d2">Glass, filtration, EMI shielding, specialty materials, automotive and smart textiles are the roads we have already travelled. In principle metal fiber can work in almost any industry — and there are many we have not met, or not yet thought of.</p>
+  <div class="othdone rv d2"><span>Already in use</span>{done}</div>
+</div></section>""" + subnav(SUB_APP, a["f"]) + f"""
+<main>
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Why it is open-ended</div>
+    <h2 class="h-md rv d1" style="margin-top:14px">One fiber, metal and textile at once</h2>
+    <p class="lead rv d2">Combine these properties and the number of places metal fiber fits grows well beyond the six industries above.</p></div>
+  <div class="oprops">{props}</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Already in service</div>
+    <h2 class="h-md rv d1" style="margin-top:14px">Directions beyond the six industries</h2>
+    <p class="lead rv d2">Metal fiber already works in these places. The next direction may come from your requirement.</p></div>
+  <div class="odirs">{dirs}</div>
+</div></section>
+
+<section class="othcall" style="--bg:url('img/other-network.webp')"><div class="wrap">
+  <div class="oc-t rv">
+    <span class="eb">YOUR INDUSTRY</span>
+    <h2>Your industry could be the next one</h2>
+    <p>Everyone has blind spots: you know your process best, we know metal fiber best. If you think metal fiber could work in your industry — even if it is only an idea — bring us the requirement. One conversation can open a new application.</p>
+    <div class="acts"><a class="btn btn-pri" href="contact.html">Tell us your requirement<svg><use href="#i-arrow"/></svg></a><a class="btn btn-line lt" href="sample.html">Request a sample</a></div>
+  </div>
+  <ol class="oc-steps rv">
+    <li><b>01</b><h3>Tell us the conditions</h3><p>Temperature, medium, load and the properties you need.</p></li>
+    <li><b>02</b><h3>We propose the material</h3><p>Fiber diameter, alloy and product form, chosen for your duty.</p></li>
+    <li><b>03</b><h3>Samples, validation, supply</h3><p>{a["terms"][0]}</p></li>
+  </ol>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow rv">Starting points</div>
+    <h2 class="h-md rv d1" style="margin-top:14px">Materials new applications start from</h2></div>
+  {rel_cards(a["f"])}
+  <p class="othend rv">Every new requirement takes metal fiber further — and that is where QL's future lies.</p>
+</div></section>
+
+{CTA_BAND}
+</main>
+""" + footer()
+    w(a["f"], html)
+
+
+for a in APPS:
+    if a["f"] == "a-more.html":
+        more_page(a)
 
 print(f"应用方案 {len(APPS)} 页完成")

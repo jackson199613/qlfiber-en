@@ -44,7 +44,11 @@ cards = "".join(
      <h3 style="margin:8px 0 9px">{t}</h3><p>{d}</p>
      <p style="margin-top:12px;font-family:var(--mono);font-size:12px;color:var(--ink)">{k}</p>
      <span class="more">View solution<svg style="width:13px;height:13px"><use href="#i-arrow"/></svg></span></div></a>'''
- for i,(u,n,t,tag,img,d,k) in enumerate(CARDS))
+ for i,(u,n,t,tag,img,d,k) in enumerate(CARDS) if u != 'a-more.html') + '''<a class="othwide rv" href="a-more.html" style="--bg:url('img/other-network.webp')">
+  <div><span class="cat">MORE APPLICATIONS · CO-DEVELOPMENT</span><h3>Your industry isn't listed? It could be the next one.</h3>
+  <p>In principle, metal fiber can work in almost any industry — and there are many we have not met yet. Bring us your requirement and we will look for the answer together.</p></div>
+  <span class="btn btn-pri">Explore what's possible<svg class="i" style="width:13px;height:13px"><use href="#i-arrow"/></svg></span>
+</a>'''
 
 steps = "".join(
  f'''<div style="display:flex;gap:20px;padding:20px 0;border-top:1px solid var(--line)">

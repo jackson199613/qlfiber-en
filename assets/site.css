@@ -678,3 +678,61 @@ table.spec td,table.spec th{font-size:14.5px}
 /* item 18: no highlighter blocks on headings */
 mark,.dk mark,.hero mark{background:none!important;color:var(--gold)!important;padding:0!important}
 body:not(.dk) main .sec mark{color:#a87a00!important}
+
+/* ===== 2026.11.25 client feedback 3.0 (same as the Chinese site) ===== */
+/* item 1: one colour per heading — emphasis takes the heading's own colour */
+h1 em,h2 em,h3 em,.h-xl em,.h-lg em,.h-md em,.dk .h-xl em,.dk .h-lg em,.dk .h-md em,.band h2 em,.ph h1 em,
+h1 mark,h2 mark,h3 mark,.dk h1 mark,.hero h1 mark,body:not(.dk) main .sec h2 mark,body:not(.dk) main .sec h1 mark{
+  color:inherit!important;-webkit-text-fill-color:currentColor!important;background:none!important;font-style:normal!important;padding:0!important}
+
+/* item 11: news covers shown whole, never cropped; odd ratios get a blurred fill of the same image */
+.im.ncv{aspect-ratio:16/9!important;position:relative;overflow:hidden;background:#e9e9e6!important}
+.im.ncv::before{content:"";position:absolute;inset:-24px;background:var(--cv) center/cover no-repeat;filter:blur(18px) brightness(.92);transform:scale(1.08)}
+.im.ncv img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain!important;transform:none!important}
+.post:hover .im.ncv img{transform:none!important}
+/* latest post spans two columns so the grid closes with full rows */
+@media(min-width:1101px){.posts{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.posts .post.feat{grid-column:span 2;display:grid!important;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.posts .post.feat .im{aspect-ratio:auto!important;min-height:100%}.posts .post.feat .im img{position:absolute;inset:0}
+.posts .post.feat .bd{display:flex;flex-direction:column;justify-content:center;padding:34px 36px}
+.posts .post.feat h3{font-size:24px;line-height:1.35}}
+[hidden]{display:none!important}
+/* items 2/4: More Applications — the open-ended possibilities of metal fiber */
+.othwide{grid-column:1/-1;position:relative;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:56px;border-radius:var(--r-lg,16px);overflow:hidden;color:#fff;
+  background:linear-gradient(90deg,rgba(12,22,54,.92) 0%,rgba(12,22,54,.72) 45%,rgba(12,22,54,.25) 100%),var(--bg) center/cover no-repeat;min-height:290px;transition:transform .3s,box-shadow .3s}
+.othwide:hover{transform:translateY(-3px);box-shadow:0 24px 50px -28px rgba(10,20,60,.6)}
+.othwide>div{max-width:660px}
+.othwide .cat{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:#ffd54a}
+.othwide h3{font-size:30px;line-height:1.25;margin:12px 0 14px;color:#fff}
+.othwide p{font-size:16px;line-height:1.75;color:rgba(255,255,255,.88);margin:0}
+.othwide .btn{flex:none}
+.othhero.ph::before,.othhero.ph::after{display:none!important}
+.othhero{background:linear-gradient(90deg,rgba(10,20,52,.95) 0%,rgba(10,20,52,.8) 50%,rgba(10,20,52,.35) 100%),url('/img/other-network.webp') center/cover no-repeat!important;padding-bottom:84px!important}
+.othdone{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:28px}
+.othdone span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:rgba(255,255,255,.65);margin-right:6px;text-transform:uppercase}
+.othdone a{font-size:14px;color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 14px}
+.othdone a:hover{background:rgba(255,255,255,.14)}
+.oprops{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.oprop{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg,16px);padding:28px}
+.oprop .num{font-family:var(--mono);font-size:12px;color:#a87a00}
+.oprop h3{font-size:20px;margin:10px 0 8px}
+.oprop p{margin:0;font-size:15px;line-height:1.7;color:var(--muted)}
+.oprop p.sm{margin-top:10px;font-size:14px;color:var(--ink)}
+.odirs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.odir{background:#fff;border-radius:12px;padding:20px 22px;border-left:4px solid var(--gold)}
+.odir b{font-size:16px;font-weight:600}
+.othcall{position:relative;color:#fff;padding:110px 0;background:linear-gradient(180deg,rgba(9,18,48,.88),rgba(9,18,48,.94)),var(--bg) center/cover no-repeat}
+.othcall .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.othcall .eb{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:#ffd54a}
+.othcall h2{font-size:42px;line-height:1.2;margin:14px 0 18px;color:#fff}
+.othcall p{font-size:17px;line-height:1.8;color:rgba(255,255,255,.88);margin:0}
+.othcall .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.othcall .btn-line.lt{color:#fff!important;border-color:rgba(255,255,255,.5)!important;background:transparent!important}
+.oc-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.oc-steps li{display:grid;grid-template-columns:56px 1fr;column-gap:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:22px 24px}
+.oc-steps b{grid-row:span 2;font-family:var(--mono);font-size:26px;color:#ffd54a;line-height:1}
+.oc-steps h3{font-size:18px;margin:0 0 4px;color:#fff}
+.oc-steps p{font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.8)}
+.othend{text-align:center;font-size:20px;font-weight:600;margin:56px auto 0;max-width:760px;line-height:1.6}
+@media(max-width:1100px){.oprops,.odirs{grid-template-columns:1fr 1fr}.othcall .wrap{grid-template-columns:1fr;gap:36px}.othwide{flex-direction:column;align-items:flex-start;padding:40px 30px}}
+@media(max-width:640px){.oprops,.odirs{grid-template-columns:1fr}.othcall h2{font-size:30px}}
