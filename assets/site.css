@@ -737,3 +737,59 @@ h1 mark,h2 mark,h3 mark,.dk h1 mark,.hero h1 mark,body:not(.dk) main .sec h2 mar
 @media(max-width:1100px){.oprops,.odirs{grid-template-columns:1fr 1fr}.othcall .wrap{grid-template-columns:1fr;gap:36px}.othwide{flex-direction:column;align-items:flex-start;padding:40px 30px}}
 @media(max-width:640px){.oprops,.odirs{grid-template-columns:1fr}.othcall h2{font-size:30px}}
 .num sup,b.num sup,.ph-k sup,.kpi sup{color:inherit!important;-webkit-text-fill-color:currentColor!important}
+
+/* Intro animation v7 (client feedback 4.0 item 1): one fiber bundle morphing through draw / twist / weave / sinter into the QL mark */
+html.qi-lock,html.qi-lock body{overflow:hidden}
+#qlintro{position:fixed;inset:0;z-index:9999;background:radial-gradient(120vw 90vh at 50% 50%,#2a2316 0%,#14120e 45%,#0b0a08 100%);overflow:hidden;cursor:pointer;
+  transition:opacity .6s ease .1s}
+#qlintro canvas{position:absolute;inset:0;display:block}
+#qlintro::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(180deg,rgba(255,255,255,.012) 0 1px,transparent 1px 3px)}
+
+#qlintro .qi-name{position:absolute;left:0;right:0;top:0;height:0;opacity:0;transition:opacity .9s ease}
+#qlintro .qi-mark{position:absolute;left:50%;top:var(--qly);width:var(--qlr);height:var(--qlr);margin:calc(var(--qlr)/-2) 0 0 calc(var(--qlr)/-2);border-radius:50%;
+  box-shadow:0 0 0 2px rgba(255,212,0,.9),0 0 40px rgba(255,200,40,.55),0 0 120px rgba(255,190,0,.35);background:#fff;display:grid;place-items:center}
+#qlintro .qi-mark img{width:88%;height:88%;border-radius:50%}
+#qlintro h2{position:absolute;left:0;right:0;top:var(--qty);transform:translateY(-50%);margin:0;text-align:center;font-family:var(--display);font-weight:800;
+  font-size:var(--qfs);line-height:1.25;letter-spacing:0;
+  background:linear-gradient(100deg,#b8860b 0%,#ffe9a3 22%,#fff8dc 30%,#ffd400 45%,#c99a1a 62%,#fff1b8 78%,#d4a017 100%);background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(255,200,40,.35))}
+#qlintro h2 .w{display:inline}
+#qlintro.qi-narrow h2 .w{display:block}
+#qlintro.qi-s2 .qi-name{opacity:1}
+#qlintro.qi-s2 h2{animation:qiShine 1.6s ease-in-out forwards}
+@keyframes qiShine{from{background-position:100% 0}to{background-position:0 0}}
+#qlintro .qi-sub{position:absolute;left:0;right:0;top:calc(var(--qty) + var(--qfs) * 1.05);text-align:center;opacity:0;transform:translateY(10px);transition:opacity .8s ease .35s,transform .8s ease .35s}
+#qlintro.qi-narrow .qi-sub{top:calc(var(--qty) + var(--qfs) * 1.7)}
+#qlintro.qi-s2 .qi-sub{opacity:1;transform:none}
+#qlintro p{text-align:center}
+#qlintro .qi-en{margin:0;font-family:var(--mono);letter-spacing:.5em;font-size:clamp(11px,1vw,14px);color:#d9c27a;padding-left:.5em}
+#qlintro .qi-rule{display:block;height:1px;width:min(440px,70vw);margin:16px auto 14px;background:linear-gradient(90deg,transparent,#ffd400,transparent)}
+#qlintro .qi-tag{margin:0;font-size:clamp(15px,1.5vw,20px);letter-spacing:.12em;color:#fff6d6}
+#qlintro .qi-meta{position:absolute;left:0;right:0;bottom:6vh;display:flex;justify-content:center;gap:34px;font-size:12.5px;letter-spacing:.2em;color:rgba(230,215,170,.75);opacity:0;transition:opacity .8s ease .6s}
+#qlintro.qi-s2 .qi-meta{opacity:1}
+
+#qlintro .qi-flash{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;
+  background:radial-gradient(circle,#fff 0%,#fff9e0 35%,#ffe680 60%,rgba(255,212,0,0) 72%);transform:scale(0);opacity:0}
+#qlintro.qi-s3 .qi-name,#qlintro.qi-s3 .qi-sub,#qlintro.qi-s3 .qi-meta{opacity:0;transition:opacity .35s ease}
+#qlintro.qi-s3 .qi-flash{animation:qiFlash .9s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes qiFlash{0%{opacity:0;transform:scale(0)}25%{opacity:1}100%{opacity:1;transform:scale(400)}}
+#qlintro.qi-out{opacity:0;pointer-events:none}
+
+#qlintro .qi-step{position:absolute;left:0;right:0;top:calc(45vh + min(27vh,230px));display:flex;justify-content:center;align-items:baseline;gap:14px;opacity:0;transform:translateY(8px);transition:opacity .28s ease,transform .28s ease;pointer-events:none;padding:0 20px;flex-wrap:wrap}
+#qlintro .qi-step.on{opacity:1;transform:none}
+#qlintro .qi-step b{font-family:var(--mono);font-weight:600;font-size:13px;letter-spacing:.18em;color:#14120e;background:#ffd400;border-radius:4px;padding:2px 8px 1px}
+#qlintro .qi-step em{font-style:normal;font-family:var(--display);font-weight:800;font-size:clamp(20px,2.1vw,30px);letter-spacing:.14em;text-transform:uppercase;color:#fff6d6}
+#qlintro .qi-step span{font-size:clamp(13px,1.15vw,16px);letter-spacing:.04em;color:rgba(230,215,170,.86)}
+#qlintro.qi-s2 .qi-step{opacity:0}
+#qlintro .qi-skip{position:absolute;right:26px;top:22px;z-index:3;background:rgba(255,255,255,.08);border:1px solid rgba(255,212,0,.45);border-radius:999px;padding:7px 18px;font-size:13px;color:#f3e3a6;cursor:pointer;letter-spacing:.1em}
+#qlintro .qi-skip:hover{background:rgba(255,212,0,.18)}
+@media(max-width:600px){#qlintro .qi-meta{flex-direction:column;gap:6px;align-items:center;bottom:5vh}}
+
+/* 4.0: retouched product photos (img/pc-*) all share one background, #f6f6f4. In any frame they are shown whole,
+   never cropped, and the frame takes the same colour so no edge is visible. */
+img[src*="img/pc-"][src][src]{object-fit:contain!important;background:#f6f6f4!important;padding:0!important}
+.im:has(>img[src*="img/pc-"]),figure:has(>img[src*="img/pc-"]),a:has(>img[src*="img/pc-"]){background:#f6f6f4!important}
+/* 4.0 follow-up: cards in one row have different amounts of text; the "View product line" link now sits on the same baseline in every card */
+.line{display:flex;flex-direction:column}
+.line .bd{flex:1 1 auto;display:flex;flex-direction:column;align-items:flex-start}
+.line .bd .more{margin-top:auto;padding-top:14px}
