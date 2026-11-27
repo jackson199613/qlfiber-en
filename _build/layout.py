@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """QL Metal Fiber · English site — shared layout"""
-import os, json
+import os, re, json
 
 SITE   = "https://qlfiber-en.netlify.app"
 COMPANY = "Fujian QL Metal Fiber Co., Ltd."
@@ -178,7 +178,15 @@ def footer():
 """
 
 
+# Images are served with a long browser cache. Photos that were replaced under the same file name
+# (retouched product photos) carry a version tag, otherwise returning visitors keep seeing the old ones.
+# Bump IMG_VER whenever these images are replaced again, then rebuild.
+IMG_VER = "20261127b"
+_VER_RE = re.compile(r'(img/(?:pc-|sleeve-06)[A-Za-z0-9_-]*\.webp)(?!\?)')
+
+
 def w(name, html):
+    html = _VER_RE.sub(lambda m: m.group(1) + "?v=" + IMG_VER, html)
     root = os.path.join(os.path.dirname(__file__), "..")
     with open(os.path.join(root, name), "w", encoding="utf-8") as f:
         f.write(html)
